@@ -1,0 +1,119 @@
+import { m } from "framer-motion";
+import { Star } from "lucide-react";
+import { TestimonialsColumn } from "./ui/testimonials-columns";
+const testimonials = [
+  {
+    text: "INLAND EMPIRE: The ceiling fan was mocking me. Simone AI sat down, opened her notebook, and asked twenty cold questions. Suddenly, my noir conspiracy had pulse and teeth.",
+    name: "Harrier Du Bois",
+    role: "Detective Lieutenent",
+  },
+  {
+    text: "Managing two competing factional narratives in Jamrock was an absolute procedural nightmare. Simone parsed the ideological fault lines without flinching. Her dossier report is pinned to my precinct board.",
+    name: "Jean Vicquemare",
+    role: "Major Crimes Division",
+  },
+  {
+    text: "RHETORIC [Challenging: Success] — She forced me to confront what my socialist pamphlet masquerading as a novel was actually trying to say. Pure dialectical gold.",
+    name: "Trant Heidelstam",
+    role: "Special Consultant",
+  },
+  {
+    text: "I was terrified my characters were mere cardboard puppets of Revacholian despair. Simone extracted genuine remorse and buried secrets I hadn't even dared to contemplate.",
+    name: "Judit Minot",
+    role: "Patrol Officer",
+  },
+  {
+    text: "PERCEPTION: The smell of salt marsh and wet asphalt. Simone calibrated my opening chapter's spatial atmosphere until you could taste the motor oil in the air.",
+    name: "Chester McLaine",
+    role: "RCM Officer",
+  },
+  {
+    text: "Twenty rigorous questions. No bourgeois sycophancy. Just cold diagnostic evaluation of narrative momentum and existential tension. Absolutely essential.",
+    name: "Macky",
+    role: "Dockworker Poet",
+  },
+  {
+    text: "ENCYCLOPEDIA: The history of the Suzerainty and the Communard insurrection is vast. Olivia structured my generational family chronicle so the timeline never contradicted itself.",
+    name: "Gaston Martin",
+    role: "Boulodrome Historian",
+  },
+  {
+    text: "SAVOIR FAIRE: Saved me three months of running in frantic circles around the Doomed Commercial Area. The outline snapped together like a spring-loaded latch.",
+    name: "Cuno",
+    role: "Street Critic",
+  },
+  {
+    text: "I haven't written a coherent paragraph since the Antecentennial Revolution. Simone unlocked seventeen years of suppressed stories from my locker.",
+    name: "René De Pauw",
+    role: "Carabineer Veteran",
+  },
+  {
+    text: "SHIVERS: A cold wind blows from the bay. The city is a living organism waiting for someone to write its obituary. Archivest makes sure you don't drop the pen.",
+    name: "The Working Class Woman",
+    role: "Martinaise Local",
+  },
+  {
+    text: "Saved me from writing the wrong political tragedy! In sixty minutes, Simone clarified the stakes and the class conflict. Off to Olivia for outline construction!",
+    name: "Call Me Mañana",
+    role: "Union Liaison",
+  },
+  {
+    text: "Simone didn't fill my head with synthetic babble or cheap genre tropes. She operated like a hardened editor in an abandoned radio tower.",
+    name: "Titus Hardie",
+    role: "Hardie Boys Chief",
+  },
+  {
+    text: "I didn't lack ideas. I was drowning in an ocean of fragmented memories. Simone illuminated the core mystery, and the narrative road opened straight ahead.",
+    name: "Klaasje Amandou",
+    role: "Rooftop Chronicler",
+  },
+  {
+    text: "HALF LIGHT: Panic was setting in as the deadline approached. Simone stepped in, slowed the adrenaline, and rebuilt the outline beat by beat.",
+    name: "Lilienne Carter",
+    role: "Netpicker Novelist",
+  },
+];
+const firstColumn = testimonials.slice(0, 5);
+const secondColumn = testimonials.slice(5, 10);
+const thirdColumn = testimonials.slice(10, 15);
+const Testimonials = () => {
+  return (
+    <section className="bg-white relative py-16">
+      <div className="container z-10 mx-auto px-4">
+        <m.div
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.1,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="flex flex-col items-center justify-center max-w-2xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center text-[#0F2C24]">
+            Dispatches from Martinaise &amp; Beyond
+          </h2>
+        </m.div>
+
+
+
+
+        <div className="flex justify-center gap-6 mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={50} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={60} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={54} />
+        </div>
+      </div>
+    </section>
+  );
+};
+export default Testimonials;
