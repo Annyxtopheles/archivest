@@ -1,4 +1,4 @@
-import bannerImg from "@/assets/StoryGroove_Banner_Image_2.png";
+import bannerImg from "@/assets/banner-manuscript-desk-2.jpg";
 
 const QuoteBanner = () => {
   return (
@@ -8,14 +8,14 @@ const QuoteBanner = () => {
     >
       <img
         src={bannerImg}
-        alt=""
+        alt="Archivest typewriter and manuscripts"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
         decoding="async"
         width={1920}
         height={600}
       />
-      <div className="absolute inset-0 bg-[#081813]/70" />
+      <div className="absolute inset-0 bg-[#081813]/65 backdrop-blur-[1px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-10 md:px-16">
         <h2 className="text-2xl md:text-[1.75rem] font-bold leading-tight text-[#36FF9B]">
