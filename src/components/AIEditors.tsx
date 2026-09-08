@@ -2,13 +2,21 @@ import { useState, useRef, useCallback } from "react";
 import { Pause, Play } from "lucide-react";
 import CrossFadeVideo, { type CrossFadeVideoHandle } from "./CrossFadeVideo";
 import { BrandName } from "./ui/trademark";
+import KitsuragiAvatar from "@/assets/kitsuragi-avatar.jpg";
+import VolitionAvatar from "@/assets/volition-avatar.jpg";
+import LogicAvatar from "@/assets/logic-avatar.jpg";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 
 const editors = [
   {
     name: "KitsuragiAI®",
     title: "Premise Interrogator // Shivers & Logic",
     description: "Your razor-sharp partner. Socratic cross-examinations test motive, stakes, and emotional resonance until your premise crystallizes into an undeniable case file.",
-    videoUrl: "/videos/Kitsuragi.mp4",
+    videoUrl: `${base}videos/Kitsuragi.mp4`,
+    poster: KitsuragiAvatar,
     banner: "THOUGHT CABINET ENTRY #01" as string | null,
   },
   {
@@ -16,7 +24,8 @@ const editors = [
     title: "Story Architect // Encyclopedia & Drama",
     description:
       "The master ledger. Stitches napkins, outlines, and character dossiers into an unshakeable chapter blueprint, holding the line against narrative collapse.",
-    videoUrl: "/videos/Volition.mp4",
+    videoUrl: `${base}videos/Volition.mp4`,
+    poster: VolitionAvatar,
     banner: "THOUGHT CABINET ENTRY #02" as string | null,
   },
   {
@@ -24,7 +33,8 @@ const editors = [
     title: "Developmental Coroner // Visual Calculus",
     description:
       "Forensic autopsy for completed drafts. Delivers an unsparing Global Editorial Letter analyzing pacing, structural fractures, and scene cohesion.",
-    videoUrl: "/videos/Logic.mp4",
+    videoUrl: `${base}videos/Logic.mp4`,
+    poster: LogicAvatar,
     banner: "THOUGHT CABINET ENTRY #03",
   },
 ];
@@ -73,6 +83,7 @@ const AICoachCards = () => {
                 videoRefs.current[index] = el;
               }}
               src={editor.videoUrl}
+              poster={editor.poster}
             />
             <button
               onClick={() => togglePlay(index)}

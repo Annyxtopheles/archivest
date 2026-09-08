@@ -10,12 +10,13 @@ export interface CrossFadeVideoHandle {
 
 interface CrossFadeVideoProps {
   src: string;
+  poster?: string;
   className?: string;
   onNearEnd?: () => void;
 }
 
 const CrossFadeVideo = forwardRef<CrossFadeVideoHandle, CrossFadeVideoProps>(
-  ({ src, className }, ref) => {
+  ({ src, poster, className }, ref) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [isPaused, setIsPaused] = useState(false);
@@ -72,6 +73,7 @@ const CrossFadeVideo = forwardRef<CrossFadeVideoHandle, CrossFadeVideoProps>(
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover rounded-xl"
           src={src}
+          poster={poster}
           muted
           loop
           autoPlay
