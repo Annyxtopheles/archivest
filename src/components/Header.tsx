@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -41,7 +41,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="inline-block">
+            <Link to="/" className="inline-block">
               <img
                 src={archivestHorizontal}
                 alt="Archivest Logo"
@@ -50,7 +50,7 @@ const Header = () => {
                 decoding="async"
                 className="h-9 sm:h-10 md:h-11 w-auto cursor-pointer transition-opacity hover:opacity-90"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

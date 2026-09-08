@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import StarsBackdrop from "@/components/ui/stars-backdrop";
 import { Reg } from "@/components/ui/trademark";
@@ -13,7 +14,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start gap-3 mb-4 sm:mb-6">
-              <a href="/">
+              <Link to="/">
                 <img
                   src={archivestHorizontal}
                   alt="Archivest Logo"
@@ -23,7 +24,7 @@ const Footer = () => {
                   height={42}
                   className="h-9 sm:h-10 md:h-12 w-auto cursor-pointer hover:opacity-90 transition-opacity"
                 />
-              </a>
+              </Link>
             </div>
             <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-md mx-auto sm:mx-0 mb-2">
               The city of Revachol has a tragedy to tell.
@@ -56,11 +57,11 @@ const Footer = () => {
             © 2026 Archivest.ai. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm md:text-base">
-            <a href="/privacy-policy" className="text-white/60 hover:text-[#36FF9B] transition-colors">Privacy Policy</a>
-            <a href="/terms-of-service" className="text-white/60 hover:text-[#36FF9B] transition-colors">Terms of Service</a>
-            <a href="/refund-policy" className="text-white/60 hover:text-[#36FF9B] transition-colors">Refund Policy</a>
-            <a href="/early-access-terms" className="text-white/60 hover:text-[#36FF9B] transition-colors">Early Access Terms</a>
-            <a href="/contact" className="text-white/60 hover:text-[#36FF9B] transition-colors">Contact</a>
+            <Link to="/privacy-policy" className="text-white/60 hover:text-[#36FF9B] transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-white/60 hover:text-[#36FF9B] transition-colors">Terms of Service</Link>
+            <Link to="/refund-policy" className="text-white/60 hover:text-[#36FF9B] transition-colors">Refund Policy</Link>
+            <Link to="/early-access-terms" className="text-white/60 hover:text-[#36FF9B] transition-colors">Early Access Terms</Link>
+            <Link to="/contact" className="text-white/60 hover:text-[#36FF9B] transition-colors">Contact</Link>
           </div>
         </div>
       </div>
