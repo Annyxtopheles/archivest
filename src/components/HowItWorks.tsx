@@ -10,9 +10,9 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import KitsuragiAvatar from "@/assets/kitsuragi-avatar.jpg";
 import VolitionAvatar from "@/assets/volition-avatar.jpg";
 import LogicAvatar from "@/assets/logic-avatar.jpg";
-import SimoneScreenshot from "@/assets/Simone_AI_side_image_v5.png";
-import OliviaScreenshot from "@/assets/Olivia_AI_side_image_v2.png";
-import EllisScreenshot from "@/assets/Ellis_AI_side_image.png";
+import KitsuragiWorkflow from "@/assets/workflow-kitsuragi.jpg";
+import VolitionWorkflow from "@/assets/workflow-volition.jpg";
+import LogicWorkflow from "@/assets/workflow-logic.jpg";
 
 const HowItWorks = () => {
   const aiCompanions = [
@@ -28,7 +28,7 @@ const HowItWorks = () => {
         </>
       ),
       avatar: KitsuragiAvatar,
-      image: SimoneScreenshot,
+      image: KitsuragiWorkflow,
       imageOnRight: false,
       blurImage: false,
     },
@@ -44,7 +44,7 @@ const HowItWorks = () => {
         </>
       ),
       avatar: VolitionAvatar,
-      image: OliviaScreenshot,
+      image: VolitionWorkflow,
       imageOnRight: true,
       blurImage: false,
     },
@@ -60,7 +60,7 @@ const HowItWorks = () => {
         </>
       ),
       avatar: LogicAvatar,
-      image: EllisScreenshot,
+      image: LogicWorkflow,
       imageOnRight: false,
       blurImage: false,
     },

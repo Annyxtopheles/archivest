@@ -1,9 +1,8 @@
-import novelistTrainImageAsset from "@/assets/novelist-train-window.png.asset.json";
+import novelistMetroImage from "@/assets/novelist-metro.jpg";
 import { Button } from "@/components/ui/button";
 import { useCheckout } from "@/hooks/use-checkout";
 import { Reg } from "@/components/ui/trademark";
 
-const NovelistTrainImage = novelistTrainImageAsset.url;
 const SIMONE_PRICE_ID = import.meta.env.VITE_SIMONE_ONETIME_PRICE as string;
 
 const YourNovelEverywhere = () => {
@@ -33,8 +32,8 @@ const YourNovelEverywhere = () => {
           </div>
           <div className="order-1 md:order-2">
             <img
-              src={NovelistTrainImage}
-              alt="Novelist writing on a laptop by a train window with mountains in view"
+              src={novelistMetroImage}
+              alt="Author drafting on a laptop inside a Revachol metro carriage"
               loading="lazy"
               decoding="async"
               width={1280}
