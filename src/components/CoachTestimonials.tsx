@@ -4,22 +4,22 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Simone didn't hand me convenient bourgeois platitudes. She interrogated my drunken premise like a lieutenant double-checking ballistic trajectories. What was once incoherent static in the Whirling-in-Rags became razor-sharp socio-political tragedy.",
+      "Kitsuragi didn't offer bourgeois comfort. He cross-examined my drunken premise like a lieutenant inspecting ballistic angles. Suddenly, my hazy static was an undeniable case file.",
     attribution: "— H. Du Bois, RCM Lieutenant Double-Yefreitor",
   },
   {
     quote:
-      "Archivest completely stabilized my case notes. Olivia's structural ledger and scene-beat blueprints stopped me from losing my narrative in the boardwalk fog. Rigorous. Methodical. Exactly what a detective of letters requires.",
+      "Volition's master ledger stopped my narrative from dissolving in the boardwalk fog. Rigorous, methodical scene architecture. Exactly what a detective of letters requires.",
     attribution: "— Kim Kitsuragi, Lieutenant, 57th Precinct",
   },
   {
     quote:
-      "I was trapped in the same draft for a decade—an ideological bog of failed revolutions. Ellis arrived like a post-war coroner with a red pen, dissecting character arcs down to their bare marrow. Outstanding forensic clarity.",
+      "I was trapped in a decade-long ideological draft. Logic arrived like an unsparing coroner with a red pen, dissecting character arcs to bare marrow. Forensic perfection.",
     attribution: "— Evrart Claire, Union Boss & Amateur Chronicler",
   },
   {
     quote:
-      "The Thought Cabinet interface keeps my plot outline pinned right next to my prose. When the existential dread creeps in from the Sea, Archivest holds the structural line. It is truly disco.",
+      "The Thought Cabinet keeps my plot outline pinned beside my typewriter. When existential dread blows in from the Sea, Archivest holds the structural line.",
     attribution: "— Lena, Cryptid Researcher & Memoirist",
   },
 ];
@@ -42,20 +42,20 @@ const CoachTestimonials = () => {
             >
               <span
                 aria-hidden
-                className="block font-serif text-3xl md:text-4xl leading-none text-[#36FF9B] select-none -mb-3 md:-mb-5"
+                className="block font-serif text-3xl md:text-4xl leading-none text-black/40 select-none -mb-3 md:-mb-5"
               >
                 “
               </span>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1 mb-3">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 text-[#36FF9B] fill-[#36FF9B]" />
+                    <Star key={i} className="w-3.5 h-3.5 text-black fill-black" />
                   ))}
                 </div>
                 <p className="text-[#081813] text-sm leading-relaxed">
                   {t.quote}
                 </p>
-                <p className="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-[#059669]">
+                <p className="mt-4 text-xs font-bold tracking-[0.14em] uppercase text-black/75">
                   {t.attribution}
                 </p>
               </div>

@@ -3,37 +3,37 @@ import { Star } from "lucide-react";
 import { TestimonialsColumn } from "./ui/testimonials-columns";
 const testimonials = [
   {
-    text: "INLAND EMPIRE: The ceiling fan was mocking me. Simone AI sat down, opened her notebook, and asked twenty cold questions. Suddenly, my noir conspiracy had pulse and teeth.",
+    text: "INLAND EMPIRE: The ceiling fan was mocking me. Kitsuragi sat down, opened his blue notebook, and asked twenty cold questions. Suddenly, my conspiracy had pulse and teeth.",
     name: "Harrier Du Bois",
-    role: "Detective Lieutenent",
+    role: "Detective Lieutenant",
   },
   {
-    text: "Managing two competing factional narratives in Jamrock was an absolute procedural nightmare. Simone parsed the ideological fault lines without flinching. Her dossier report is pinned to my precinct board.",
+    text: "Managing two competing factional narratives in Jamrock was a procedural nightmare. Kitsuragi parsed the ideological fault lines without flinching.",
     name: "Jean Vicquemare",
     role: "Major Crimes Division",
   },
   {
-    text: "RHETORIC [Challenging: Success] — She forced me to confront what my socialist pamphlet masquerading as a novel was actually trying to say. Pure dialectical gold.",
+    text: "RHETORIC [Challenging: Success] — Forced me to confront what my political manifesto masquerading as a novel was actually trying to say. Dialectical gold.",
     name: "Trant Heidelstam",
     role: "Special Consultant",
   },
   {
-    text: "I was terrified my characters were mere cardboard puppets of Revacholian despair. Simone extracted genuine remorse and buried secrets I hadn't even dared to contemplate.",
+    text: "I was terrified my characters were mere cardboard puppets of Revacholian despair. Volition extracted genuine remorse and buried secrets I hadn't dared contemplate.",
     name: "Judit Minot",
     role: "Patrol Officer",
   },
   {
-    text: "PERCEPTION: The smell of salt marsh and wet asphalt. Simone calibrated my opening chapter's spatial atmosphere until you could taste the motor oil in the air.",
+    text: "PERCEPTION: The smell of salt marsh and wet asphalt. Kitsuragi calibrated my opening chapter's spatial atmosphere until you could taste the motor oil.",
     name: "Chester McLaine",
     role: "RCM Officer",
   },
   {
-    text: "Twenty rigorous questions. No bourgeois sycophancy. Just cold diagnostic evaluation of narrative momentum and existential tension. Absolutely essential.",
+    text: "Twenty rigorous questions. No bourgeois sycophancy. Just cold diagnostic evaluation of narrative momentum and existential tension.",
     name: "Macky",
     role: "Dockworker Poet",
   },
   {
-    text: "ENCYCLOPEDIA: The history of the Suzerainty and the Communard insurrection is vast. Olivia structured my generational family chronicle so the timeline never contradicted itself.",
+    text: "ENCYCLOPEDIA: The history of the Suzerainty and the Communard insurrection is vast. Volition structured my family chronicle so the timeline never contradicted itself.",
     name: "Gaston Martin",
     role: "Boulodrome Historian",
   },
@@ -43,7 +43,7 @@ const testimonials = [
     role: "Street Critic",
   },
   {
-    text: "I haven't written a coherent paragraph since the Antecentennial Revolution. Simone unlocked seventeen years of suppressed stories from my locker.",
+    text: "I haven't written a coherent paragraph since the Revolution. Kitsuragi unlocked seventeen years of suppressed stories from my locker.",
     name: "René De Pauw",
     role: "Carabineer Veteran",
   },
@@ -53,22 +53,22 @@ const testimonials = [
     role: "Martinaise Local",
   },
   {
-    text: "Saved me from writing the wrong political tragedy! In sixty minutes, Simone clarified the stakes and the class conflict. Off to Olivia for outline construction!",
+    text: "Saved me from writing the wrong political tragedy! In sixty minutes, Kitsuragi clarified the stakes. Off to Volition for outline construction!",
     name: "Call Me Mañana",
     role: "Union Liaison",
   },
   {
-    text: "Simone didn't fill my head with synthetic babble or cheap genre tropes. She operated like a hardened editor in an abandoned radio tower.",
+    text: "Didn't fill my head with synthetic babble or cheap tropes. Operated like a hardened editor in an abandoned radio tower.",
     name: "Titus Hardie",
     role: "Hardie Boys Chief",
   },
   {
-    text: "I didn't lack ideas. I was drowning in an ocean of fragmented memories. Simone illuminated the core mystery, and the narrative road opened straight ahead.",
+    text: "I didn't lack ideas—I was drowning in fragmented memories. Kitsuragi illuminated the core mystery, and the narrative road opened straight ahead.",
     name: "Klaasje Amandou",
     role: "Rooftop Chronicler",
   },
   {
-    text: "HALF LIGHT: Panic was setting in as the deadline approached. Simone stepped in, slowed the adrenaline, and rebuilt the outline beat by beat.",
+    text: "HALF LIGHT: Panic was setting in as the deadline approached. Logic stepped in, slowed the adrenaline, and rebuilt the outline beat by beat.",
     name: "Lilienne Carter",
     role: "Netpicker Novelist",
   },

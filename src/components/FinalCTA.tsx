@@ -31,7 +31,7 @@ const FinalCTA = () => {
         </h2>
 
         <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-          COMMUNAL LOGIC: [Trivial: Success] — Clear the smoke from the precinct room. Begin the interrogation with SimoneAI<Reg /> today.
+          COMMUNAL LOGIC: [Trivial: Success] — Clear the smoke from the precinct room. Begin the interrogation with KitsuragiAI<Reg /> today.
         </p>
 
         <Button

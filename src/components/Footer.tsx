@@ -31,7 +31,7 @@ const Footer = () => {
               Your typewriter is the only witness.
             </p>
             <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-md mx-auto sm:mx-0">
-              Station yourself alongside SimoneAI<Reg /> and inscribe the novel that outlives the pale.
+              Station yourself alongside KitsuragiAI<Reg /> and inscribe the novel that outlives the pale.
             </p>
           </div>
 

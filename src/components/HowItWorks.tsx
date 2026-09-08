@@ -17,16 +17,14 @@ import EllisScreenshot from "@/assets/Ellis_AI_side_image.png";
 const HowItWorks = () => {
   const aiCompanions = [
     {
-      name: "SimoneAI®",
+      name: "KitsuragiAI®",
       title: "Interrogation of the Idea // Shivers & Logic",
       microcopy: "From a hazy barroom apparition to a razor-sharp narrative indictment.",
       description: (
         <>
-          A concept haunts your skull, refusing to dissipate with the morning aspirins? Simone subjects the phantom to ruthless Socratic inquiry.
+          A concept haunts your skull? Kitsuragi subjects the phantom to relentless Socratic inquiry.
           <br /><br />
-          Twenty targeted cross-examinations dissect your core conflicts, psychological motives, and market relevance across the Quadrant.
-          <br /><br />
-          She synthesizes your <strong className="text-white font-semibold">Case Dossier Report</strong>—complete with opening crime scene breakdown, literary comps, tension index, and a verified route toward Chapter One.
+          Twenty cross-examinations dissect motive, stakes, and narrative tension, synthesizing your <strong className="text-white font-semibold">Case Dossier Report</strong>—with opening scene breakdowns and an verified route toward Chapter One.
         </>
       ),
       avatar: SimoneAI,
@@ -35,16 +33,14 @@ const HowItWorks = () => {
       blurImage: false,
     },
     {
-      name: "OliviaAI®",
+      name: "VolitionAI®",
       title: "The Master Ledger // Encyclopedia & Drama",
       microcopy: "Transform drunken post-revolutionary mania into an ironclad literary timeline.",
       description: (
         <>
-          Engage in real-time dialectics with Olivia as she regiments your chaotic musings into a formidable Story Bible.
+          Real-time dialectics to regiment chaotic notes into a formidable Story Bible.
           <br /><br />
-          She tracks character moralities, psychological baggage, factional tensions, and chapter-by-chapter pacing—holding the full macro-architecture while you command the typewriter.
-          <br /><br />
-          Structure is the only bulwark holding back the Pale.
+          Tracks character moralities, psychological baggage, factional tensions, and chapter pacing. Structure is the only bulwark holding back the Pale.
         </>
       ),
       avatar: OliviaAI,
@@ -53,18 +49,14 @@ const HowItWorks = () => {
       blurImage: false,
     },
     {
-      name: "EllisAI®",
+      name: "LogicAI®",
       title: "The Manuscript Coroner // Visual Calculus",
       microcopy: "Forensic developmental autopsy of your completed manuscript.",
       description: (
         <>
-          When the manuscript is laid out on the zinc table, Ellis conducts an exhaustive post-mortem.
+          When the manuscript is laid out on the zinc table, Logic conducts an exhaustive post-mortem.
           <br /><br />
-          Receive a Global Editorial Letter inspecting structural fissures, dialogue cadence, dramatic tension, and subtextual rot across every chapter.
-          <br /><br />
-          <strong className="text-white font-semibold">
-            This is where your manuscript sheds bourgeois flab and emerges devastatingly sharp.
-          </strong>
+          A Global Editorial Letter inspecting structural fissures, dialogue cadence, dramatic tension, and subtextual rot across every chapter.
         </>
       ),
       avatar: EllisAI,
@@ -88,14 +80,12 @@ const HowItWorks = () => {
             </p>
           </div>
 
-
-
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
             <p className="text-base sm:text-lg text-white/85 leading-relaxed">
-              From the initial autopsy of an idea to the final forensic polish, Archivest keeps the living case file intact. Interrogate the spark with{" "}
-              <strong className="font-bold text-[#36FF9B]">SimoneAI<Reg /></strong>. Structure the conspiracy and chapter beats with{" "}
-              <strong className="font-bold text-[#36FF9B]">OliviaAI<Reg /></strong>. Perform rigorous structural inquests with{" "}
-              <strong className="font-bold text-[#36FF9B]">EllisAI<Reg /></strong>. The prose remains exclusively yours.
+              From the initial autopsy of an idea to the final forensic polish: Interrogate the spark with{" "}
+              <strong className="font-bold text-[#36FF9B]">KitsuragiAI<Reg /></strong>. Structure the conspiracy with{" "}
+              <strong className="font-bold text-[#36FF9B]">VolitionAI<Reg /></strong>. Perform rigorous structural inquests with{" "}
+              <strong className="font-bold text-[#36FF9B]">LogicAI<Reg /></strong>. The prose remains exclusively yours.
             </p>
           </div>
 

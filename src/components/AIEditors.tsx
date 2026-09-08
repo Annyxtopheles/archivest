@@ -5,25 +5,25 @@ import { BrandName } from "./ui/trademark";
 
 const editors = [
   {
-    name: "SimoneAI®",
+    name: "KitsuragiAI®",
     title: "Premise Interrogator // Shivers & Logic",
-    description: "Simone shakes you by the lapels until your hazy drunken vision crystallizes into an undeniable case file. Socratic cross-examinations test motive, tragic stakes, and commercial viability.",
+    description: "Your razor-sharp partner. Socratic cross-examinations test motive, stakes, and emotional resonance until your premise crystallizes into an undeniable case file.",
     videoUrl: "/videos/Simone.mp4",
     banner: "THOUGHT CABINET ENTRY #01" as string | null,
   },
   {
-    name: "OliviaAI®",
+    name: "VolitionAI®",
     title: "Story Architect // Encyclopedia & Drama",
     description:
-      "Sire! Olivia takes your manic napkins, cigarette-stained outlines, and fragmented character dossiers and stitches them into a rigorous, chapter-by-chapter case ledger. Keeps your narrative timeline in check.",
+      "The master ledger. Stitches napkins, outlines, and character dossiers into an unshakeable chapter blueprint, holding the line against narrative collapse.",
     videoUrl: "/videos/Olivia.mp4",
     banner: "THOUGHT CABINET ENTRY #02" as string | null,
   },
   {
-    name: "EllisAI®",
-    title: "Developmental Coroner // Visual Calculus & Inland Empire",
+    name: "LogicAI®",
+    title: "Developmental Coroner // Visual Calculus",
     description:
-      "A forensic autopsy of your completed manuscript. Ellis delivers a brutally honest Global Editorial Letter, assessing structural bone density, pacing rhythms, and emotional crime scenes at both macro and micro levels.",
+      "Forensic autopsy for completed drafts. Delivers an unsparing Global Editorial Letter analyzing pacing, structural fractures, and scene cohesion.",
     videoUrl: "/videos/Ellis.mp4",
     banner: "THOUGHT CABINET ENTRY #03",
   },

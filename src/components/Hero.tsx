@@ -38,20 +38,16 @@ const Hero = () => {
           <div aria-hidden className="pointer-events-none absolute -inset-6 md:-inset-8 bg-black/40 blur-2xl rounded-[2rem] z-0" />
           <div className="relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-[3.25rem] lg:text-[3.5rem] xl:text-6xl font-bold leading-[1.1] text-white">
-            Unravel the case.<br />Inscribe the ruins of Revachol.
+            Unravel the case.<br />Inscribe Revachol.
           </h1>
-          <p className="mt-5 text-xl sm:text-2xl md:text-3xl font-medium text-[#36FF9B] leading-snug">
-            Cerebral apparatus for hardboiled authors.<br />
-            The Pale encroaches. You inscribe every line.
+          <p className="mt-4 text-xl sm:text-2xl md:text-3xl font-medium text-[#36FF9B] leading-snug">
+            Cerebral apparatus for authors. You write every line.
           </p>
-          <p className="mt-6 text-base sm:text-lg text-white/85 max-w-xl leading-relaxed">
-            Archivest is your private <strong className="font-semibold text-white">Thought Cabinet &amp; Authorship Station</strong>—an immersive ideational atelier engineered directly into the gloom of Martinaise. Interrogate instincts, assemble your case file, orchestrate scenes, and audit structure alongside <strong className="font-semibold text-white">three cerebral faculties</strong> calibrated for the exhaustive life of a literary epic.
+          <p className="mt-5 text-base sm:text-lg text-white/85 max-w-xl leading-relaxed">
+            Your private Thought Cabinet &amp; Authorship Station. Interrogate instincts, assemble case files, orchestrate scenes, and audit structure with three dialectical faculties. Zero synthetic slop over your prose.
           </p>
-          <p className="mt-6 text-lg sm:text-xl md:text-2xl font-semibold text-[#36FF9B] leading-snug">
-            INLAND EMPIRE: [Medium: Success] — The words already exist in the static. Pull them through.
-          </p>
-          <p className="mt-4 text-base sm:text-lg text-white/85 max-w-xl leading-relaxed">
-            Trained on raw dialectics and post-revolutionary melancholia. Human authorship inviolable. Zero synthetic hallucinations over your prose.
+          <p className="mt-5 text-base sm:text-lg font-semibold text-[#36FF9B] leading-snug">
+            INLAND EMPIRE: [Medium: Success] — The words exist in the static. Pull them through.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start">
@@ -61,9 +57,8 @@ const Hero = () => {
               disabled={isLoading(SIMONE_PRICE_ID)}
               className="w-full sm:w-auto h-auto transition-all duration-300 hover:scale-105 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_0_30px_rgba(54,255,155,0.6)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_0_40px_rgba(54,255,155,0.8)] border-2 border-[#36FF9B]/60 bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] rounded-full px-8 py-4 text-base md:text-lg font-bold"
             >
-              {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Internalize SimoneAI<Reg /> for $7</span>)}
+              {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Deploy KitsuragiAI<Reg /> for $7</span>)}
             </Button>
-
           </div>
           </div>
         </div>

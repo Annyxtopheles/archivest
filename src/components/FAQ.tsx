@@ -18,11 +18,8 @@ const FAQ = () => {
       question: "What is the Archivest Thought Cabinet & Authorship Station?",
       answer: (
         <>
-          <p className="mb-4">Archivest is your secure literary precinct stationed right on the border of the Insulindian coast. An ideational apparatus engineered for relentless fiction authors who refuse synthetic prose generation.</p>
-          <p className="mb-4">You command every strike of the typewriter keys. Inside the station, three dialectical faculties—SimoneAI<Reg />, OliviaAI<Reg />, and EllisAI<Reg />—interrogate instincts, track factional character arcs, and audit structural fractures in real time.</p>
-          <p className="mb-4">It feels less like a mundane writing tool and more like entering an airtight detective atelier where the case file deepens and the narrative fog burns off with every session.</p>
-          <p className="mb-4">Human authorship remains sacred. While the world descends into commercial static and synthetic gibberish, Archivest protects your voice and inalienable copyright.</p>
-          <p>All the forensic power of dialectical intelligence. Zero synthetic slop. Your prose. Your case.</p>
+          <p className="mb-4">Archivest is your private literary atelier. You command every stroke of the typewriter while three dialectical faculties—KitsuragiAI<Reg />, VolitionAI<Reg />, and LogicAI<Reg />—interrogate instincts, track character arcs, and audit structural fractures in real time.</p>
+          <p>All the forensic power of dialectical intelligence. Zero synthetic slop over your prose. Your voice remains inviolable.</p>
         </>
       ),
     },
@@ -31,12 +28,10 @@ const FAQ = () => {
       question: "Where do I begin my investigation inside Archivest?",
       answer: (
         <>
-          <p className="mb-4">Depends on your current level of narrative sobriety:</p>
-          <p className="mb-4"><strong>Case #1: I have a feverish premise or loose cigarette-pack scribbles.</strong><br />Deploy SimoneAI<Reg />. She cross-examines your core conflict, stakes, and audience resonance with twenty Socratic inquiries to produce your Case Dossier.</p>
-          <p className="mb-4"><strong>Case #2: I have a sprawling, chaotic draft with structural fractures.</strong><br />Deploy EllisAI<Reg /> for a Global Editorial Autopsy to pinpoint structural rot, followed by OliviaAI<Reg /> to re-architect your chapter beats and scene intentions.</p>
-          <p className="mb-4"><strong>Case #3: Complete draft ready for forensic audit.</strong><br />Advance directly to EllisAI<Reg /> for a chapter-by-chapter developmental dissection.</p>
-          <p className="mb-4"><strong>Case #4: Prolific author managing an entire generational canon.</strong><br />Archivest becomes your permanent literary headquarters, maintaining continuity and ideological consistency across all projects.</p>
-          <p>Dispatches or inquiries? Contact the station telegraph: <a href="mailto:support@archivest.ai" className="text-[#059669] hover:underline">support@archivest.ai</a></p>
+          <p className="mb-4"><strong>Case #1: Raw impulse or premise notes:</strong> Deploy KitsuragiAI<Reg /> for a 20-inquiry Socratic interrogation to produce your Case Dossier.</p>
+          <p className="mb-4"><strong>Case #2: Chaotic draft needing structure:</strong> Deploy VolitionAI<Reg /> to architect chapter beats, character arcs, and narrative tension.</p>
+          <p className="mb-4"><strong>Case #3: Completed manuscript:</strong> Deploy LogicAI<Reg /> for an exhaustive developmental autopsy across pacing and structural cohesion.</p>
+          <p>Dispatches or inquiries? Contact dispatch: <a href="mailto:support@archivest.ai" className="text-[#059669] hover:underline">support@archivest.ai</a></p>
         </>
       ),
     },
@@ -103,7 +98,7 @@ const FAQ = () => {
       question: "What is the refund protocol and clearance evaluation?",
       answer: (
         <>
-          <p className="mb-4">We do not distribute frivolous free trials. Instead, we offer the SimoneAI<Reg /> Preliminary Dossier for $7 (7 Real), allowing you to experience our dialectical rigor firsthand before committing to full station charter.</p>
+          <p className="mb-4">We do not distribute frivolous free trials. Instead, we offer the KitsuragiAI<Reg /> Preliminary Dossier for $7 (7 Real), allowing you to experience our dialectical rigor firsthand before committing to full station charter.</p>
           <p className="mb-4">Because access immediately provisions dedicated cognitive computing resources and archive space, charter and monthly requisitions are non-refundable once activated.</p>
           <p>You may pause your station charter for up to six months per year ($19/mo) to safeguard your case files while operating in the field.</p>
         </>

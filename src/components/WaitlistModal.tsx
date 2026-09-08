@@ -36,17 +36,17 @@ interface WaitlistModalProps {
 
 const MODAL_CONFIG: Record<SignupType, { title: ReactNode; description: ReactNode; cta: string }> = {
   simone_free: {
-    title: <>Commence Case Intake with SimoneAI<Reg /></>,
-    description: "Enter your telephonic dispatch address to initialize preliminary clearance—no currency required.",
+    title: <>Commence Case Intake with KitsuragiAI<Reg /></>,
+    description: "Enter your dispatch address to initialize preliminary clearance—no currency required.",
     cta: "Commence Inquiry",
   },
   olivia_early_access: {
-    title: <>Requisition Early Archive Clearance: OliviaAI<Reg /></>,
-    description: <>Enlist on the precinct registry to be among the first authors deploying the OliviaAI<Reg /> Master Ledger.</>,
+    title: <>Requisition Early Archive Clearance: VolitionAI<Reg /></>,
+    description: <>Enlist on the precinct registry to deploy the VolitionAI<Reg /> Master Ledger.</>,
     cta: "Request Precinct Clearance",
   },
   ellis_waitlist: {
-    title: <>Join the EllisAI<Reg /> Forensic Waitlist</>,
+    title: <>Join the LogicAI<Reg /> Forensic Waitlist</>,
     description: <>The developmental coroner is finalizing calibration. Enlist to receive telegraphic notice upon arrival.</>,
     cta: "Enter Registry",
   },

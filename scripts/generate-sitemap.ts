@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 
-const BASE_URL = "https://storygroove-creative-flow.lovable.app";
+const BASE_URL = "https://archivest.ai";
 
 interface SitemapEntry {
   path: string;

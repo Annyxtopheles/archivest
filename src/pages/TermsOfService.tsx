@@ -67,7 +67,7 @@ const TermsOfService = () => {
             </p>
             <p className="text-gray-700 leading-relaxed mb-3">Acceptable use includes:</p>
             <ul className="list-disc list-inside space-y-2 mb-4 ml-4 text-gray-700 leading-relaxed">
-              <li>Following the guided processes within SimoneAI<Reg />, OliviaAI<Reg />, EllisAI<Reg />, and other Archivest features</li>
+              <li>Following the guided processes within KitsuragiAI<Reg />, VolitionAI<Reg />, LogicAI<Reg />, and other Archivest features</li>
               <li>Using the platform for intentional writing, story development, drafting support, and revision</li>
               <li>Working within the natural flow of the product and its designed creative workflows</li>
             </ul>

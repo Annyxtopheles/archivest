@@ -48,48 +48,37 @@ const StepArrow = () => (
 );
 
 const starterBenefits = [
-  "Cross-examine your raw impulse into an ironclad narrative premise",
-  "Extract your case logline, synopsis, and inaugural crime-scene beat",
-  "Compute your narrative tension index and ideological resonance",
-  "Download your Case Dossier Report and step-by-step investigation roadmap",
-  "Walk away equipped to construct your master ledger and chapter blueprint",
+  "Interrogate your raw impulse into an ironclad premise",
+  "Extract case logline, synopsis, and opening scene beat",
+  "Compute narrative tension and ideological resonance",
+  "Download your comprehensive Case Dossier Report",
+  "Ready-to-deploy blueprint for chapter construction",
 ];
 
 const step2Benefits = [
-  "Commission your private Revachol Authorship Station & Thought Cabinet",
-  "Full integration with our triad of cognitive faculties",
-  "Forensic case memory preserved across every session and draft",
-  "Long-term timeline continuity and ideological indexation",
-  "Encrypted dispatch access to the underground fellowship of authors",
-  "Direct telephonic support via pneumatic message tube",
-  "Automatic synchronization with future cognitive upgrades and faculties",
-  "Inviolable authorship rights. Full ledger export at any moment.",
+  "Private Revachol Authorship Station & Thought Cabinet",
+  "Full integration with Kitsuragi, Volition & Logic",
+  "Persistent forensic memory across all drafts",
+  "Long-term timeline continuity and world indexation",
+  "Private underground syndicate & dispatch access",
+  "Inviolable copyright. Export full archives anytime.",
 ];
 
 const builderBenefits = [
-  "Collaborate interactively with OliviaAI® to forge your manic case notes into a chapter-by-chapter master ledger.",
-  "Construct an ironclad novel roadmap with sharp beat pacing, character moral fractures, and subplot tensions.",
-  "Take cigarette-burned napkins or a half-finished mystery and synthesize a lucid narrative plan.",
-  "Reconstruct a stalled discovery draft without torching your entire case history.",
-  "Calibrate every scene so each interaction moves the investigation forward with genuine momentum.",
-  "Real-time craft interrogation on scene logic, high-stakes dialogue, and psychological subtext.",
-  "Hone your literary instincts in real time as Olivia examines every narrative hinge.",
-  "Maintain your character dossiers, Story Bible, and historical lore in one unified dossier.",
-  "Leverage persistent memory so your world's social classes and timeline remain consistent throughout.",
-  "Dictate witness interviews and manic revelations on the fly with built-in voice capture.",
-  "Access the private underground author syndicate with weekly dialectical workshops and live dispatches.",
-  "Transition from an ideational hangover to a battle-tested draft ready for ink.",
-  "Reach structural milestones that shatter writer's block into pieces.",
-  "Human authorship remains sacred: Olivia interrogates and advises, but your hand holds the pen.",
+  "Interactive collaboration with VolitionAI® for chapter-by-chapter master ledger.",
+  "Construct ironclad roadmaps with sharp beat pacing and character moral fractures.",
+  "Turn fragmented notes or half-finished drafts into a coherent case file.",
+  "Real-time craft interrogation on scene logic, stakes, and subtext.",
+  "Story Bible memory preserves your world's lore and class dynamics.",
+  "Human authorship inviolable: Volition interrogates, you hold the pen.",
 ];
 
 const studioBenefits = [
-  "Direct forensic collaboration with EllisAI® as your developmental coroner and structural surveyor",
-  "Receive an unvarnished Global Editorial Letter detailing narrative fractures, character inconsistencies, and structural pathology",
-  "Comprehensive chapter-by-chapter developmental autopsy across pacing, stakes, emotional crime scenes, and narrative purpose",
-  "Master novel craft through live diagnostic evaluations tailored specifically to your manuscript",
-  "Fortify your prose and narrative architecture with forensic precision before facing publishers and critics",
-  "Deliver an undeniable literary dossier that commands absolute attention across every district",
+  "Direct collaboration with LogicAI® as your developmental coroner.",
+  "Unvarnished Global Editorial Letter analyzing structural fractures.",
+  "Chapter-by-chapter developmental autopsy across pacing, stakes, and tension.",
+  "Tailored diagnostic evaluations to refine prose and narrative architecture.",
+  "Deliver an undeniable literary dossier ready for publication.",
 ];
 
 const Pricing = () => {
@@ -121,7 +110,7 @@ const Pricing = () => {
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-[#059669]">Preliminary Interrogation</h3>
             <p className="mt-2 text-lg font-semibold text-[#081813]">
-              Subject your premise to SimoneAI<Reg />'s 20 Socratic Cross-Examinations &amp; Receive Your Case Dossier
+              Subject your premise to KitsuragiAI<Reg />'s 20 Socratic Cross-Examinations &amp; Receive Your Case Dossier
             </p>
 
             <p className="mt-1 text-muted-foreground">Audit your creative instincts before establishing full precinct clearance.</p>
@@ -130,10 +119,10 @@ const Pricing = () => {
           <div className="bg-white rounded-3xl border border-[#10B981]/15 shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-6 md:p-10">
             <div className="max-w-xl mx-auto">
               {/* Avatar */}
-              <div className="w-[120px] h-[120px] mx-auto mb-5 rounded-full overflow-hidden ring-2 ring-[#36FF9B]/40 ring-offset-2">
+              <div className="w-[120px] h-[120px] mx-auto mb-5 rounded-full overflow-hidden ring-2 ring-[#081813]/20 ring-offset-2">
                 <img
                   src={SimoneAI}
-                  alt="SimoneAI®"
+                  alt="KitsuragiAI®"
                   loading="lazy"
                   decoding="async"
                   width={128}
@@ -142,11 +131,11 @@ const Pricing = () => {
                 />
               </div>
 
-              {/* Simone title block */}
+              {/* Kitsuragi title block */}
               <div className="text-center">
-                <div className="text-lg font-bold text-[#081813]">SimoneAI<Reg /></div>
-                <div className="text-sm text-muted-foreground mt-1">Premise Interrogator &amp; Dialectical Coach</div>
-                <div className="text-sm font-semibold text-[#059669] mt-1">SimoneAI<Reg /> (Complete Case Dossier Report)</div>
+                <div className="text-lg font-bold text-[#081813]">KitsuragiAI<Reg /></div>
+                <div className="text-sm text-muted-foreground mt-1">Premise Interrogator &amp; Dialectical Partner</div>
+                <div className="text-sm font-semibold text-[#059669] mt-1">KitsuragiAI<Reg /> (Complete Case Dossier Report)</div>
               </div>
 
               <div className="my-6 border-t border-[#10B981]/10" />
@@ -163,7 +152,7 @@ const Pricing = () => {
                 <ul className="space-y-3 inline-block text-left">
                   {starterBenefits.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm">
-                      <Check className="w-5 h-5 text-[#36FF9B] flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
                       <span className="text-[#081813]">{b}</span>
                     </li>
                   ))}
@@ -183,7 +172,7 @@ const Pricing = () => {
                   disabled={isLoading(SIMONE_PRICE_ID)}
                   className="mt-5 rounded-full bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] font-semibold px-6 shadow-[0_0_20px_rgba(54,255,155,0.4)] transition-all duration-300"
                 >
-                  {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Acquire Case Dossier With SimoneAI<Reg /></span>)}
+                  {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Acquire Case Dossier With KitsuragiAI<Reg /></span>)}
                 </Button>
                 <p className="text-xs text-muted-foreground mt-3">No long-term precinct pledge required.</p>
               </div>
@@ -226,7 +215,7 @@ const Pricing = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 md:border-l md:border-[#10B981]/15 md:pl-8">
                 {step2Benefits.map((b) => (
                   <li key={b} className="flex items-start gap-2 text-sm">
-                    <Check className="w-5 h-5 text-[#36FF9B] flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
                     <span className="text-[#081813]">{b}</span>
                   </li>
                 ))}
@@ -269,7 +258,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-white">
                     <img
                       src={SimoneAI}
-                      alt="SimoneAI®"
+                      alt="KitsuragiAI®"
                       loading="lazy"
                       decoding="async"
                       width={128}
@@ -280,7 +269,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-white">
                     <img
                       src={OliviaAI}
-                      alt="OliviaAI®"
+                      alt="VolitionAI®"
                       loading="lazy"
                       decoding="async"
                       width={128}
@@ -291,7 +280,7 @@ const Pricing = () => {
                 </div>
                 <div>
                   <div className="text-[11px] font-semibold tracking-wider text-muted-foreground">
-                    SimoneAI<Reg /> &middot; OliviaAI<Reg />
+                    KitsuragiAI<Reg /> &middot; VolitionAI<Reg />
                   </div>
                   <div className="text-[11px] text-muted-foreground">
                     Premise Interrogator &middot; Narrative Architect &middot; Encyclopedia &amp; Drama
@@ -302,18 +291,18 @@ const Pricing = () => {
               <h4 className="text-2xl font-bold text-[#059669]">Field Detective Edition</h4>
               <p className="mt-2 text-sm italic text-[#081813]">For authors ready to forge fragmented revelations into an ironclad, chapter-by-chapter case file.</p>
               <div className="mt-2 text-lg font-semibold text-[#081813]">$79/mo or $799 annually</div>
-              <div className="text-sm text-[#059669] font-semibold mt-1">Includes SimoneAI<Reg /> + OliviaAI<Reg /></div>
+              <div className="text-sm text-[#059669] font-semibold mt-1">Includes KitsuragiAI<Reg /> + VolitionAI<Reg /></div>
 
               <div className="my-5 border-t border-[#10B981]/15" />
 
               <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
                 EVERYTHING IN PRELIMINARY DOSSIER, PLUS:
               </div>
-              <ul className="sm:columns-2 sm:gap-x-5 space-y-2.5 flex-1">
+              <ul className="space-y-2.5 flex-1">
                 {builderBenefits.map((b, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm break-inside-avoid">
-                    <Check className="w-4 h-4 text-[#36FF9B] flex-shrink-0 mt-1" />
-                    <span className="text-muted-foreground leading-snug"><BrandInline text={b} /></span>
+                    <Check className="w-4 h-4 text-black flex-shrink-0 mt-1" />
+                    <span className="text-[#081813] leading-snug"><BrandInline text={b} /></span>
                   </li>
                 ))}
               </ul>
@@ -358,7 +347,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
                       src={SimoneAI}
-                      alt="SimoneAI®"
+                      alt="KitsuragiAI®"
                       loading="lazy"
                       decoding="async"
                       width={128}
@@ -369,7 +358,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
                       src={OliviaAI}
-                      alt="OliviaAI®"
+                      alt="VolitionAI®"
                       loading="lazy"
                       decoding="async"
                       width={128}
@@ -380,7 +369,7 @@ const Pricing = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
                       src={EllisAI}
-                      alt="EllisAI®"
+                      alt="LogicAI®"
                       loading="lazy"
                       decoding="async"
                       width={128}
@@ -391,7 +380,7 @@ const Pricing = () => {
                 </div>
                 <div>
                   <div className="text-[11px] font-semibold tracking-wider text-gray-300">
-                    SimoneAI<Reg /> &middot; OliviaAI<Reg /> &middot; EllisAI<Reg />
+                    KitsuragiAI<Reg /> &middot; VolitionAI<Reg /> &middot; LogicAI<Reg />
                   </div>
                   <div className="text-[11px] text-gray-400">
                     Premise Interrogator &middot; Narrative Architect &middot; Forensic Manuscript Coroner
@@ -402,18 +391,18 @@ const Pricing = () => {
               <h4 className="text-2xl font-bold text-white">Prefecture Edition</h4>
               <p className="mt-2 text-sm italic text-gray-300">For authors conducting exhaustive forensic autopsies, building multi-generational chronicles, and erecting an enduring canon in one comprehensive suite.</p>
               <div className="mt-2 text-lg font-semibold text-[#36FF9B]">$99/mo or $999 annually</div>
-              <div className="text-sm text-[#36FF9B] font-medium mt-1">Includes SimoneAI<Reg /> + OliviaAI<Reg /> + EllisAI<Reg /></div>
+              <div className="text-sm text-[#36FF9B] font-medium mt-1">Includes KitsuragiAI<Reg /> + VolitionAI<Reg /> + LogicAI<Reg /></div>
 
               <div className="my-5 border-t border-white/10" />
 
               <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
                 Everything in Field Detective, plus:
               </div>
-              <ul className="sm:columns-2 sm:gap-x-5 space-y-2 flex-1">
+              <ul className="space-y-2 flex-1">
                 {studioBenefits.map((b, i) => (
                   <li
                     key={i}
-                    className={`flex items-start gap-2 text-sm break-inside-avoid ${i === 2 ? "sm:[break-after:column]" : ""}`}
+                    className="flex items-start gap-2 text-sm break-inside-avoid"
                   >
                     <Check className="w-4 h-4 text-[#36FF9B] flex-shrink-0 mt-1" />
                     <span className="text-gray-300 leading-snug"><BrandInline text={b} /></span>

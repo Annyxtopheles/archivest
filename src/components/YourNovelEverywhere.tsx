@@ -28,7 +28,7 @@ const YourNovelEverywhere = () => {
               disabled={isLoading(SIMONE_PRICE_ID)}
               className="w-full sm:w-auto h-auto transition-all duration-300 hover:scale-105 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_0_30px_rgba(54,255,155,0.6)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_0_40px_rgba(54,255,155,0.8)] border-2 border-[#36FF9B]/60 bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] rounded-full px-8 py-4 text-base md:text-lg font-bold"
             >
-              {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Internalize SimoneAI<Reg /> for $7</span>)}
+              {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (<span>Deploy KitsuragiAI<Reg /> for $7</span>)}
             </Button>
           </div>
           <div className="order-1 md:order-2">
