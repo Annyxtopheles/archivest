@@ -3,25 +3,25 @@ import { Lightbulb, Users, PenLine, FileEdit } from "lucide-react";
 const pillars = [
   {
     icon: Lightbulb,
-    title: "1. Visual Calculus",
+    title: "Visual Calculus",
     titleSub: "Reconstruct the Premise",
     description: "Interrogate the psychic spark. Synthesize a premise hard enough to survive Martinaise winter.",
   },
   {
     icon: Users,
-    title: "2. Drama & Logic",
+    title: "Drama & Logic",
     titleSub: "The Dramatis Personae",
     description: "Map character neuroses, ideological schisms, and structural beats into a ledger of high intrigue.",
   },
   {
     icon: PenLine,
-    title: "3. Conceptualization",
+    title: "Conceptualization",
     titleSub: "Inscribe the Prose",
     description: "Commit typewriter hammers to paper. Pure human prose under constant psychic interrogation.",
   },
   {
     icon: FileEdit,
-    title: "4. Interfacing",
+    title: "Interfacing",
     titleSub: "The Post-Mortem Audit",
     description: "Global forensic autopsy of every scene, beat, and setup before sending files to the coalition.",
   },

@@ -3,6 +3,46 @@ import { Star } from "lucide-react";
 import { TestimonialsColumn } from "./ui/testimonials-columns";
 const testimonials = [
   {
+    text: "Kitsuragi didn't offer bourgeois comfort. He cross-examined my drunken premise like a lieutenant inspecting ballistic angles. Suddenly, my hazy static was an undeniable case file.",
+    name: "H. Du Bois",
+    role: "RCM Lieutenant Double-Yefreitor",
+  },
+  {
+    text: "Volition's master ledger stopped my narrative from dissolving in the boardwalk fog. Rigorous, methodical scene architecture. Exactly what a detective of letters requires.",
+    name: "Kim Kitsuragi",
+    role: "Lieutenant, 57th Precinct",
+  },
+  {
+    text: "I was trapped in a decade-long ideological draft. Logic arrived like an unsparing coroner with a red pen, dissecting character arcs to bare marrow. Forensic perfection.",
+    name: "Evrart Claire",
+    role: "Union Boss & Amateur Chronicler",
+  },
+  {
+    text: "The Thought Cabinet keeps my plot outline pinned beside my typewriter. When existential dread blows in from the Sea, Archivest holds the structural line.",
+    name: "Lena",
+    role: "Cryptid Researcher & Memoirist",
+  },
+  {
+    text: "Archivest replaced my cluttered desk of loose receipts. The faculties remember class allegiances and moral contradictions. I write with brutal conviction now.",
+    name: "Cindy the Skull",
+    role: "Street Essayist & Agitator",
+  },
+  {
+    text: "Like stepping into a warm bookstore shielded from coastal squalls. My world-building dossier stays cohesive, piercing through creative amnesia.",
+    name: "Annette",
+    role: "Bookstore Clerk & Lorekeeper",
+  },
+  {
+    text: "Forced me to confront the historical reality of my setting. Every street now carries authentic decay, political weight, and economic friction.",
+    name: "Plaisance",
+    role: "Antique Appraiser & Dramatist",
+  },
+  {
+    text: "Volition keeps the plot lines taut while Logic points out plot inconsistencies before I commit them to ink. Indispensable for mystery writers.",
+    name: "Trant Heidelstam",
+    role: "Consultant & Crime Analyst",
+  },
+  {
     text: "INLAND EMPIRE: The ceiling fan was mocking me. Kitsuragi sat down, opened his blue notebook, and asked twenty cold questions. Suddenly, my conspiracy had pulse and teeth.",
     name: "Harrier Du Bois",
     role: "Detective Lieutenant",
@@ -52,33 +92,15 @@ const testimonials = [
     name: "The Working Class Woman",
     role: "Martinaise Local",
   },
-  {
-    text: "Saved me from writing the wrong political tragedy! In sixty minutes, Kitsuragi clarified the stakes. Off to Volition for outline construction!",
-    name: "Call Me Mañana",
-    role: "Union Liaison",
-  },
-  {
-    text: "Didn't fill my head with synthetic babble or cheap tropes. Operated like a hardened editor in an abandoned radio tower.",
-    name: "Titus Hardie",
-    role: "Hardie Boys Chief",
-  },
-  {
-    text: "I didn't lack ideas—I was drowning in fragmented memories. Kitsuragi illuminated the core mystery, and the narrative road opened straight ahead.",
-    name: "Klaasje Amandou",
-    role: "Rooftop Chronicler",
-  },
-  {
-    text: "HALF LIGHT: Panic was setting in as the deadline approached. Logic stepped in, slowed the adrenaline, and rebuilt the outline beat by beat.",
-    name: "Lilienne Carter",
-    role: "Netpicker Novelist",
-  },
 ];
-const firstColumn = testimonials.slice(0, 5);
-const secondColumn = testimonials.slice(5, 10);
-const thirdColumn = testimonials.slice(10, 15);
+
+const firstColumn = testimonials.slice(0, 6);
+const secondColumn = testimonials.slice(6, 12);
+const thirdColumn = testimonials.slice(12, 18);
+
 const Testimonials = () => {
   return (
-    <section className="bg-white relative py-16">
+    <section className="bg-[#081813] relative py-20 overflow-hidden border-t border-white/5">
       <div className="container z-10 mx-auto px-4">
         <m.div
           initial={{
@@ -99,18 +121,18 @@ const Testimonials = () => {
           }}
           className="flex flex-col items-center justify-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center text-[#0F2C24]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center text-white">
             Dispatches from Martinaise &amp; Beyond
           </h2>
+          <p className="mt-3 text-base sm:text-lg text-[#36FF9B] text-center font-medium">
+            Field reports from authors holding the structural line against the Pale.
+          </p>
         </m.div>
 
-
-
-
-        <div className="flex justify-center gap-6 mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={50} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={60} />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={54} />
+        <div className="flex justify-center gap-6 mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={48} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={56} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={52} />
         </div>
       </div>
     </section>

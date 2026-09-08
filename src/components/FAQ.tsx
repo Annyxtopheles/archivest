@@ -31,7 +31,7 @@ const FAQ = () => {
           <p className="mb-4"><strong>Case #1: Raw impulse or premise notes:</strong> Deploy KitsuragiAI<Reg /> for a 20-inquiry Socratic interrogation to produce your Case Dossier.</p>
           <p className="mb-4"><strong>Case #2: Chaotic draft needing structure:</strong> Deploy VolitionAI<Reg /> to architect chapter beats, character arcs, and narrative tension.</p>
           <p className="mb-4"><strong>Case #3: Completed manuscript:</strong> Deploy LogicAI<Reg /> for an exhaustive developmental autopsy across pacing and structural cohesion.</p>
-          <p>Dispatches or inquiries? Contact dispatch: <a href="mailto:support@archivest.ai" className="text-[#059669] hover:underline">support@archivest.ai</a></p>
+          <p>Dispatches or inquiries? Contact dispatch: <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">support@archivest.ai</a></p>
         </>
       ),
     },
@@ -120,7 +120,7 @@ const FAQ = () => {
       answer: (
         <p>
           Transmit questions to central dispatch at{" "}
-          <a href="mailto:support@archivest.ai" className="text-[#059669] hover:underline">
+          <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">
             support@archivest.ai
           </a>
           . Inquiries receive attention within 24–48 hours.
@@ -129,11 +129,10 @@ const FAQ = () => {
     },
   ];
 
-
   return (
     <m.section
       id="faq"
-      className="scroll-mt-28 md:scroll-mt-32 py-16 md:py-24 bg-gradient-to-b from-[#F4FBF7] to-white"
+      className="scroll-mt-28 md:scroll-mt-32 py-16 md:py-24 bg-[#081813] text-white relative overflow-hidden border-t border-white/5"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -141,10 +140,10 @@ const FAQ = () => {
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mx-auto max-w-xl text-center mb-12">
-          <h2 className="text-balance text-3xl font-bold md:text-4xl mb-4 text-[#0F2C24] lg:text-5xl">
+          <h2 className="text-balance text-3xl font-bold md:text-4xl mb-4 text-white lg:text-5xl">
             Dispatches from Central Precinct: Frequently Asked Questions
           </h2>
-          <p className="text-muted-foreground text-balance">
+          <p className="text-gray-300 text-balance">
             Exhaustive tactical dossiers answering the most critical inquiries regarding the Thought Cabinet, authorship protections, and cognitive requisitions.
           </p>
         </div>
@@ -153,15 +152,15 @@ const FAQ = () => {
           <Accordion
             type="single"
             collapsible
-            className="bg-card w-full rounded-2xl border border-border px-8 py-3 shadow-lg"
+            className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 w-full rounded-2xl border border-white/10 px-8 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-sm"
           >
             {faqItems.map((item) => (
-              <AccordionItem key={item.id} value={item.id} className="border-dashed">
-                <AccordionTrigger className="cursor-pointer text-base hover:no-underline text-left py-6">
+              <AccordionItem key={item.id} value={item.id} className="border-dashed border-white/10">
+                <AccordionTrigger className="cursor-pointer text-base hover:no-underline text-left py-6 text-white hover:text-[#36FF9B] transition-colors">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="text-base text-muted-foreground">{item.answer}</div>
+                  <div className="text-base text-gray-300">{item.answer}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}

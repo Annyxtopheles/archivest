@@ -1,149 +1,99 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Reg, TM } from "@/components/ui/trademark";
+import { Reg } from "@/components/ui/trademark";
+import { Scale, Feather, AlertTriangle, Cpu } from "lucide-react";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#081813] text-white">
       <Header />
       <main className="container mx-auto px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-[150px] pb-16 max-w-4xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#081813] mb-2 sm:mb-3">Terms of Service</h1>
-        <p className="text-sm text-gray-500 mb-6 sm:mb-8">Effective Date: April 2026 · Operated by GBBB LLC (d/b/a Archivest)</p>
+        <div className="mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#36FF9B]/15 text-[#36FF9B] border border-[#36FF9B]/30 mb-4">
+            <Scale className="w-3.5 h-3.5" />
+            Precinct Jurisprudence
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-3">Atelier Terms of Service</h1>
+          <p className="text-sm text-gray-400 mb-6 sm:mb-8">Effective Date: April 2026 · Registered under GBBB LLC (d/b/a Archivest) · All Rights Reserved</p>
+        </div>
 
-        <div className="prose prose-lg max-w-none">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">1. Nature of Service</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Archivest provides an AI-assisted creative platform designed to support writers through guidance, prompts, and structural feedback. Archivest does not independently create complete works and is intended to function as a creative aid, not a substitute for the user's own authorship and judgment.
+        <div className="space-y-8 text-gray-300">
+          <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+              <Feather className="w-5 h-5 text-[#36FF9B]" />
+              <span className="text-[#36FF9B]">1.</span> The Sacred Principle of Human Authorship
+            </h2>
+            <p className="leading-relaxed mb-4">
+              Archivest provides a specialized dialectical apparatus designed to accompany serious novelists through premise interrogation, narrative architecture, and developmental autopsy. Archivest does <strong className="text-white">NOT</strong> generate ghostwritten prose or replace human imagination.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              Users remain solely responsible for reviewing, editing, and finalizing all content generated with the assistance of the platform.
+            <p className="leading-relaxed">
+              You command every stroke of the typewriter. The dialectical faculties—KitsuragiAI<Reg />, VolitionAI<Reg />, and LogicAI<Reg />—serve strictly as interrogators, continuity custodians, and structural coroners.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">2. User Content &amp; Ownership</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              By using Archivest, users grant Archivest a limited, non-exclusive license to process, transmit, store, and display their content solely as needed to operate the platform and provide the service to the user.
+          <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+              <span className="text-[#36FF9B]">2.</span> Inviolable Intellectual Sovereignty
+            </h2>
+            <p className="leading-relaxed mb-4">
+              You retain 100% unencumbered copyright, trademark, and artistic title to your manuscripts, lore, characters, and case files. Archivest makes zero claim of ownership over anything committed to your Thought Cabinet.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              This includes saving project materials, displaying content inside the user's account, and processing user content through the platform's AI features so the user can receive coaching, feedback, organization, and related functionality.
+            <p className="leading-relaxed mb-4">
+              By operating the station, you grant Archivest only the strict, temporary technical clearance required to process, render, and store your case files on secure precinct servers.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Users retain full ownership of their original content. Archivest does not claim ownership of user-created material.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Archivest does not use user manuscripts, drafts, story ideas, or project materials to train AI models.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">3. Early Access Features</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Certain features may be offered as "Early Access" or experimental features and may be incomplete, subject to errors, or modified or discontinued at any time without notice.
+            <p className="leading-relaxed">
+              Your words will never be harvested or surrendered to train public foundation models or corporate algorithm farms.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">4. Subscriptions, Billing, and Included Usage</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Subscriptions are billed in advance and are non-refundable except where required by law. Users may cancel at any time and will retain access through the end of the current billing period.
+          <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+              <Cpu className="w-5 h-5 text-[#36FF9B]" />
+              <span className="text-[#36FF9B]">3.</span> Station Charters, Requisitions &amp; Pausing
+            </h2>
+            <p className="leading-relaxed mb-4">
+              Requisitions (Lifetime Station Charter and monthly cognitive allocations) are billed in advance. Due to dedicated computing provision and vault reservation upon activation, payments are non-refundable.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Archivest includes standard platform usage within its subscription pricing. There are no token packs, recharge credits, or surprise usage-based AI fees for normal intended use of the platform.
+            <p className="leading-relaxed mb-4">
+              There are no surprise per-token charges or pay-per-word meters for standard creative novel drafting.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              However, subscription access is subject to reasonable fair-use limits. Archivest reserves the right to define, monitor, and enforce usage limits to protect platform stability, service quality, and operating costs.
+            <p className="leading-relaxed">
+              If an author must embark on an extended expedition or fieldwork, the station charter may be paused for up to six months annually ($19/mo maintenance ledger) to keep your case files sealed and preserved.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">5. Acceptable Use and Fair Use</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Archivest is built around structured creative workflows for novel development, including idea development, story architecture, outlining, drafting support, revision, and developmental feedback. It is not intended to function as a general-purpose AI chat tool, unlimited chat engine, or open-ended AI sandbox.
+          <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-[#36FF9B]" />
+              <span className="text-[#36FF9B]">4.</span> Acceptable Conduct &amp; Forensic Fair Use
+            </h2>
+            <p className="leading-relaxed mb-4">
+              Archivest is calibrated strictly for the craft of long-form fiction and creative storytelling. It is not an open-ended conversational playground, an automated content spam mill, or a benchmarking testbed.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Users agree to use Archivest in accordance with its intended design, guided workflows, and normal creative use patterns.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-3">Acceptable use includes:</p>
-            <ul className="list-disc list-inside space-y-2 mb-4 ml-4 text-gray-700 leading-relaxed">
-              <li>Following the guided processes within KitsuragiAI<Reg />, VolitionAI<Reg />, LogicAI<Reg />, and other Archivest features</li>
-              <li>Using the platform for intentional writing, story development, drafting support, and revision</li>
-              <li>Working within the natural flow of the product and its designed creative workflows</li>
+            <p className="leading-relaxed mb-3">Acceptable atelier operations include:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4 ml-4 text-gray-300 leading-relaxed">
+              <li>Deploying KitsuragiAI<Reg /> for rigorous 20-question premise interrogations.</li>
+              <li>Utilizing VolitionAI<Reg /> to track chapter beats, subplots, and character psychologies.</li>
+              <li>Running LogicAI<Reg /> for developmental autopsy and manuscript structural diagnosis.</li>
             </ul>
-            <p className="text-gray-700 leading-relaxed mb-3">Users may not:</p>
-            <ul className="list-disc list-inside space-y-2 mb-4 ml-4 text-gray-700 leading-relaxed">
-              <li>Use Archivest for unlawful, harmful, abusive, or infringing purposes</li>
-              <li>Circumvent, bypass, manipulate, or misuse designed workflows, prompts, system guardrails, or platform limitations</li>
-              <li>Attempt to turn Archivest into an unlimited general-purpose AI chat engine</li>
-              <li>Force extended or repetitive conversations outside the intended product flows</li>
-              <li>Attempt to generate large volumes of content through repeated prompts, bulk prompting, or abnormal usage patterns</li>
-              <li>Run automated, scripted, bot-driven, or programmatic interactions</li>
-              <li>Use the platform in a manner that creates disproportionate system load, operational burden, or cost relative to standard member usage</li>
-              <li>Attempt to exploit, reverse engineer, scrape, interfere with, or disrupt the platform's functionality</li>
+            <p className="leading-relaxed mb-3">Prohibited transgressions:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4 ml-4 text-gray-300 leading-relaxed">
+              <li>Running automated scraping bots, mass crawlers, or programmatic stress tests against precinct servers.</li>
+              <li>Bypassing structural prompt guardrails to output synthetic pulp slop at volume.</li>
+              <li>Using individual author licenses to syndicate third-party commercial publishing houses without prior enterprise clearance.</li>
+              <li>Attempting to decompile, reverse-engineer, or harvest the dialectical prompting architectures of the station.</li>
             </ul>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Individual and Commercial Use:</strong> Individual accounts may not be used to process client manuscripts, third-party works, or manuscripts belonging to a publishing house, editorial service, ghostwriting operation, or other commercial organization. Editors, editorial firms, publishers, and other professionals interested in using Archivest's developmental editing services for client or third-party manuscripts must contact Archivest for authorization and commercial pricing.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Benchmarking and competitive testing:</strong> Users may not test, benchmark, compare, or evaluate Archivest or its AI coaches for developing or improving another product, platform, model, or commercial workflow.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Fair Use Is Not Defined Solely by Numerical Limits:</strong> The absence of a displayed counter, daily cap, or specific numerical limit does not constitute permission for unlimited use. Fair use may be determined by volume, frequency, pattern, purpose, and manner of use.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Archivest reserves the right to monitor usage patterns to ensure fair and intended use, apply rate limits, usage caps, technical restrictions, or other controls, and suspend or terminate accounts that violate this policy or pose risk to the platform, other users, service stability, or operating costs.
-            </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">6. Suspension and Termination</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Archivest may suspend, limit, or terminate access to the platform at its discretion for violations of these Terms, abusive or abnormal usage patterns, attempts to misuse the platform, nonpayment, or actions that create legal, technical, financial, operational, or security risk.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Where appropriate, Archivest may first apply usage limits, rate limits, or temporary restrictions. However, Archivest reserves the right to suspend or terminate access without prior notice when necessary to protect the platform, other users, service stability, or operating costs.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Archivest shall not be liable for any loss of access resulting from enforcement of these Terms.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">7. Disclaimer of Warranties</h2>
-            <p className="text-gray-700 leading-relaxed">
-              The platform is provided on an "as is" and "as available" basis without warranties of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">8. Limitation of Liability</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              To the fullest extent permitted by law, Archivest shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including loss of data, content, or business opportunity.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Archivest's total liability for any claim shall not exceed the total amount paid by the user in the twelve (12) months preceding the claim.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">9. Indemnification</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Users agree to indemnify, defend, and hold harmless Archivest, GBBB LLC, and its affiliates from and against any claims, damages, liabilities, and expenses arising out of use or misuse of the platform, violation of these Terms, or infringement of third-party rights.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">10. Governing Law</h2>
-            <p className="text-gray-700 leading-relaxed">
-              These Terms are governed by the laws of the State of Colorado.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#081813] mb-4">11. Changes to These Terms</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Archivest may update these Terms from time to time. Continued use constitutes acceptance of the updated Terms.
+          <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+              <span className="text-[#36FF9B]">5.</span> Jurisdictional Dispatches
+            </h2>
+            <p className="leading-relaxed">
+              Archivest reserves the right to suspend or decommission stations found in flagrant breach of these terms. For questions or enterprise syndicate licensing, transmit your dispatch to{" "}
+              <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline font-semibold">
+                support@archivest.ai
+              </a>.
             </p>
           </section>
         </div>

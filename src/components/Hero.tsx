@@ -40,13 +40,15 @@ const Hero = () => {
             Unravel the case.<br />Inscribe Revachol.
           </h1>
           <p className="mt-4 text-xl sm:text-2xl md:text-3xl font-medium text-[#36FF9B] leading-snug">
-            Cerebral apparatus for authors. You write every line.
+            Cerebral apparatus for authors.<br />
+            You write every line.
           </p>
           <p className="mt-5 text-base sm:text-lg text-white/85 max-w-xl leading-relaxed">
             Your private Thought Cabinet &amp; Authorship Station. Interrogate instincts, assemble case files, orchestrate scenes, and audit structure with three dialectical faculties. Zero synthetic slop over your prose.
           </p>
           <p className="mt-5 text-base sm:text-lg font-semibold text-[#36FF9B] leading-snug">
-            INLAND EMPIRE: [Medium: Success] — The words exist in the static. Pull them through.
+            INLAND EMPIRE: [Medium: Success]<br />
+            <span className="text-white/90 font-normal">The words exist in the static. Pull them through.</span>
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start">
