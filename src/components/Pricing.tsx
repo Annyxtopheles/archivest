@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 import { m } from "framer-motion";
 import { Button } from "./ui/button";
-import SimoneAI from "@/assets/Simone_AI.png";
-import OliviaAI from "@/assets/Olivia_AI.png";
-import EllisAI from "@/assets/Ellis_AI.png";
+import KitsuragiAvatar from "@/assets/kitsuragi-avatar.jpg";
+import VolitionAvatar from "@/assets/volition-avatar.jpg";
+import LogicAvatar from "@/assets/logic-avatar.jpg";
 import { useCheckout } from "@/hooks/use-checkout";
 import { Reg, TM, BrandInline } from "./ui/trademark";
 
@@ -121,7 +121,7 @@ const Pricing = () => {
               {/* Avatar */}
               <div className="w-[120px] h-[120px] mx-auto mb-5 rounded-full overflow-hidden ring-2 ring-[#081813]/20 ring-offset-2">
                 <img
-                  src={SimoneAI}
+                  src={KitsuragiAvatar}
                   alt="KitsuragiAI®"
                   loading="lazy"
                   decoding="async"
@@ -257,7 +257,7 @@ const Pricing = () => {
                 <div className="flex -space-x-3">
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-white">
                     <img
-                      src={SimoneAI}
+                      src={KitsuragiAvatar}
                       alt="KitsuragiAI®"
                       loading="lazy"
                       decoding="async"
@@ -268,7 +268,7 @@ const Pricing = () => {
                   </div>
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-white">
                     <img
-                      src={OliviaAI}
+                      src={VolitionAvatar}
                       alt="VolitionAI®"
                       loading="lazy"
                       decoding="async"
@@ -346,7 +346,7 @@ const Pricing = () => {
                 <div className="flex -space-x-3">
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
-                      src={SimoneAI}
+                      src={KitsuragiAvatar}
                       alt="KitsuragiAI®"
                       loading="lazy"
                       decoding="async"
@@ -357,7 +357,7 @@ const Pricing = () => {
                   </div>
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
-                      src={OliviaAI}
+                      src={VolitionAvatar}
                       alt="VolitionAI®"
                       loading="lazy"
                       decoding="async"
@@ -368,7 +368,7 @@ const Pricing = () => {
                   </div>
                   <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#07221A]">
                     <img
-                      src={EllisAI}
+                      src={LogicAvatar}
                       alt="LogicAI®"
                       loading="lazy"
                       decoding="async"

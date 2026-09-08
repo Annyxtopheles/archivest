@@ -3,8 +3,7 @@ import StarsBackdrop from "@/components/ui/stars-backdrop";
 import { useCheckout } from "@/hooks/use-checkout";
 import { Reg } from "@/components/ui/trademark";
 
-import heroAsset from "@/assets/hero-writing-studio.webp.asset.json";
-const heroImage = heroAsset.url;
+import heroImage from "@/assets/hero-bg.jpg";
 
 const SIMONE_PRICE_ID = import.meta.env.VITE_SIMONE_ONETIME_PRICE as string;
 
@@ -16,7 +15,7 @@ const Hero = () => {
       {/* Background image */}
       <img
         src={heroImage}
-        alt="A cozy writer's studio with a laptop showing the Archivest novelist app"
+        alt="Revachol detective workstation with typewriter, dossier, and terminal"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
         decoding="async"

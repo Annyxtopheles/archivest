@@ -44,20 +44,6 @@ export const AICoachIntro = () => (
 const AICoachCards = () => {
   const [playingStates, setPlayingStates] = useState<boolean[]>([true, true, true]);
   const videoRefs = useRef<(CrossFadeVideoHandle | null)[]>([null, null, null]);
-  const resettingRef = useRef(false);
-
-  // Playback is controlled by IntersectionObserver inside CrossFadeVideo.
-
-  const handleNearEnd = useCallback(() => {
-    if (resettingRef.current) return;
-    resettingRef.current = true;
-    videoRefs.current.forEach((handle) => {
-      handle?.triggerFadeReset();
-    });
-    setTimeout(() => {
-      resettingRef.current = false;
-    }, 1200);
-  }, []);
 
   const togglePlay = (index: number) => {
     const handle = videoRefs.current[index];
@@ -87,7 +73,6 @@ const AICoachCards = () => {
                 videoRefs.current[index] = el;
               }}
               src={editor.videoUrl}
-              onNearEnd={handleNearEnd}
             />
             <button
               onClick={() => togglePlay(index)}

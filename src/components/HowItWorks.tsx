@@ -7,9 +7,9 @@ import { ModernBackgroundPaths } from "@/components/ui/modern-background-paths";
 import { Reg, TM, BrandName } from "@/components/ui/trademark";
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import SimoneAI from "@/assets/Simone_AI.png";
-import OliviaAI from "@/assets/Olivia_AI.png";
-import EllisAI from "@/assets/Ellis_AI.png";
+import KitsuragiAvatar from "@/assets/kitsuragi-avatar.jpg";
+import VolitionAvatar from "@/assets/volition-avatar.jpg";
+import LogicAvatar from "@/assets/logic-avatar.jpg";
 import SimoneScreenshot from "@/assets/Simone_AI_side_image_v5.png";
 import OliviaScreenshot from "@/assets/Olivia_AI_side_image_v2.png";
 import EllisScreenshot from "@/assets/Ellis_AI_side_image.png";
@@ -27,7 +27,7 @@ const HowItWorks = () => {
           Twenty cross-examinations dissect motive, stakes, and narrative tension, synthesizing your <strong className="text-white font-semibold">Case Dossier Report</strong>—with opening scene breakdowns and an verified route toward Chapter One.
         </>
       ),
-      avatar: SimoneAI,
+      avatar: KitsuragiAvatar,
       image: SimoneScreenshot,
       imageOnRight: false,
       blurImage: false,
@@ -43,7 +43,7 @@ const HowItWorks = () => {
           Tracks character moralities, psychological baggage, factional tensions, and chapter pacing. Structure is the only bulwark holding back the Pale.
         </>
       ),
-      avatar: OliviaAI,
+      avatar: VolitionAvatar,
       image: OliviaScreenshot,
       imageOnRight: true,
       blurImage: false,
@@ -59,7 +59,7 @@ const HowItWorks = () => {
           A Global Editorial Letter inspecting structural fissures, dialogue cadence, dramatic tension, and subtextual rot across every chapter.
         </>
       ),
-      avatar: EllisAI,
+      avatar: LogicAvatar,
       image: EllisScreenshot,
       imageOnRight: false,
       blurImage: false,

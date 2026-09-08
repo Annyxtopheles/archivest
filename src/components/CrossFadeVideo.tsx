@@ -1,7 +1,4 @@
-import { forwardRef, useImperativeHandle, useRef, useState, useCallback, useEffect } from "react";
-
-const FADE_MS = 800;
-const TRIGGER_BEFORE = 0.8;
+import { forwardRef, useImperativeHandle, useRef, useState, useEffect } from "react";
 
 export interface CrossFadeVideoHandle {
   play(): void;
@@ -18,14 +15,11 @@ interface CrossFadeVideoProps {
 }
 
 const CrossFadeVideo = forwardRef<CrossFadeVideoHandle, CrossFadeVideoProps>(
-  ({ src, className, onNearEnd }, ref) => {
+  ({ src, className }, ref) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const [overlayOpacity, setOverlayOpacity] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const userPausedRef = useRef(false);
-    const fadingIn = useRef(false);
-    const nearEndFired = useRef(false);
 
     useEffect(() => {
       const el = containerRef.current;
@@ -68,46 +62,9 @@ const CrossFadeVideo = forwardRef<CrossFadeVideoHandle, CrossFadeVideoProps>(
         return videoRef.current;
       },
       triggerFadeReset() {
-        const video = videoRef.current;
-        if (!video) return;
-        fadingIn.current = true;
-        setOverlayOpacity(1);
-        setTimeout(() => {
-          video.currentTime = 0;
-          if (!isPaused) {
-            video.play().catch(() => {});
-          }
-          setTimeout(() => {
-            setOverlayOpacity(0);
-            fadingIn.current = false;
-            nearEndFired.current = false;
-          }, 50);
-        }, FADE_MS);
+        // Videos are seamlessly loopable, no flash needed
       },
     }));
-
-    const handleTimeUpdate = useCallback(() => {
-      const video = videoRef.current;
-      if (!video || !video.duration || fadingIn.current) return;
-
-      const timeLeft = video.duration - video.currentTime;
-      if (timeLeft <= TRIGGER_BEFORE && timeLeft > 0 && !nearEndFired.current) {
-        nearEndFired.current = true;
-        onNearEnd?.();
-      }
-    }, [onNearEnd]);
-
-    const handleEnded = useCallback(() => {
-      const video = videoRef.current;
-      if (!video) return;
-      video.currentTime = 0;
-      video.play().catch(() => {});
-      setTimeout(() => {
-        setOverlayOpacity(0);
-        fadingIn.current = false;
-        nearEndFired.current = false;
-      }, 50);
-    }, []);
 
     return (
       <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className ?? ""}`}>
@@ -116,19 +73,12 @@ const CrossFadeVideo = forwardRef<CrossFadeVideoHandle, CrossFadeVideoProps>(
           className="absolute inset-0 w-full h-full object-cover rounded-xl"
           src={src}
           muted
+          loop
+          autoPlay
           playsInline
           // @ts-ignore — needed for older iOS Safari
           webkit-playsinline=""
-          preload="none"
-          onTimeUpdate={handleTimeUpdate}
-          onEnded={handleEnded}
-        />
-        <div
-          className="absolute inset-0 rounded-xl bg-white pointer-events-none"
-          style={{
-            opacity: overlayOpacity,
-            transition: `opacity ${FADE_MS}ms ease-in-out`,
-          }}
+          preload="auto"
         />
       </div>
     );
