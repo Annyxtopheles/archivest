@@ -8,7 +8,7 @@ const QuoteBanner = () => {
     >
       <img
         src={bannerImg}
-        alt="Archivest typewriter and manuscripts"
+        alt="Archivest journal, spectacles, and manuscript"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
         decoding="async"
