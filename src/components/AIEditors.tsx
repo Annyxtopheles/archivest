@@ -8,7 +8,7 @@ const editors = [
     name: "KitsuragiAI®",
     title: "Premise Interrogator // Shivers & Logic",
     description: "Your razor-sharp partner. Socratic cross-examinations test motive, stakes, and emotional resonance until your premise crystallizes into an undeniable case file.",
-    videoUrl: "/videos/Simone.mp4",
+    videoUrl: "/videos/Kitsuragi.mp4",
     banner: "THOUGHT CABINET ENTRY #01" as string | null,
   },
   {
@@ -16,7 +16,7 @@ const editors = [
     title: "Story Architect // Encyclopedia & Drama",
     description:
       "The master ledger. Stitches napkins, outlines, and character dossiers into an unshakeable chapter blueprint, holding the line against narrative collapse.",
-    videoUrl: "/videos/Olivia.mp4",
+    videoUrl: "/videos/Volition.mp4",
     banner: "THOUGHT CABINET ENTRY #02" as string | null,
   },
   {
@@ -24,7 +24,7 @@ const editors = [
     title: "Developmental Coroner // Visual Calculus",
     description:
       "Forensic autopsy for completed drafts. Delivers an unsparing Global Editorial Letter analyzing pacing, structural fractures, and scene cohesion.",
-    videoUrl: "/videos/Ellis.mp4",
+    videoUrl: "/videos/Logic.mp4",
     banner: "THOUGHT CABINET ENTRY #03",
   },
 ];
