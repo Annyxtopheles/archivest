@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import archivestHorizontal from "@/assets/Archivest Horizontal.svg";
 import archivestVertical from "@/assets/Archivest Vertical.svg";
 
@@ -24,9 +25,6 @@ const navItems = [{
   href: "/#faq"
 }];
 
-const LOGIN_URL = "https://app.archivest.ai/login";
-const SIGNUP_URL = "https://app.archivest.ai/signup";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -35,6 +33,15 @@ const Header = () => {
     e.preventDefault();
     navigate(href);
   }, [navigate]);
+
+  const handleLoginClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    toast("INTERFACING: [Medium: Success] — Officer Console", {
+      description:
+        "Precinct 41 terminal is in closed archive mode for this portfolio showcase. Central radio relays remain sealed.",
+      duration: 5500,
+    });
+  }, []);
 
   return <header data-site-header className="fixed top-3 md:top-5 left-3 right-3 md:left-6 md:right-6 z-50">
       <div className="mx-auto max-w-7xl bg-[#081813]/70 backdrop-blur-xl backdrop-saturate-150 border border-[#36FF9B]/20 shadow-[0_12px_40px_rgba(0,0,0,0.45)] rounded-2xl px-5 md:px-8 py-4 md:py-5">
@@ -73,12 +80,10 @@ const Header = () => {
             </Button>
             <Button
               size="sm"
-              asChild
+              onClick={handleLoginClick}
               className="bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] hover:shadow-[0_0_20px_rgba(54,255,155,0.5)] transition-all duration-500 ease-out"
             >
-              <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
-                Log In
-              </a>
+              Log In
             </Button>
           </nav>
 
@@ -95,12 +100,10 @@ const Header = () => {
             </Button>
             <Button
               size="sm"
-              asChild
+              onClick={handleLoginClick}
               className="bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] transition-all duration-500 ease-out"
             >
-              <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
-                Log In
-              </a>
+              Log In
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -121,10 +124,16 @@ const Header = () => {
                       Start Today
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" asChild className="w-full">
-                    <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
-                      Log In
-                    </a>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={(e) => {
+                      setIsOpen(false);
+                      handleLoginClick(e);
+                    }}
+                    className="w-full"
+                  >
+                    Log In
                   </Button>
                 </nav>
               </SheetContent>

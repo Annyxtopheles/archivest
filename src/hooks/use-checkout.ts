@@ -1,43 +1,78 @@
 import { useState, useCallback, useEffect } from "react";
 import { toast } from "sonner";
-import { createCheckoutSession } from "@/services/checkout-service";
+
+const SIMONE_PRICE_ID = import.meta.env.VITE_SIMONE_ONETIME_PRICE as string;
+const BUILDER_MONTHLY_PRICE_ID = import.meta.env.VITE_PRICE_BUILDER_MONTHLY as string;
+const BUILDER_YEARLY_PRICE_ID = import.meta.env.VITE_PRICE_BUILDER_YEARLY as string;
+const STUDIO_MONTHLY_PRICE_ID = import.meta.env.VITE_PRICE_STUDIO_MONTHLY as string;
+const STUDIO_YEARLY_PRICE_ID = import.meta.env.VITE_PRICE_STUDIO_YEARLY as string;
 
 export function useCheckout() {
   const [loadingPriceId, setLoadingPriceId] = useState<string | null>(null);
 
-  // Reset loading state when the page is restored from bfcache or becomes visible again
-  // (e.g. user returns from Stripe via browser back button).
   useEffect(() => {
     const reset = () => setLoadingPriceId(null);
-    const handlePageShow = (e: PageTransitionEvent) => {
-      if (e.persisted) reset();
-      else reset();
-    };
-    const handleVisibility = () => {
-      if (document.visibilityState === "visible") reset();
-    };
-    window.addEventListener("pageshow", handlePageShow);
-    document.addEventListener("visibilitychange", handleVisibility);
-    return () => {
-      window.removeEventListener("pageshow", handlePageShow);
-      document.removeEventListener("visibilitychange", handleVisibility);
-    };
+    window.addEventListener("pageshow", reset);
+    return () => window.removeEventListener("pageshow", reset);
   }, []);
 
   const startCheckout = useCallback(async (priceId: string | undefined) => {
-    if (!priceId) {
-      toast.error("Checkout is not configured. Please try again later.");
+    const id = priceId || "starter-dossier";
+    setLoadingPriceId(id);
+
+    // Brief simulated latency (500ms) for responsive button feedback
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    setLoadingPriceId(null);
+
+    // 1. Starter / $7 Kitsuragi Dossier
+    if (
+      !priceId ||
+      priceId === SIMONE_PRICE_ID ||
+      id.includes("simone") ||
+      id === "starter-dossier"
+    ) {
+      toast("INLAND EMPIRE: [Medium: Success] — Case Dossier Requisitioned", {
+        description:
+          "7 Real ($7) logged in archive demonstration mode. KitsuragiAI has commenced your 20 Socratic cross-examinations in the local case ledger.",
+        duration: 6000,
+      });
       return;
     }
-    try {
-      setLoadingPriceId(priceId);
-      const url = await createCheckoutSession(priceId);
-      window.location.href = url;
-    } catch (err) {
-      console.error("Checkout error:", err);
-      toast.error("Something went wrong. Please try again.");
-      setLoadingPriceId(null);
+
+    // 2. Field Detective Edition ($79/mo or $799/yr)
+    if (
+      priceId === BUILDER_MONTHLY_PRICE_ID ||
+      priceId === BUILDER_YEARLY_PRICE_ID ||
+      id.includes("builder")
+    ) {
+      toast("VOLITION: [Medium: Success] — Field Detective Clearance Logged", {
+        description:
+          "Requisition acknowledged in showcase mode. VolitionAI and KitsuragiAI stand ready at your Thought Cabinet drafting desk.",
+        duration: 6000,
+      });
+      return;
     }
+
+    // 3. Prefecture Edition ($99/mo or $999/yr)
+    if (
+      priceId === STUDIO_MONTHLY_PRICE_ID ||
+      priceId === STUDIO_YEARLY_PRICE_ID ||
+      id.includes("studio")
+    ) {
+      toast("VISUAL CALCULUS: [Challenging: Success] — Taskforce Mobilized", {
+        description:
+          "Complete Martinaise taskforce mobilized in demonstration sandbox. Kitsuragi, Volition, and Logic are stationed on the zinc table.",
+        duration: 6000,
+      });
+      return;
+    }
+
+    // 4. General fallback
+    toast("COMMUNAL LOGIC: [Trivial: Success] — Requisition Noted", {
+      description:
+        "The Thought Cabinet is operating in public portfolio showcase mode. No currency was deducted from your pocket.",
+      duration: 5000,
+    });
   }, []);
 
   return {
