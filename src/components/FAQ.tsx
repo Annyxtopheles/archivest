@@ -31,7 +31,7 @@ const FAQ = () => {
           <p className="mb-4"><strong>Case #1: Raw impulse or premise notes:</strong> Deploy KitsuragiAI<Reg /> for a 20-inquiry Socratic interrogation to produce your Case Dossier.</p>
           <p className="mb-4"><strong>Case #2: Chaotic draft needing structure:</strong> Deploy VolitionAI<Reg /> to architect chapter beats, character arcs, and narrative tension.</p>
           <p className="mb-4"><strong>Case #3: Completed manuscript:</strong> Deploy LogicAI<Reg /> for an exhaustive developmental autopsy across pacing and structural cohesion.</p>
-          <p>Dispatches or inquiries? Contact dispatch: <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">support@archivest.ai</a></p>
+          <p>Dispatches or inquiries? Contact dispatch: <span className="font-mono text-xs text-white/50 mr-1">[FREQ: 41.9 MHz]</span><a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">support@archivest.ai</a></p>
         </>
       ),
     },

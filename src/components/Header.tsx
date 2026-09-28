@@ -74,7 +74,7 @@ const Header = () => {
               asChild
               className="bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588] hover:shadow-[0_0_20px_rgba(54,255,155,0.5)] transition-all duration-500 ease-out"
             >
-              <a href="/#builder-edition" onClick={(e) => handleNavClick(e, "/#builder-edition")}>
+              <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
                 Start Today
               </a>
             </Button>
@@ -92,16 +92,16 @@ const Header = () => {
             <Button
               size="sm"
               asChild
-              className="bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588] transition-all duration-500 ease-out"
+              className="bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588] transition-all duration-500 ease-out text-xs sm:text-sm px-3 sm:px-4"
             >
-              <a href="/#builder-edition" onClick={(e) => handleNavClick(e, "/#builder-edition")}>
+              <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
                 Start Today
               </a>
             </Button>
             <Button
               size="sm"
               onClick={handleLoginClick}
-              className="bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] transition-all duration-500 ease-out"
+              className="hidden sm:inline-flex bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] transition-all duration-500 ease-out text-xs sm:text-sm px-3 sm:px-4"
             >
               Log In
             </Button>
@@ -120,7 +120,7 @@ const Header = () => {
                       {item.label}
                     </a>)}
                   <Button size="sm" asChild className="w-full mt-4 bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588]">
-                    <a href="/#builder-edition" onClick={(e) => { handleNavClick(e, "/#builder-edition"); setIsOpen(false); }}>
+                    <a href="/#pricing" onClick={(e) => { handleNavClick(e, "/#pricing"); setIsOpen(false); }}>
                       Start Today
                     </a>
                   </Button>

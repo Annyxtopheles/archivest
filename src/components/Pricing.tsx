@@ -205,6 +205,13 @@ const Pricing = () => {
                 <div className="mt-2 text-lg font-semibold text-white">Lifetime Station Charter</div>
                 <p className="mt-1 text-sm text-[#36FF9B] font-medium">Requisite to commission your precinct.</p>
                 <p className="mt-3 text-base font-bold text-[#36FF9B]">This is where your manuscript,<br />and your whole body of work,<br />gain an unbreakable fortress.</p>
+                <Button
+                  onClick={() => startCheckout("charter-397")}
+                  disabled={isLoading("charter-397")}
+                  className="mt-5 w-full rounded-full bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] font-semibold px-6 shadow-[0_0_20px_rgba(54,255,155,0.4)] transition-all duration-300"
+                >
+                  {isLoading("charter-397") ? "Redirecting…" : "Requisition Station Charter ($397)"}
+                </Button>
               </div>
 
               {/* Benefits — vertical single column */}
@@ -222,7 +229,7 @@ const Pricing = () => {
             <div className="mt-8 rounded-2xl bg-[#081813]/80 border border-white/10 px-5 py-3 flex items-center justify-center gap-3 text-sm text-gray-300">
               <Lock className="w-4 h-4 text-[#36FF9B] flex-shrink-0" />
               <span className="text-center">
-                You pay the membership fee when you join. Your monthly coaching plan is separate and can be upgraded later without paying the membership fee again. If you need to step away, you can pause your studio instead of canceling. If you cancel and return later, you will need to rejoin.
+                PRECINCT PROTOCOL: Your Lifetime Station Charter permanently bonds your Thought Cabinet archive to Precinct 41. Monthly faculty dispatches may be paused or mobilized at will without forfeiting your forensic archives.
               </span>
             </div>
           </div>

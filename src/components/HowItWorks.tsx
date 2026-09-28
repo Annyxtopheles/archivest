@@ -158,6 +158,10 @@ const HowItWorks = () => {
           </div>
 
           <div className="max-w-6xl mx-auto text-center mt-14 md:mt-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#36FF9B]/10 text-[#36FF9B] border border-[#36FF9B]/30 mb-4 shadow-[0_0_15px_rgba(54,255,155,0.15)]">
+              <span className="w-2 h-2 rounded-full bg-[#36FF9B] animate-pulse" />
+              SURVEILLANCE DISPATCH // CH-41.9 MHz
+            </div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
               Witness the Cognitive Engine in Action
             </h3>

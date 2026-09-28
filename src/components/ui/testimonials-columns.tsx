@@ -12,11 +12,17 @@ export const TestimonialsColumn = (props: {
   }>;
   duration?: number;
 }) => {
+  const [isPaused, setIsPaused] = React.useState(false);
+
   return (
-    <div className={props.className}>
+    <div
+      className={props.className}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <m.div
         animate={{
-          translateY: "-50%",
+          translateY: isPaused ? undefined : "-50%",
         }}
         transition={{
           duration: props.duration || 10,
@@ -25,6 +31,9 @@ export const TestimonialsColumn = (props: {
           repeatType: "loop",
         }}
         className="flex flex-col gap-6 pb-6 bg-transparent"
+        style={{
+          animationPlayState: isPaused ? "paused" : "running",
+        }}
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (

@@ -67,6 +67,16 @@ export function useCheckout() {
       return;
     }
 
+    // 4. Lifetime Station Charter ($397)
+    if (id.includes("charter") || id.includes("station") || id === "charter-397") {
+      toast("ENCYCLOPEDIA: [Medium: Success] — Station Charter Sealed", {
+        description:
+          "Lifetime Station Charter logged for $397 in showcase mode. Your Thought Cabinet fortress and historical world ledger are permanently deeded to Precinct 41.",
+        duration: 6000,
+      });
+      return;
+    }
+
     // 4. General fallback
     toast("COMMUNAL LOGIC: [Trivial: Success] — Requisition Noted", {
       description:
