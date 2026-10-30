@@ -6,109 +6,129 @@ html {
   scroll-behavior: smooth;
 }
 
-
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 20% 95%; /* Travertine #F6F5F0 */
+    --foreground: 60 10% 10%; /* Bronze charcoal #181816 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 15% 98%;
+    --card-foreground: 60 10% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 15% 98%;
+    --popover-foreground: 60 10% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 60 10% 10%; /* Deep bronze #181816 */
+    --primary-foreground: 45 20% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 42 16% 90%; /* Warm concrete #EAE7DF */
+    --secondary-foreground: 60 10% 10%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 42 16% 90%;
+    --muted-foreground: 40 10% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 17 60% 49%; /* Terracotta #C85A32 */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 15% 82%;
+    --input: 40 15% 82%;
+    --ring: 17 60% 49%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 60 10% 9%; /* Deep bronze studio #181816 */
+    --foreground: 45 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 60 8% 13%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 60 8% 13%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 45 20% 95%;
+    --primary-foreground: 60 10% 9%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 60 7% 18%;
+    --secondary-foreground: 45 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 60 7% 18%;
+    --muted-foreground: 40 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 17 60% 49%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 60 8% 22%;
+    --input: 60 8% 22%;
+    --ring: 165 41% 31%; /* Verdigris #2E6F5E */
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+/* Procedural Architectural Hatch Patterns & CAD Grids */
+.cad-grid-light {
+  background-image: 
+    linear-gradient(to right, rgba(24, 24, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(24, 24, 22, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+.cad-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(234, 231, 223, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(234, 231, 223, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
 
-  p {
-    line-height: 1.7;
-  }
+.cad-isometric-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(200, 90, 50, 0.25) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Material Cross-Section Hatchings */
+.hatch-concrete {
+  background-image: radial-gradient(rgba(24, 24, 22, 0.15) 1px, transparent 0);
+  background-size: 6px 6px;
+}
+
+.hatch-earth {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(200, 90, 50, 0.12) 4px,
+    rgba(200, 90, 50, 0.12) 8px
+  );
+}
+
+.hatch-timber {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(46, 111, 94, 0.12) 3px,
+    rgba(46, 111, 94, 0.12) 6px
+  );
+}
+
+/* Custom architectural scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #181816;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A3832;
+  border-radius: 4px;
+  border: 1px solid rgba(234, 231, 223, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C85A32;
 }
