@@ -2,49 +2,53 @@
 
 import { m } from "framer-motion";
 import { Button } from "./ui/button";
-import { Sparkles } from "lucide-react";
-import StarsBackdrop from "./ui/stars-backdrop";
+import { Compass, Download } from "lucide-react";
 import { useCheckout } from "@/hooks/use-checkout";
-import { Reg } from "./ui/trademark";
-
-const SIMONE_PRICE_ID = import.meta.env.VITE_SIMONE_ONETIME_PRICE as string;
 
 const FinalCTA = () => {
   const { startCheckout, isLoading } = useCheckout();
 
   return (
-    <section className="relative bg-[#081813] py-10 md:py-16 overflow-hidden">
-      <StarsBackdrop />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-[#36FF9B]/20 blur-[100px] rounded-full" />
-
+    <section className="relative bg-[#1F1E1B] py-16 md:py-24 overflow-hidden border-t border-[#EAE7DF]/15 text-[#F6F5F0]">
+      {/* Subtle CAD grid */}
+      <div className="absolute inset-0 cad-grid-dark opacity-40 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#C85A32]/15 blur-[110px] rounded-full pointer-events-none" />
 
       <m.div
-        initial={{ opacity: 0.5, y: 50 }}
+        initial={{ opacity: 0.5, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
-        className="relative z-10 text-center px-4"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="relative z-10 text-center px-4 max-w-4xl mx-auto"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 px-4">
-          <span className="text-gray-300">The city of Revachol has a tragedy to tell.</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider bg-[#C85A32]/15 text-[#C85A32] border border-[#C85A32]/30 mb-5">
+          <Compass className="w-3.5 h-3.5" />
+          Tectonic Rigor · Zero Carbon Guesswork
+        </div>
+
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-5 leading-tight">
+          <span className="text-[#EAE7DF]">Every building is a material ledger.</span>
           <br />
-          <span className="text-[#36FF9B]">Your typewriter is the only witness.</span>
+          <span className="text-[#C85A32]">Specify it with empirical truth.</span>
         </h2>
 
-        <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-          COMMUNAL LOGIC: [Trivial: Success] — Clear the smoke from the precinct room. Begin the interrogation with KitsuragiAI<Reg /> today.
+        <p className="text-[#B8B19F] text-base sm:text-lg max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
+          Commission your studio's STRATA workbench today. Inspect 4,000+ low-carbon specimens, simulate hygrothermal envelopes, and export CSI MasterFormat tender packages.
         </p>
 
         <Button
           size="lg"
-          onClick={() => startCheckout(SIMONE_PRICE_ID)}
-          disabled={isLoading(SIMONE_PRICE_ID)}
-          className="w-full sm:w-auto bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] font-semibold py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 text-sm sm:text-base md:text-lg rounded-full shadow-[0_0_25px_rgba(54,255,155,0.4)] transition-all duration-300"
+          onClick={() => startCheckout("starter-dossier")}
+          disabled={isLoading("starter-dossier")}
+          className="w-full sm:w-auto bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold py-6 px-8 rounded shadow-[0_0_30px_rgba(200,90,50,0.4)] transition-all duration-300"
         >
-          {isLoading(SIMONE_PRICE_ID) ? "Redirecting…" : (
-            <>
-              Commence Premise Interrogation for Only $7
-              <Sparkles className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-            </>
+          {isLoading("starter-dossier") ? (
+            "Compiling Specification Package..."
+          ) : (
+            <span className="flex items-center gap-2">
+              <Download className="w-4 h-4" />
+              Requisition Single Assembly Dossier ($7)
+            </span>
           )}
         </Button>
       </m.div>

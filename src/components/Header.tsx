@@ -1,29 +1,47 @@
 import { useState, useCallback } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Layers, Compass, FileSpreadsheet, ShieldCheck } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import archivestHorizontal from "@/assets/Archivest Horizontal.svg";
-import archivestVertical from "@/assets/Archivest Vertical.svg";
+import { StrataLogo, StrataVerticalLogo } from "./StrataLogo";
 
-const navItems = [{
-  id: "how-it-works",
-  label: "How It Works",
-  href: "/#how-it-works"
-}, {
-  id: "why-archivest",
-  label: "Why Archivest",
-  href: "/#why-archivest"
-}, {
-  id: "pricing",
-  label: "Pricing",
-  href: "/#pricing"
-}, {
-  id: "faq",
-  label: "FAQ",
-  href: "/#faq"
-}];
+const navItems = [
+  {
+    id: "spec-sandbox",
+    label: "Spec Sandbox",
+    href: "/#spec-sandbox",
+    icon: Layers,
+  },
+  {
+    id: "engineering-modules",
+    label: "Analyzers",
+    href: "/#engineering-modules",
+    icon: Compass,
+  },
+  {
+    id: "workflow",
+    label: "BIM Workflow",
+    href: "/#workflow",
+    icon: FileSpreadsheet,
+  },
+  {
+    id: "carbon-benchmarks",
+    label: "EPD Benchmarks",
+    href: "/#carbon-benchmarks",
+    icon: ShieldCheck,
+  },
+  {
+    id: "pricing",
+    label: "Licensing",
+    href: "/#pricing",
+  },
+  {
+    id: "faq",
+    label: "Docs",
+    href: "/#faq",
+  },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,57 +52,61 @@ const Header = () => {
     navigate(href);
   }, [navigate]);
 
-  const handleLoginClick = useCallback((e: React.MouseEvent) => {
+  const handleStudioLogin = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
-    toast("INTERFACING: [Medium: Success] — Officer Console", {
+    toast("REVIT / ARCHICAD BIM CONNECT: [Connected]", {
       description:
-        "Precinct 41 terminal is in closed archive mode for this portfolio showcase. Central radio relays remain sealed.",
-      duration: 5500,
+        "MatterLab Central Materials Vault is open in Studio Preview mode. Real-time EPD telemetry active.",
+      duration: 5000,
     });
   }, []);
 
-  return <header data-site-header className="fixed top-3 md:top-5 left-3 right-3 md:left-6 md:right-6 z-50">
-      <div className="mx-auto max-w-7xl bg-[#081813]/70 backdrop-blur-xl backdrop-saturate-150 border border-[#36FF9B]/20 shadow-[0_12px_40px_rgba(0,0,0,0.45)] rounded-2xl px-5 md:px-8 py-4 md:py-5">
+  return (
+    <header data-site-header className="fixed top-3 md:top-5 left-3 right-3 md:left-6 md:right-6 z-50">
+      <div className="mx-auto max-w-7xl bg-[#181816]/85 backdrop-blur-xl border border-[#EAE7DF]/15 shadow-[0_16px_40px_rgba(0,0,0,0.6)] rounded-xl px-4 md:px-7 py-3 md:py-3.5">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="inline-block">
-              <img
-                src={archivestHorizontal}
-                alt="Archivest Logo"
-                width={196}
-                height={40}
-                decoding="async"
-                className="h-9 sm:h-10 md:h-11 w-auto cursor-pointer transition-opacity hover:opacity-90"
-              />
+            <Link to="/" className="inline-block transition-opacity hover:opacity-90">
+              <StrataLogo />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-8">
-              {navItems.map(item => <li key={item.id}>
-                  <a href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="text-white hover:text-[#36FF9B] transition-colors text-base font-medium">
+          <nav className="hidden lg:flex items-center gap-7">
+            <ul className="flex items-center gap-6">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="text-[#EAE7DF]/80 hover:text-[#C85A32] transition-colors text-xs uppercase font-mono tracking-wider font-medium"
+                  >
                     {item.label}
                   </a>
-                </li>)}
+                </li>
+              ))}
             </ul>
-            <Button
-              size="sm"
-              asChild
-              className="bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588] hover:shadow-[0_0_20px_rgba(54,255,155,0.5)] transition-all duration-500 ease-out"
-            >
-              <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
-                Start Today
-              </a>
-            </Button>
-            <Button
-              size="sm"
-              onClick={handleLoginClick}
-              className="bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] hover:shadow-[0_0_20px_rgba(54,255,155,0.5)] transition-all duration-500 ease-out"
-            >
-              Log In
-            </Button>
+
+            <div className="flex items-center gap-3 pl-2 border-l border-[#EAE7DF]/10">
+              <Button
+                size="sm"
+                asChild
+                className="bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-[#A64522] border border-[#C85A32]/80 shadow-[0_0_20px_rgba(200,90,50,0.35)] transition-all duration-300"
+              >
+                <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
+                  Requisition Seat
+                </a>
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleStudioLogin}
+                className="bg-transparent text-[#EAE7DF] border-[#EAE7DF]/25 hover:bg-[#EAE7DF]/10 hover:text-white font-mono text-xs uppercase tracking-wider transition-all duration-300"
+              >
+                BIM Vault
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu */}
@@ -92,55 +114,79 @@ const Header = () => {
             <Button
               size="sm"
               asChild
-              className="bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588] transition-all duration-500 ease-out text-xs sm:text-sm px-3 sm:px-4"
+              className="bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-[#A64522] transition-all px-3"
             >
               <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
-                Start Today
+                Requisition Seat
               </a>
             </Button>
-            <Button
-              size="sm"
-              onClick={handleLoginClick}
-              className="hidden sm:inline-flex bg-white text-[#081813] border border-white hover:bg-[#36FF9B] hover:text-[#081813] hover:border-[#36FF9B] transition-all duration-500 ease-out text-xs sm:text-sm px-3 sm:px-4"
-            >
-              Log In
-            </Button>
+            
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <button className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Toggle menu">
-                  <Menu className="h-6 w-6" />
+                <button
+                  className="text-[#F6F5F0] p-2 hover:bg-[#EAE7DF]/10 rounded-lg transition-colors border border-[#EAE7DF]/15"
+                  aria-label="Toggle menu"
+                >
+                  <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-[#081813] border-[#36FF9B]/20 w-[280px]">
-                <div className="flex justify-center mt-4 mb-2">
-                  <img src={archivestVertical} alt="Archivest" className="h-20 w-auto" />
+              <SheetContent side="right" className="bg-[#181816] border-[#EAE7DF]/15 w-[290px] text-[#F6F5F0]">
+                <div className="flex justify-center mt-6 mb-4">
+                  <StrataVerticalLogo />
                 </div>
-                <nav className="flex flex-col gap-6 mt-6">
-                  {navItems.map(item => <a key={item.id} href={item.href} onClick={(e) => { handleNavClick(e, item.href); setIsOpen(false); }} className="text-white/90 hover:text-[#36FF9B] transition-colors text-lg font-medium">
-                      {item.label}
-                    </a>)}
-                  <Button size="sm" asChild className="w-full mt-4 bg-[#36FF9B] text-[#081813] font-semibold border border-[#36FF9B] hover:bg-[#2ee588] hover:border-[#2ee588]">
-                    <a href="/#pricing" onClick={(e) => { handleNavClick(e, "/#pricing"); setIsOpen(false); }}>
-                      Start Today
+                <div className="h-px w-full bg-[#EAE7DF]/10 mb-6" />
+                <nav className="flex flex-col gap-4">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      onClick={(e) => {
+                        handleNavClick(e, item.href);
+                        setIsOpen(false);
+                      }}
+                      className="text-[#EAE7DF]/80 hover:text-[#C85A32] transition-colors text-sm font-mono uppercase tracking-wider py-1.5 flex items-center justify-between"
+                    >
+                      <span>{item.label}</span>
+                      <span className="text-[10px] text-[#B8B19F]/50 font-mono">0{navItems.indexOf(item) + 1}</span>
                     </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={(e) => {
-                      setIsOpen(false);
-                      handleLoginClick(e);
-                    }}
-                    className="w-full"
-                  >
-                    Log In
-                  </Button>
+                  ))}
+                  
+                  <div className="pt-6 mt-4 border-t border-[#EAE7DF]/10 flex flex-col gap-3">
+                    <Button
+                      size="sm"
+                      asChild
+                      className="w-full bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider hover:bg-[#A64522]"
+                    >
+                      <a
+                        href="/#pricing"
+                        onClick={(e) => {
+                          handleNavClick(e, "/#pricing");
+                          setIsOpen(false);
+                        }}
+                      >
+                        Requisition Seat
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={(e) => {
+                        setIsOpen(false);
+                        handleStudioLogin(e);
+                      }}
+                      className="w-full border-[#EAE7DF]/20 text-[#EAE7DF] font-mono text-xs uppercase tracking-wider"
+                    >
+                      Access BIM Vault
+                    </Button>
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>
           </div>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;

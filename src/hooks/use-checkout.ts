@@ -1,12 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { toast } from "sonner";
 
-const SIMONE_PRICE_ID = import.meta.env.VITE_SIMONE_ONETIME_PRICE as string;
-const BUILDER_MONTHLY_PRICE_ID = import.meta.env.VITE_PRICE_BUILDER_MONTHLY as string;
-const BUILDER_YEARLY_PRICE_ID = import.meta.env.VITE_PRICE_BUILDER_YEARLY as string;
-const STUDIO_MONTHLY_PRICE_ID = import.meta.env.VITE_PRICE_STUDIO_MONTHLY as string;
-const STUDIO_YEARLY_PRICE_ID = import.meta.env.VITE_PRICE_STUDIO_YEARLY as string;
-
 export function useCheckout() {
   const [loadingPriceId, setLoadingPriceId] = useState<string | null>(null);
 
@@ -20,67 +14,70 @@ export function useCheckout() {
     const id = priceId || "starter-dossier";
     setLoadingPriceId(id);
 
-    // Brief simulated latency (500ms) for responsive button feedback
+    // Brief simulated latency (500ms) for responsive feedback
     await new Promise((resolve) => setTimeout(resolve, 500));
     setLoadingPriceId(null);
 
-    // 1. Starter / $7 Kitsuragi Dossier
+    // 1. $7 Preview Pass / Single Spec Dossier
     if (
       !priceId ||
-      priceId === SIMONE_PRICE_ID ||
-      id.includes("simone") ||
-      id === "starter-dossier"
+      id.includes("starter") ||
+      id.includes("dossier") ||
+      id.includes("mat-") ||
+      id === "preview-pass"
     ) {
-      toast("INLAND EMPIRE: [Medium: Success] — Case Dossier Requisitioned", {
+      toast("SPECIFICATION DOSSIER REQUISITIONED", {
         description:
-          "7 Real ($7) logged in archive demonstration mode. KitsuragiAI has commenced your 20 Socratic cross-examinations in the local case ledger.",
+          "STRATA Preview Pass active ($7). CSI MasterFormat Div 03/06/09 specification package compiled with 3rd-party EPD carbon verification.",
+        duration: 5500,
+      });
+      return;
+    }
+
+    // 2. Solo Architect Tier ($79/mo)
+    if (id.includes("solo") || id.includes("builder")) {
+      toast("SOLO ARCHITECT SEAT COMMISSIONED", {
+        description:
+          "MatterLab Studio Seat initialized. Unlimited parametric envelope simulations, Revit schedule bindings, and live LCA calculators unlocked.",
+        duration: 5500,
+      });
+      return;
+    }
+
+    // 3. Practice Studio Tier ($99/mo or $999/yr)
+    if (id.includes("practice") || id.includes("studio")) {
+      toast("PRACTICE STUDIO WORKBENCH INITIALIZED", {
+        description:
+          "Multi-seat studio license registered. Centralized BIM asset vault, custom quarry provenance API, and LEED/BREEAM tender exports enabled.",
+        duration: 5500,
+      });
+      return;
+    }
+
+    // 4. Global Engineering Firm ($397 Lifetime Charter)
+    if (id.includes("charter") || id.includes("enterprise") || id.includes("firm")) {
+      toast("GLOBAL ENGINEERING FIRM VAULT CHARTERED", {
+        description:
+          "Lifetime Enterprise Spec Vault commissioned ($397). Unlimited team seats, dedicated computational materials engineer, and custom EPD ingest pipelines active.",
         duration: 6000,
       });
       return;
     }
 
-    // 2. Field Detective Edition ($79/mo or $799/yr)
-    if (
-      priceId === BUILDER_MONTHLY_PRICE_ID ||
-      priceId === BUILDER_YEARLY_PRICE_ID ||
-      id.includes("builder")
-    ) {
-      toast("VOLITION: [Medium: Success] — Field Detective Clearance Logged", {
+    // 5. Engineering Module Analzyers
+    if (id.includes("analyzer") || id.includes("simulator") || id.includes("ledger")) {
+      toast("PARAMETRIC SIMULATION ENGINE DISPATCHED", {
         description:
-          "Requisition acknowledged in showcase mode. VolitionAI and KitsuragiAI stand ready at your Thought Cabinet drafting desk.",
-        duration: 6000,
+          "ISO 14044 / ASTM C423 calculation matrix computed for active project coordinate.",
+        duration: 5000,
       });
       return;
     }
 
-    // 3. Prefecture Edition ($99/mo or $999/yr)
-    if (
-      priceId === STUDIO_MONTHLY_PRICE_ID ||
-      priceId === STUDIO_YEARLY_PRICE_ID ||
-      id.includes("studio")
-    ) {
-      toast("VISUAL CALCULUS: [Challenging: Success] — Taskforce Mobilized", {
-        description:
-          "Complete Martinaise taskforce mobilized in demonstration sandbox. Kitsuragi, Volition, and Logic are stationed on the zinc table.",
-        duration: 6000,
-      });
-      return;
-    }
-
-    // 4. Lifetime Station Charter ($397)
-    if (id.includes("charter") || id.includes("station") || id === "charter-397") {
-      toast("ENCYCLOPEDIA: [Medium: Success] — Station Charter Sealed", {
-        description:
-          "Lifetime Station Charter logged for $397 in showcase mode. Your Thought Cabinet fortress and historical world ledger are permanently deeded to Precinct 41.",
-        duration: 6000,
-      });
-      return;
-    }
-
-    // 4. General fallback
-    toast("COMMUNAL LOGIC: [Trivial: Success] — Requisition Noted", {
+    // Fallback
+    toast("STRATA STUDIO ACTION LOGGED", {
       description:
-        "The Thought Cabinet is operating in public portfolio showcase mode. No currency was deducted from your pocket.",
+        "Workbench running in portfolio demonstration sandbox mode. Specifications ready for download.",
       duration: 5000,
     });
   }, []);

@@ -1,33 +1,28 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import archivestVertical from "@/assets/Archivest Vertical.svg";
+import { StrataVerticalLogo } from "@/components/StrataLogo";
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
+    console.error("404 Error: Unindexed specification coordinate:", location.pathname);
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#081813] px-4">
-      <div className="text-center flex flex-col items-center">
-        <img
-          src={archivestVertical}
-          alt="Archivest"
-          className="h-20 w-auto mb-6 object-contain"
-        />
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-[#36FF9B]">404</h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-white/90 mb-2 font-serif">Lost in the Pale</p>
-        <p className="text-sm sm:text-base text-gray-400 mb-6 max-w-md">CONCEPTUALIZATION: [Medium: Failure] — You have wandered off the edge of the case dossier into total unspooled memory.</p>
-        <Link 
-          to="/" 
-          className="inline-block bg-gradient-to-r from-[#36FF9B] to-[#10B981] hover:from-[#10B981] hover:to-[#36FF9B] text-[#081813] px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-[#36FF9B]/20"
+    <div className="min-h-screen flex items-center justify-center bg-[#181816] text-[#F6F5F0] px-4">
+      <div className="text-center flex flex-col items-center max-w-md">
+        <StrataVerticalLogo className="mb-6" />
+        <h1 className="text-6xl sm:text-7xl font-mono font-bold mb-3 text-[#C85A32]">404</h1>
+        <p className="text-xl sm:text-2xl text-[#F6F5F0] mb-2 font-serif">Unindexed Datum Coordinate</p>
+        <p className="text-xs sm:text-sm font-mono text-[#B8B19F] mb-8">
+          CAD-ERR [0x404]: The requested material assembly or specification sheet does not exist at this section plane.
+        </p>
+        <Link
+          to="/"
+          className="inline-block bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-xs uppercase tracking-wider px-6 py-3.5 rounded font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(200,90,50,0.3)]"
         >
-          Return to Precinct
+          Return to STRATA Workbench
         </Link>
       </div>
     </div>

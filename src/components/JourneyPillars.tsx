@@ -1,55 +1,76 @@
-import { Lightbulb, Users, PenLine, FileEdit } from "lucide-react";
+import { Layers, FileSpreadsheet, Download, CheckCircle2, SlidersHorizontal } from "lucide-react";
 
 const pillars = [
   {
-    icon: Lightbulb,
-    title: "Visual Calculus",
-    titleSub: "Reconstruct the Premise",
-    description: "Interrogate the psychic spark. Synthesize a premise hard enough to survive Martinaise winter.",
+    icon: Layers,
+    step: "01",
+    title: "Tectonic Material Indexing",
+    titleSub: "Raw Specimen Ingestion",
+    description: "Search 4,000+ low-carbon specimens by cradle-to-gate GWP, mineral classification, and structural compressive tolerance.",
   },
   {
-    icon: Users,
-    title: "Drama & Logic",
-    titleSub: "The Dramatis Personae",
-    description: "Map character neuroses, ideological schisms, and structural beats into a ledger of high intrigue.",
+    icon: SlidersHorizontal,
+    step: "02",
+    title: "Parametric Hygrothermal Modeling",
+    titleSub: "Acoustic & Fire Stress Test",
+    description: "Simulate composite wall cross-sections under ASTM E84 flame spread and ISO 354 reverberation damping algorithms.",
   },
   {
-    icon: PenLine,
-    title: "Conceptualization",
-    titleSub: "Inscribe the Prose",
-    description: "Commit typewriter hammers to paper. Pure human prose under constant psychic interrogation.",
+    icon: FileSpreadsheet,
+    step: "03",
+    title: "CSI MasterFormat Integration",
+    titleSub: "Revit & ArchiCAD Export",
+    description: "Compile verified environmental product declarations (EPD) into ready-to-bind Division 03, 06, and 09 architectural project manuals.",
   },
   {
-    icon: FileEdit,
-    title: "Interfacing",
-    titleSub: "The Post-Mortem Audit",
-    description: "Global forensic autopsy of every scene, beat, and setup before sending files to the coalition.",
+    icon: Download,
+    step: "04",
+    title: "Verifiable EPD Ledger",
+    titleSub: "LEED / BREEAM Audit Trail",
+    description: "Generate immutable compliance dossiers with 3rd-party certifier stamps directly ingestible by municipal building authorities.",
   },
 ];
 
 const JourneyPillars = () => {
   return (
-    <div className="max-w-6xl mx-auto mb-10 md:mb-14">
-      <div className="rounded-2xl border border-[#36FF9B]/20 bg-gradient-to-r from-[#0A241C]/80 via-[#0D2A20]/70 to-[#0A241C]/80 backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 sm:px-6 md:px-8 py-5 md:py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 md:gap-0">
+    <div className="max-w-6xl mx-auto mb-16" id="workflow">
+      <div className="text-center mb-8">
+        <span className="text-xs font-mono uppercase tracking-widest text-[#C85A32] font-semibold">
+          PHYSICAL SAMPLE BOARD TO BIM WORKFLOW
+        </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#F6F5F0] mt-1">
+          Four Stages of Precision Material Governance
+        </h2>
+      </div>
+
+      <div className="rounded-2xl border border-[#EAE7DF]/15 bg-gradient-to-r from-[#1F1E1B]/90 via-[#252420]/80 to-[#1F1E1B]/90 backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.5)] px-4 sm:px-6 md:px-8 py-6 md:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={pillar.title}
-                className={`flex items-start gap-4 animate-fade-in ${
-                  index > 0 ? "md:pl-5 md:border-l md:border-[#36FF9B]/15" : ""
-                } md:pr-5`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`flex flex-col items-start gap-3.5 ${
+                  index > 0 ? "md:pl-6 md:border-l md:border-[#EAE7DF]/15" : ""
+                } md:pr-6`}
               >
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#36FF9B]/10 ring-1 ring-[#36FF9B]/30 flex items-center justify-center">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#36FF9B]" />
+                <div className="flex items-center justify-between w-full">
+                  <div className="w-11 h-11 rounded-lg bg-[#C85A32]/10 border border-[#C85A32]/30 flex items-center justify-center text-[#C85A32]">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className="font-mono text-xs font-bold text-[#B8B19F]/60">
+                    STAGE {pillar.step}
+                  </span>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-base md:text-lg font-semibold text-[#36FF9B] leading-tight">
+
+                <div>
+                  <h3 className="text-base font-serif font-bold text-[#F6F5F0] leading-snug">
                     {pillar.title}
                   </h3>
-                  <p className="mt-1 text-sm text-white/75 leading-relaxed">
+                  <div className="text-[11px] font-mono text-[#C85A32] mt-0.5">
+                    {pillar.titleSub}
+                  </div>
+                  <p className="mt-2 text-xs text-[#EAE7DF]/70 font-sans leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>

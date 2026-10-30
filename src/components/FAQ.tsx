@@ -1,173 +1,120 @@
-import { m } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Reg, TM } from "@/components/ui/trademark";
-
-const fadeInVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
-  },
-};
+import { ShieldCheck } from "lucide-react";
 
 const FAQ = () => {
-    const faqItems = [
+  const faqItems = [
     {
-      id: "item-what-is",
-      question: "What is the Archivest Thought Cabinet & Authorship Station?",
+      id: "item-what-is-strata",
+      question: "What is the STRATA Material Specification Workbench?",
       answer: (
         <>
-          <p className="mb-4">Archivest is your private literary atelier. You command every stroke of the typewriter while three dialectical faculties—KitsuragiAI<Reg />, VolitionAI<Reg />, and LogicAI<Reg />—interrogate instincts, track character arcs, and audit structural fractures in real time.</p>
-          <p>All the forensic power of dialectical intelligence. Zero synthetic slop over your prose. Your voice remains inviolable.</p>
+          <p className="mb-3">
+            STRATA (developed by MatterLab Applied Sciences) is a computational material specification workbench and embodied carbon library built specifically for architects, facade engineers, and specification writers.
+          </p>
+          <p>
+            Unlike generic visual moodboard directories, every specimen in STRATA is indexed with verified 3rd-party Environmental Product Declarations (EN 15804+A2), ASTM E84 fire performance metrics, ISO 354 acoustic absorption curves, and parametric Revit/IFC schedule bindings.
+          </p>
         </>
       ),
     },
     {
-      id: "item-where-to-start",
-      question: "Where do I begin my investigation inside Archivest?",
+      id: "item-epd-accuracy",
+      question: "How are Cradle-to-Gate (A1–A3) carbon metrics verified?",
       answer: (
         <>
-          <p className="mb-4"><strong>Case #1: Raw impulse or premise notes:</strong> Deploy KitsuragiAI<Reg /> for a 20-inquiry Socratic interrogation to produce your Case Dossier.</p>
-          <p className="mb-4"><strong>Case #2: Chaotic draft needing structure:</strong> Deploy VolitionAI<Reg /> to architect chapter beats, character arcs, and narrative tension.</p>
-          <p className="mb-4"><strong>Case #3: Completed manuscript:</strong> Deploy LogicAI<Reg /> for an exhaustive developmental autopsy across pacing and structural cohesion.</p>
-          <p>Dispatches or inquiries? Contact dispatch: <span className="font-mono text-xs text-white/50 mr-1">[FREQ: 41.9 MHz]</span><a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">support@archivest.ai</a></p>
+          <p className="mb-3">
+            All GWP (Global Warming Potential) values in STRATA are audited against ISO 14025 and EN 15804+A2 Type III Environmental Product Declarations issued by accredited program operators (IBU, UL Environment, Environdec, and ASTM).
+          </p>
+          <p>
+            We separate biogenic carbon sequestration from fossil fuel manufacturing emissions so your Whole-Building Life Cycle Assessment (WBLCA) passes LEED v4.1, BREEAM, and RIBA 2030 audits without dispute.
+          </p>
         </>
       ),
     },
     {
-      id: "item-tech-savvy",
-      question: "Do I require an advanced degree in Electrical Engineering to operate this station?",
-      answer: (
-        <p>Negative. Archivest is built for hardboiled novelists and sleuths of craft, not electro-chemists. The computational machinery humming in the radio room stays out of sight; your manuscript stays center stage.</p>
-      ),
-    },
-    {
-      id: "item-vs-chatgpt",
-      question: "How does Archivest differ from general chatbots like ChatGPT or Claude?",
-      answer: (
-        <>
-          <p className="mb-4">Comparing general LLMs to Archivest is like comparing a rusty crowbar to an entire criminal forensics laboratory. General chatbots are blank slate word-completion algorithms prone to sycophancy and hallucinations.</p>
-          <p className="mb-4">Archivest is a custom-engineered narrative apparatus built around the full trajectory of a novel: premise interrogation, Story Bible architecture, scene pacing, and developmental autopsies.</p>
-          <p className="mb-4">Crucially: our faculties do NOT write or rewrite your prose. You write every word. We preserve the integrity of human consciousness.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-experience",
-      question: "What does operating the Archivest station feel like?",
-      answer: (
-        <>
-          <p className="mb-4">It feels like unlocking your room at the Whirling-in-Rags, lighting a fresh lamp, and spreading out your case dossier across the table.</p>
-          <p className="mb-4">Your Story Bible, character psychologies, subplots, and chapter revisions remain tethered together. You return not to a fragmented pile of notes, but to a living, breathing social organism.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-no-writing-prose",
-      question: "Will the AI faculties write my chapters for me?",
-      answer: (
-        <>
-          <p className="mb-4">Hard refusal. Archivest maintains an inviolable ideological guardrail: human authorship is non-negotiable.</p>
-          <p>If you desire synthetic algorithms to spew generic sentences on your behalf, this station is not for you.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-vs-course",
-      question: "How does this compare to creative writing seminars or masterclasses?",
-      answer: (
-        <>
-          <p className="mb-4">Lectures give you abstract theory while you sit passively in an auditorium. Archivest gives you an interactive crime lab where you apply craft principles directly to your manuscript in real time.</p>
-          <p>Plus, you gain encrypted access to our private syndicate of serious authors sharing battle-tested dispatches from the front lines of publishing.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-beginners-experienced",
-      question: "Is Archivest suitable for greenhorn scribes or seasoned veterans?",
-      answer: (
-        <>
-          <p className="mb-4">Both. Greenhorn writers receive an orderly, methodical progression preventing them from drowning in the deep waters of Act II.</p>
-          <p>Veteran authors receive a relentless dialectical foil that challenges comfortable habits, exposes thematic blind spots, and pressure-tests narrative architecture at the highest level.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-refund",
-      question: "What is the refund protocol and clearance evaluation?",
-      answer: (
-        <>
-          <p className="mb-4">We do not distribute frivolous free trials. Instead, we offer the KitsuragiAI<Reg /> Preliminary Dossier for $7 (7 Real), allowing you to experience our dialectical rigor firsthand before committing to full station charter.</p>
-          <p className="mb-4">Because access immediately provisions dedicated cognitive computing resources and archive space, charter and monthly requisitions are non-refundable once activated.</p>
-          <p>You may pause your station charter for up to six months per year ($19/mo) to safeguard your case files while operating in the field.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-privacy",
-      question: "Are my case notes and manuscripts shielded from surveillance?",
-      answer: (
-        <>
-          <p className="mb-4">Absolute clearance. Your words, characters, and manuscripts belong entirely to you. We never train public foundation models on your intellectual property.</p>
-          <p>Your work remains sealed inside your private Thought Cabinet.</p>
-        </>
-      ),
-    },
-    {
-      id: "item-contact-support",
-      question: "Pneumatic Message Tube & Inquiries",
+      id: "item-bim-revit",
+      question: "Does STRATA integrate directly with Autodesk Revit, Rhino, and ArchiCAD?",
       answer: (
         <p>
-          Transmit questions to central dispatch at{" "}
-          <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline">
-            support@archivest.ai
-          </a>
-          . Inquiries receive attention within 24–48 hours.
+          Yes. Every assembly exports natively as an IFC4 material asset, an Autodesk Revit (`.adsklib` / `.rvt`) parameter family with pre-populated thermal and physical appearance assets, and a formatted 3-part CSI MasterFormat specification sheet (Word `.docx` and `.pdf`).
+        </p>
+      ),
+    },
+    {
+      id: "item-vendor-bias",
+      question: "Are materials in the library sponsored by manufacturers?",
+      answer: (
+        <>
+          <p className="mb-3">
+            Never. STRATA maintains a strict empirical firewall: manufacturers cannot pay to alter rankings, conceal Red List chemicals, or inflate thermal R-values.
+          </p>
+          <p>
+            Specimens are admitted solely after passing MatterLab's independent laboratory verification for compressive strength, VOC off-gassing, and quarry chain-of-custody transparency.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "item-custom-assemblies",
+      question: "Can our studio build and save custom multi-layer wall assemblies?",
+      answer: (
+        <p>
+          Yes. Using the Live Assembly Inspector and Hygrothermal Simulator, you can stack exterior rain-screens, vapor-permeable membranes, bio-based insulation batts, and structural CLT or geopolymer cores—instantly computing combined U-value, Glaser interstitial condensation risk, and net kgCO₂e/m².
+        </p>
+      ),
+    },
+    {
+      id: "item-licensing",
+      question: "How does the $397 Lifetime Studio Vault Charter differ from monthly seats?",
+      answer: (
+        <p>
+          The $397 Lifetime Charter permanently commissions your studio's central specification vault, granting perpetual access to all 4,000+ material datasets and quarterly EPD updates. Individual Architect or Practice seats can then be scaled up or paused according to your active project workload.
         </p>
       ),
     },
   ];
 
   return (
-    <m.section
+    <section
       id="faq"
-      className="scroll-mt-28 md:scroll-mt-32 py-16 md:py-24 bg-[#081813] text-white relative overflow-hidden border-t border-white/5"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={fadeInVariants}
+      className="scroll-mt-28 py-20 bg-[#181816] text-[#F6F5F0] relative overflow-hidden border-t border-[#EAE7DF]/15"
     >
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="mx-auto max-w-xl text-center mb-12">
-          <h2 className="text-balance text-3xl font-bold md:text-4xl mb-4 text-white lg:text-5xl">
-            Dispatches from Central Precinct: Frequently Asked Questions
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-[#2E6F5E]/15 text-[#2E6F5E] border border-[#2E6F5E]/30 mb-3">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            TECHNICAL DOCUMENTATION &amp; COMPLIANCE FAQ
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0]">
+            Specification &amp; Engineering Protocol
           </h2>
-          <p className="text-gray-300 text-balance">
-            Exhaustive tactical dossiers answering the most critical inquiries regarding the Thought Cabinet, authorship protections, and cognitive requisitions.
+          <p className="mt-3 text-sm sm:text-base text-[#EAE7DF]/70 font-sans">
+            Answers regarding ISO 14044 carbon accounting, BIM interoperability, and studio licensing.
           </p>
         </div>
 
-        <div className="mx-auto max-w-5xl">
-          <Accordion
-            type="single"
-            collapsible
-            className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 w-full rounded-2xl border border-white/10 px-8 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-sm"
-          >
-            {faqItems.map((item) => (
-              <AccordionItem key={item.id} value={item.id} className="border-dashed border-white/10">
-                <AccordionTrigger className="cursor-pointer text-base hover:no-underline text-left py-6 text-white hover:text-[#36FF9B] transition-colors">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="text-base text-gray-300">{item.answer}</div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <Accordion type="single" collapsible className="space-y-4">
+          {faqItems.map((item) => (
+            <AccordionItem
+              key={item.id}
+              value={item.id}
+              className="rounded-xl border border-[#EAE7DF]/15 bg-[#1F1E1B]/90 px-6 py-1 data-[state=open]:border-[#C85A32]/50 transition-all"
+            >
+              <AccordionTrigger className="text-left font-serif text-base sm:text-lg font-semibold text-[#F6F5F0] hover:text-[#C85A32] hover:no-underline py-4">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm font-sans text-[#EAE7DF]/80 leading-relaxed pb-5 pt-1 border-t border-white/5">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
+        <div className="mt-10 text-center font-mono text-xs text-[#B8B19F]">
+          DIRECT ENGINEERING DESK: <a href="mailto:specs@matterlab-strata.io" className="text-[#C85A32] hover:underline">specs@matterlab-strata.io</a> // CSI / RIBA / SIA Technical Support
         </div>
       </div>
-    </m.section>
+    </section>
   );
 };
 

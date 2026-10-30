@@ -1,50 +1,52 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Mail, MapPin, Radio } from "lucide-react";
+import { Mail, MapPin, Compass } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-[#081813] text-white">
+    <div className="min-h-screen bg-[#181816] text-[#F6F5F0]">
       <Header />
-      <main className="container mx-auto px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-[150px] pb-16 max-w-4xl">
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#36FF9B]/15 text-[#36FF9B] border border-[#36FF9B]/30 mb-4">
-            <Radio className="w-3.5 h-3.5" />
-            Precinct Dispatch
+      <main className="container mx-auto px-4 pt-28 md:pt-36 pb-20 max-w-4xl">
+        <div className="mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded text-xs font-mono uppercase tracking-wider bg-[#C85A32]/15 text-[#C85A32] border border-[#C85A32]/30 mb-4">
+            <Compass className="w-3.5 h-3.5" />
+            Materials Engineering Desk
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">Central Telegraph &amp; Inquiries</h1>
-          <p className="text-base sm:text-lg text-gray-300">
-            Dispatches from the field? Signal failures or precinct requisitions? Establish contact through official telegraphic channels below:
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mb-3">
+            Specification Support &amp; Quarry Audits
+          </h1>
+          <p className="text-base sm:text-lg text-[#EAE7DF]/75 font-sans">
+            Need custom EPD ingestion, Revit family troubleshooting, or enterprise practice licensing? Connect directly with our architectural engineering specialists.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-          <div className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
-            <Mail className="w-10 h-10 text-[#36FF9B] mb-4" />
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Telegraphic Dispatch</h2>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              For administrative audits, case files, station requisitions, and tactical support:
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 shadow-lg">
+            <Mail className="w-8 h-8 text-[#C85A32] mb-4" />
+            <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-2">Technical Specification Desk</h2>
+            <p className="text-sm text-[#EAE7DF]/75 font-sans mb-4">
+              For CSI MasterFormat inquiries, custom WBLCA audits, and enterprise seat commissioning:
             </p>
-            <a href="mailto:support@archivest.ai" className="text-[#36FF9B] hover:underline text-base sm:text-lg font-semibold break-all">
-              support@archivest.ai
+            <a href="mailto:specs@matterlab-strata.io" className="text-[#C85A32] hover:underline font-mono text-sm font-semibold break-all">
+              specs@matterlab-strata.io
             </a>
           </div>
 
-          <div className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
-            <MapPin className="w-10 h-10 text-[#36FF9B] mb-4" />
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Precinct Coordinates</h2>
-            <p className="text-sm sm:text-base text-gray-300">
-              Archivest Thought Cabinet // Sector 41<br />
-              Martinaise Waterfront, Revachol West<br />
-              Insulindian Isola, Elysium
+          <div className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 shadow-lg">
+            <MapPin className="w-8 h-8 text-[#2E6F5E] mb-4" />
+            <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-2">Applied Materials Laboratory</h2>
+            <p className="text-sm text-[#EAE7DF]/75 font-mono leading-relaxed">
+              MatterLab Applied Sciences // STRATA Division<br />
+              Technoparkstrasse 1, 8005 Zürich<br />
+              Switzerland (SIA / EN Compliance Hub)
             </p>
           </div>
         </div>
 
-        <section className="bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">Pneumatic Tube Transmission Protocol</h2>
-          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-            Central dispatch processes incoming cylinders within 24–48 standard hours. In case of acute narrative emergency, psychological static, or structural manuscript fissures while out in the field, prefix your message heading with <strong className="text-[#36FF9B] font-mono">[URGENT CASE DISPATCH]</strong>.
+        <section className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15">
+          <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-3">Manufacturer Specimen Submission Protocol</h2>
+          <p className="text-sm text-[#EAE7DF]/80 font-sans leading-relaxed">
+            Physical quarries, timber mills, and biogenic insulation producers seeking inclusion in the STRATA index must submit verified ISO 14025 / EN 15804+A2 Environmental Product Declarations alongside three physical 200mm×200mm material coupons for independent laboratory validation. Prefix technical dispatches with <strong className="text-[#C85A32] font-mono">[EPD-INGEST-REQUEST]</strong>.
           </p>
         </section>
       </main>

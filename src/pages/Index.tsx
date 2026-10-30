@@ -5,8 +5,6 @@ import JourneyPillars from "../components/JourneyPillars";
 import HowItWorks from "../components/HowItWorks";
 import HowItWorksBanner from "../components/HowItWorksBanner";
 import Pricing from "../components/Pricing";
-import StarsBackdrop from "../components/ui/stars-backdrop";
-
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
@@ -14,17 +12,15 @@ import Footer from "../components/Footer";
 import LiteraryRenaissanceBanner from "../components/LiteraryRenaissanceBanner";
 import YourNovelEverywhere from "../components/YourNovelEverywhere";
 
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#081813] text-white">
+    <div className="min-h-screen bg-[#181816] text-[#F6F5F0]">
       <Header />
       <Hero />
-      <section className="relative bg-[#081813] pt-4 pb-6 overflow-hidden">
-        <StarsBackdrop density="subtle" />
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative bg-[#181816] pt-12 pb-16 overflow-hidden border-t border-[#EAE7DF]/15">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <JourneyPillars />
-          <div className="mb-10 md:mb-12">
+          <div className="mb-10">
             <AICoachIntro />
           </div>
           <AICoachCards />

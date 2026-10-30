@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { m } from "framer-motion";
-import { Star } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export const TestimonialsColumn = (props: {
   className?: string;
@@ -40,19 +40,24 @@ export const TestimonialsColumn = (props: {
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, name, role }, i) => (
                 <div
-                  className="p-7 rounded-3xl border border-white/10 bg-gradient-to-b from-[#0A241C]/90 to-[#081813]/90 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.3)] max-w-[320px] w-full transition-all duration-300 hover:shadow-[0_12px_32px_rgba(54,255,155,0.15)] hover:-translate-y-1 hover:border-[#36FF9B]/40"
+                  className="p-6 rounded-2xl border border-[#EAE7DF]/15 bg-[#1F1E1B]/95 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.4)] max-w-[330px] w-full transition-all duration-300 hover:border-[#C85A32]/50 hover:-translate-y-1"
                   key={i}
                 >
-                  <span aria-hidden className="block font-serif text-3xl leading-none text-[#36FF9B]/50 select-none -mb-3">“</span>
-                  <div className="flex items-center gap-1 mb-3">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className="w-3.5 h-3.5 text-[#36FF9B] fill-[#36FF9B]" />
-                    ))}
+                  <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/5 font-mono text-[10px] text-[#2E6F5E]">
+                    <span className="flex items-center gap-1 font-semibold">
+                      <ShieldCheck className="w-3.5 h-3.5" /> VERIFIED SPECIFIER
+                    </span>
+                    <span className="text-[#B8B19F]">ISO 14044</span>
                   </div>
-                  <div className="text-white/90 text-sm leading-relaxed">{text}</div>
-                  <p className="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-[#36FF9B]">
-                    — {name}{role ? `, ${role}` : ""}
+                  <div className="text-[#EAE7DF]/90 text-xs sm:text-sm font-sans leading-relaxed">{text}</div>
+                  <p className="mt-4 text-xs font-mono font-bold tracking-wider uppercase text-[#C85A32]">
+                    — {name}
                   </p>
+                  {role && (
+                    <p className="text-[11px] font-mono text-[#B8B19F] mt-0.5">
+                      {role}
+                    </p>
+                  )}
                 </div>
               ))}
             </React.Fragment>

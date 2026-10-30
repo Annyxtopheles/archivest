@@ -1,141 +1,88 @@
 import { m } from "framer-motion";
-import { Star } from "lucide-react";
 import { TestimonialsColumn } from "./ui/testimonials-columns";
+
 const testimonials = [
   {
-    text: "Kitsuragi didn't offer bourgeois comfort. He cross-examined my drunken premise like a lieutenant inspecting ballistic angles. Suddenly, my hazy static was an undeniable case file.",
-    name: "H. Du Bois",
-    role: "RCM Lieutenant Double-Yefreitor",
+    text: "STRATA eliminated three weeks of manual EPD PDF hunting during our Zurich university timber hall tender. The Glaser condensation curves are dead-on accurate.",
+    name: "Lukas Lindqvist",
+    role: "Senior Facade Engineer, Lindqvist & Partner SIA",
   },
   {
-    text: "Volition's master ledger stopped my narrative from dissolving in the boardwalk fog. Rigorous, methodical scene architecture. Exactly what a detective of letters requires.",
-    name: "Kim Kitsuragi",
-    role: "Lieutenant, 57th Precinct",
+    text: "Having 3rd-party verified A1–A3 GWP metrics tied directly to CSI MasterFormat sections transformed how our studio defends low-carbon specs against value-engineering cuts.",
+    name: "Maya Lin-Vance",
+    role: "Principal Architect, Atelier Vance NYC",
   },
   {
-    text: "I was trapped in a decade-long ideological draft. Logic arrived like an unsparing coroner with a red pen, dissecting character arcs to bare marrow. Forensic perfection.",
-    name: "Evrart Claire",
-    role: "Union Boss & Amateur Chronicler",
+    text: "We swapped conventional aluminum rain-screens for charred Cryptomeria cladding after modeling the 60-year lifecycle carbon in STRATA. Passed municipal fire review on the first submission.",
+    name: "Kenji Takahashi",
+    role: "Director of Tectonics, Kengo Studio Tokyo",
   },
   {
-    text: "The Thought Cabinet keeps my plot outline pinned beside my typewriter. When existential dread blows in from the Sea, Archivest holds the structural line.",
-    name: "Lena",
-    role: "Cryptid Researcher & Memoirist",
+    text: "The Hempcrete hygrothermal simulator let us prove to structural underwriters that a 300mm monolithic bio-wall met R-value targets without synthetic vapor barriers.",
+    name: "Clara Von Berg",
+    role: "Passivhaus Certifier, Munich",
   },
   {
-    text: "Archivest replaced my cluttered desk of loose receipts. The faculties remember class allegiances and moral contradictions. I write with brutal conviction now.",
-    name: "Cindy the Skull",
-    role: "Street Essayist & Agitator",
+    text: "Finally a material specification workbench built for practicing engineers rather than interior moodboard hobbyists. The Revit parameter bindings work without a single broken family.",
+    name: "Marcus Thorne",
+    role: "BIM Director, Arup-Aligned Practice London",
   },
   {
-    text: "Like stepping into a warm bookstore shielded from coastal squalls. My world-building dossier stays cohesive, piercing through creative amnesia.",
-    name: "Annette",
-    role: "Bookstore Clerk & Lorekeeper",
+    text: "Quarry provenance tracking saved our civic museum project from sourcing uncertified travertine. Every stone block was traced to its exact Italian basin.",
+    name: "Giulia Moretti",
+    role: "Materials Specialist, Milano Architettura",
   },
   {
-    text: "Forced me to confront the historical reality of my setting. Every street now carries authentic decay, political weight, and economic friction.",
-    name: "Plaisance",
-    role: "Antique Appraiser & Dramatist",
+    text: "Comparing pozzolanic basalt concrete against standard Portland OPC in real time convinced our municipal client to approve a 74% carbon reduction across the foundation slab.",
+    name: "Henrik Soren",
+    role: "Structural Lead,Nordic Timber & Stone",
   },
   {
-    text: "Volition keeps the plot lines taut while Logic points out plot inconsistencies before I commit them to ink. Indispensable for mystery writers.",
-    name: "Trant Heidelstam",
-    role: "Consultant & Crime Analyst",
+    text: "The acoustic NRC simulator accurately predicted reverberation times in our timber atrium using mycelium baffle panels. Zero post-occupancy acoustic retrofits required.",
+    name: "Dr. Aris Thorne",
+    role: "Architectural Acoustician, Berlin",
   },
   {
-    text: "INLAND EMPIRE: The ceiling fan was mocking me. Kitsuragi sat down, opened his blue notebook, and asked twenty cold questions. Suddenly, my conspiracy had pulse and teeth.",
-    name: "Harrier Du Bois",
-    role: "Detective Lieutenant",
-  },
-  {
-    text: "Managing two competing factional narratives in Jamrock was a procedural nightmare. Kitsuragi parsed the ideological fault lines without flinching.",
-    name: "Jean Vicquemare",
-    role: "Major Crimes Division",
-  },
-  {
-    text: "RHETORIC [Challenging: Success] — Forced me to confront what my political manifesto masquerading as a novel was actually trying to say. Dialectical gold.",
-    name: "Trant Heidelstam",
-    role: "Special Consultant",
-  },
-  {
-    text: "I was terrified my characters were mere cardboard puppets of Revacholian despair. Volition extracted genuine remorse and buried secrets I hadn't dared contemplate.",
-    name: "Judit Minot",
-    role: "Patrol Officer",
-  },
-  {
-    text: "PERCEPTION: The smell of salt marsh and wet asphalt. Kitsuragi calibrated my opening chapter's spatial atmosphere until you could taste the motor oil.",
-    name: "Chester McLaine",
-    role: "RCM Officer",
-  },
-  {
-    text: "Twenty rigorous questions. No bourgeois sycophancy. Just cold diagnostic evaluation of narrative momentum and existential tension.",
-    name: "Macky",
-    role: "Dockworker Poet",
-  },
-  {
-    text: "ENCYCLOPEDIA: The history of the Suzerainty and the Communard insurrection is vast. Volition structured my family chronicle so the timeline never contradicted itself.",
-    name: "Gaston Martin",
-    role: "Boulodrome Historian",
-  },
-  {
-    text: "SAVOIR FAIRE: Saved me three months of running in frantic circles around the Doomed Commercial Area. The outline snapped together like a spring-loaded latch.",
-    name: "Cuno",
-    role: "Street Critic",
-  },
-  {
-    text: "I haven't written a coherent paragraph since the Revolution. Kitsuragi unlocked seventeen years of suppressed stories from my locker.",
-    name: "René De Pauw",
-    role: "Carabineer Veteran",
-  },
-  {
-    text: "SHIVERS: A cold wind blows from the bay. The city is a living organism waiting for someone to write its obituary. Archivest makes sure you don't drop the pen.",
-    name: "The Working Class Woman",
-    role: "Martinaise Local",
+    text: "Exporting clean Division 03, 06, and 09 project manuals directly from our sample assembly board cut our specification writing overhead in half.",
+    name: "Sarah Jenkins, CSI",
+    role: "Senior Specifier, SOM-Trained Consultant",
   },
 ];
 
-const firstColumn = testimonials.slice(0, 6);
-const secondColumn = testimonials.slice(6, 12);
-const thirdColumn = testimonials.slice(12, 18);
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#081813] relative py-20 overflow-hidden border-t border-white/5">
+    <section className="bg-[#181816] relative py-20 overflow-hidden border-t border-[#EAE7DF]/15">
       <div className="container z-10 mx-auto px-4">
         <m.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.8,
-            delay: 0.1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="flex flex-col items-center justify-center max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-2xl mx-auto text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center text-white">
-            Dispatches from Martinaise &amp; Beyond
+          <span className="text-xs font-mono uppercase tracking-widest text-[#C85A32] font-semibold mb-2">
+            FIELD REPORTS FROM GLOBAL PRACTICES
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#F6F5F0]">
+            Specified by Leading Tectonic Studios
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-[#36FF9B] text-center font-medium">
-            Field reports from authors holding the structural line against the Pale.
+          <p className="mt-3 text-base sm:text-lg text-[#EAE7DF]/75 font-sans">
+            Architects, facade engineers, and specification writers rely on STRATA to defend material integrity.
           </p>
         </m.div>
 
-        <div className="flex justify-center gap-6 mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={48} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={56} />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={52} />
+        <div className="flex justify-center gap-6 mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[680px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={36} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={44} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={40} />
         </div>
       </div>
     </section>
   );
 };
+
 export default Testimonials;
