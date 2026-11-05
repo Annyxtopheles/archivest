@@ -1,6 +1,6 @@
 import { Compass } from "lucide-react";
 
-const LiteraryRenaissanceBanner = () => {
+const TectonicDisciplineBanner = () => {
   return (
     <section className="relative overflow-hidden py-16 bg-[#181816] border-y border-[#EAE7DF]/15 flex items-center justify-center text-[#F6F5F0] text-center" id="carbon-benchmarks">
       {/* Subtle CAD grid */}
@@ -20,4 +20,4 @@ const LiteraryRenaissanceBanner = () => {
   );
 };
 
-export default LiteraryRenaissanceBanner;
+export default TectonicDisciplineBanner;

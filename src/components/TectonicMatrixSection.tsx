@@ -2,7 +2,7 @@ import { Layers, Compass, CheckCircle2, FileCode2, ArrowRight } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { useCheckout } from "@/hooks/use-checkout";
 
-const YourNovelEverywhere = () => {
+const TectonicMatrixSection = () => {
   const { startCheckout, isLoading } = useCheckout();
 
   return (
@@ -117,4 +117,4 @@ const YourNovelEverywhere = () => {
   );
 };
 
-export default YourNovelEverywhere;
+export default TectonicMatrixSection;

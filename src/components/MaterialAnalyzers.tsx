@@ -16,7 +16,7 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { useCheckout } from "@/hooks/use-checkout";
 
-export const AICoachIntro = () => (
+export const MaterialAnalyzersIntro = () => (
   <div className="text-center max-w-4xl mx-auto px-4 mb-14" id="engineering-modules">
     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider bg-[#2E6F5E]/15 text-[#2E6F5E] border border-[#2E6F5E]/30 mb-4">
       <Activity className="w-3.5 h-3.5" />
@@ -31,7 +31,9 @@ export const AICoachIntro = () => (
   </div>
 );
 
-const AICoachCards = () => {
+export const AICoachIntro = MaterialAnalyzersIntro;
+
+const MaterialAnalyzers = () => {
   const { startCheckout, isLoading } = useCheckout();
   
   // Interactive Simulator States
@@ -262,4 +264,5 @@ const AICoachCards = () => {
   );
 };
 
-export default AICoachCards;
+export { MaterialAnalyzers as AICoachCards };
+export default MaterialAnalyzers;

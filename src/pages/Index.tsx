@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import AICoachCards, { AICoachIntro } from "../components/AIEditors";
+import MaterialAnalyzers, { MaterialAnalyzersIntro } from "../components/MaterialAnalyzers";
 import JourneyPillars from "../components/JourneyPillars";
 import HowItWorks from "../components/HowItWorks";
 import HowItWorksBanner from "../components/HowItWorksBanner";
@@ -9,8 +9,8 @@ import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
-import LiteraryRenaissanceBanner from "../components/LiteraryRenaissanceBanner";
-import YourNovelEverywhere from "../components/YourNovelEverywhere";
+import TectonicDisciplineBanner from "../components/TectonicDisciplineBanner";
+import TectonicMatrixSection from "../components/TectonicMatrixSection";
 
 const Index = () => {
   return (
@@ -21,16 +21,16 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <JourneyPillars />
           <div className="mb-10">
-            <AICoachIntro />
+            <MaterialAnalyzersIntro />
           </div>
-          <AICoachCards />
+          <MaterialAnalyzers />
         </div>
       </section>
       <HowItWorksBanner />
       <HowItWorks />
-      <YourNovelEverywhere />
+      <TectonicMatrixSection />
       <Pricing />
-      <LiteraryRenaissanceBanner />
+      <TectonicDisciplineBanner />
       <Testimonials />
       <FAQ />
       <FinalCTA />
