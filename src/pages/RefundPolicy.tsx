@@ -22,16 +22,16 @@ const RefundPolicy = () => {
 
         <div className="space-y-6 bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 font-sans text-sm text-[#EAE7DF]/85 leading-relaxed">
           <section>
-            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">1. Single Assembly Dossier ($7 Pass)</h2>
+            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">1. 14-Day Free Evaluation Period</h2>
             <p>
-              If a downloaded Revit family, IFC4 asset, or CSI MasterFormat specification sheet fails to load in your CAD environment or contains a discrepancy against the published EPD certificate, notify us within 14 days for an immediate full refund or replacement package.
+              All Atelier and Practice Studio plans begin with a 14-day fully featured evaluation period. No credit card is charged during the trial, allowing your engineering team to verify Revit/ArchiCAD plugin interoperability and EPD calculations before committing to a paid subscription.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">2. Studio Vault Charter &amp; Practice Seats</h2>
+            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">2. 30-Day Money-Back Practice Guarantee</h2>
             <p>
-              New Studio Vault Charters ($397) and annual practice plans carry a 30-day engineering evaluation guarantee. If STRATA does not integrate cleanly into your studio's specification workflow within the first 30 days, request a full refund with zero administrative friction.
+              All annual subscriptions and monthly practice plans carry a 30-day money-back guarantee. If STRATA does not integrate cleanly into your studio's specification workflow within the first 30 days of paid service, notify our support desk for a full, hassle-free refund.
             </p>
           </section>
 

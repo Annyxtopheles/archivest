@@ -38,16 +38,16 @@ const FinalCTA = () => {
 
         <Button
           size="lg"
-          onClick={() => startCheckout("starter-dossier")}
-          disabled={isLoading("starter-dossier")}
+          onClick={() => startCheckout("practice-plan")}
+          disabled={isLoading("practice-plan")}
           className="w-full sm:w-auto bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold py-6 px-8 rounded shadow-[0_0_30px_rgba(200,90,50,0.4)] transition-all duration-300"
         >
-          {isLoading("starter-dossier") ? (
-            "Compiling Specification Package..."
+          {isLoading("practice-plan") ? (
+            "Provisioning Studio Workbench..."
           ) : (
             <span className="flex items-center gap-2">
               <Download className="w-4 h-4" />
-              Requisition Single Assembly Dossier ($7)
+              Start 14-Day Practice Trial (No Card Required)
             </span>
           )}
         </Button>

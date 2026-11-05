@@ -65,10 +65,10 @@ const FAQ = () => {
     },
     {
       id: "item-licensing",
-      question: "How does the $397 Lifetime Studio Vault Charter differ from monthly seats?",
+      question: "Can our practice switch between monthly and annual billing, or scale studio seats?",
       answer: (
         <p>
-          The $397 Lifetime Charter permanently commissions your studio's central specification vault, granting perpetual access to all 4,000+ material datasets and quarterly EPD updates. Individual Architect or Practice seats can then be scaled up or paused according to your active project workload.
+          Yes. You can switch between monthly and annual billing at any time with a single click. Annual plans include a 20% discount (equivalent to over two months free). Practice Studio plans include 5 named team seats, and additional project architects or facade engineers can be scaled up or down dynamically for $25/seat/month.
         </p>
       ),
     },

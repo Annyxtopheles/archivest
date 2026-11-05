@@ -177,11 +177,11 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-4 items-center">
             <Button
               size="lg"
-              onClick={() => startCheckout("starter-dossier")}
-              disabled={isLoading("starter-dossier")}
+              onClick={() => startCheckout("practice-plan")}
+              disabled={isLoading("practice-plan")}
               className="bg-[#C85A32] text-white hover:bg-[#A64522] border border-[#C85A32] font-mono text-xs uppercase tracking-wider font-semibold px-7 py-6 rounded-md shadow-[0_0_30px_rgba(200,90,50,0.4)] transition-all duration-300"
             >
-              {isLoading("starter-dossier") ? "Accessing Spec Vault..." : "Launch Material Library ($7 Preview Pass)"}
+              {isLoading("practice-plan") ? "Accessing Spec Vault..." : "Launch Material Library (Start Free Trial)"}
             </Button>
 
             <a

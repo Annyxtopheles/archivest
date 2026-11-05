@@ -11,73 +11,57 @@ export function useCheckout() {
   }, []);
 
   const startCheckout = useCallback(async (priceId: string | undefined) => {
-    const id = priceId || "starter-dossier";
+    const id = priceId || "practice-plan";
     setLoadingPriceId(id);
 
     // Brief simulated latency (500ms) for responsive feedback
     await new Promise((resolve) => setTimeout(resolve, 500));
     setLoadingPriceId(null);
 
-    // 1. $7 Preview Pass / Single Spec Dossier
-    if (
-      !priceId ||
-      id.includes("starter") ||
-      id.includes("dossier") ||
-      id.includes("mat-") ||
-      id === "preview-pass"
-    ) {
-      toast("SPECIFICATION DOSSIER REQUISITIONED", {
+    // 1. Atelier Plan ($39–$49/mo)
+    if (id.includes("atelier") || id.includes("solo")) {
+      toast("ATELIER LICENSE COMMISSIONED", {
         description:
-          "STRATA Preview Pass active ($7). CSI MasterFormat Div 03/06/09 specification package compiled with 3rd-party EPD carbon verification.",
+          "Principal architect workspace active (14-day free trial). Access to 4,000+ materials and CSI MasterFormat exports initialized.",
         duration: 5500,
       });
       return;
     }
 
-    // 2. Solo Architect Tier ($79/mo)
-    if (id.includes("solo") || id.includes("builder")) {
-      toast("SOLO ARCHITECT SEAT COMMISSIONED", {
-        description:
-          "MatterLab Studio Seat initialized. Unlimited parametric envelope simulations, Revit schedule bindings, and live LCA calculators unlocked.",
-        duration: 5500,
-      });
-      return;
-    }
-
-    // 3. Practice Studio Tier ($99/mo or $999/yr)
+    // 2. Practice Studio Plan ($99–$129/mo)
     if (id.includes("practice") || id.includes("studio")) {
-      toast("PRACTICE STUDIO WORKBENCH INITIALIZED", {
+      toast("PRACTICE STUDIO TRIAL INITIALIZED", {
         description:
-          "Multi-seat studio license registered. Centralized BIM asset vault, custom quarry provenance API, and LEED/BREEAM tender exports enabled.",
+          "5 studio seats provisioned (14-day free trial). Bidirectional Revit/ArchiCAD plugin bindings and WBLCA carbon rollups enabled.",
         duration: 5500,
       });
       return;
     }
 
-    // 4. Global Engineering Firm ($397 Lifetime Charter)
-    if (id.includes("charter") || id.includes("enterprise") || id.includes("firm")) {
-      toast("GLOBAL ENGINEERING FIRM VAULT CHARTERED", {
+    // 3. Global Enterprise Plan ($249–$299/mo)
+    if (id.includes("enterprise") || id.includes("firm")) {
+      toast("ENTERPRISE SPECIFICATION VAULT COMMISSIONED", {
         description:
-          "Lifetime Enterprise Spec Vault commissioned ($397). Unlimited team seats, dedicated computational materials engineer, and custom EPD ingest pipelines active.",
+          "Global practice license dispatched. Dedicated computational materials engineer assigned and custom EPD ingest pipeline unlocked.",
         duration: 6000,
       });
       return;
     }
 
-    // 5. Engineering Module Analzyers
+    // 4. Engineering Module Analyzers
     if (id.includes("analyzer") || id.includes("simulator") || id.includes("ledger")) {
       toast("PARAMETRIC SIMULATION ENGINE DISPATCHED", {
         description:
-          "ISO 14044 / ASTM C423 calculation matrix computed for active project coordinate.",
+          "ISO 14044 / ASTM C423 calculation matrix computed for active project assembly.",
         duration: 5000,
       });
       return;
     }
 
-    // Fallback
-    toast("STRATA STUDIO ACTION LOGGED", {
+    // 5. General or Material Specimen Export
+    toast("MATERIAL SPECIFICATION ACCESSED", {
       description:
-        "Workbench running in portfolio demonstration sandbox mode. Specifications ready for download.",
+        "14-Day Studio trial initialized. Parametric BIM asset and verified EPD carbon metrics ready for download.",
       duration: 5000,
     });
   }, []);

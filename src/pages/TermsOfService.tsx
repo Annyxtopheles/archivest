@@ -36,9 +36,9 @@ const TermsOfService = () => {
           </section>
 
           <section>
-            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">3. License Seats &amp; Vault Charter</h2>
+            <h2 className="text-lg font-serif font-bold text-[#F6F5F0] mb-2">3. License Seats &amp; Practice Subscriptions</h2>
             <p>
-              The $397 Lifetime Studio Vault Charter grants perpetual organization-wide access to the base materials database. Active computational seats (Solo Architect or Practice Studio) govern concurrent live BIM API bindings and automated WBLCA report exports.
+              STRATA provides Atelier (solo practitioner), Practice Studio (multi-seat collaborative), and Global Enterprise licensing tiers. Active computational seats govern concurrent live BIM API bindings, automated WBLCA report exports, and custom material library access.
             </p>
           </section>
 

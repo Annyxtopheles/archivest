@@ -211,11 +211,11 @@ const HowItWorks = () => {
           </p>
           <Button
             size="lg"
-            onClick={() => startCheckout("starter-dossier")}
-            disabled={isLoading("starter-dossier")}
+            onClick={() => startCheckout("practice-plan")}
+            disabled={isLoading("practice-plan")}
             className="bg-[#C85A32] text-white hover:bg-[#A64522] font-mono text-xs uppercase tracking-wider font-semibold px-8 py-5 rounded shadow-[0_0_25px_rgba(200,90,50,0.4)] transition-all"
           >
-            Requisition Studio Access ($7 Preview Pass)
+            Requisition Studio Access (Start 14-Day Trial)
           </Button>
         </div>
 

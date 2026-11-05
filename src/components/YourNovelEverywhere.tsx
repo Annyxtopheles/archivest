@@ -44,11 +44,11 @@ const YourNovelEverywhere = () => {
             <div className="pt-2">
               <Button
                 size="lg"
-                onClick={() => startCheckout("starter-dossier")}
-                disabled={isLoading("starter-dossier")}
+                onClick={() => startCheckout("practice-plan")}
+                disabled={isLoading("practice-plan")}
                 className="bg-[#C85A32] text-white hover:bg-[#A64522] font-mono text-xs uppercase tracking-wider font-semibold px-7 py-5 rounded shadow-[0_0_25px_rgba(200,90,50,0.4)]"
               >
-                Access Spatial Spec Matrix ($7)
+                Explore Practice Licensing
               </Button>
             </div>
           </div>
