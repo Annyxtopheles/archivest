@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import MaterialAnalyzers, { MaterialAnalyzersIntro } from "../components/MaterialAnalyzers";
 import JourneyPillars from "../components/JourneyPillars";
 import HowItWorks from "../components/HowItWorks";
-import HowItWorksBanner from "../components/HowItWorksBanner";
 import MaterialCatalogExplorer from "../components/MaterialCatalogExplorer";
 import Pricing from "../components/Pricing";
 import Testimonials from "../components/Testimonials";
@@ -18,16 +17,15 @@ const Index = () => {
     <div className="min-h-screen bg-[#181816] text-[#F6F5F0]">
       <Header />
       <Hero />
-      <section className="relative bg-[#181816] pt-12 pb-16 overflow-hidden border-t border-[#EAE7DF]/15">
+      <section className="relative bg-[#181816] pt-16 pb-20 overflow-hidden border-t border-[#EAE7DF]/15">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <JourneyPillars />
-          <div className="mb-10">
+          <div className="mb-12">
             <MaterialAnalyzersIntro />
           </div>
           <MaterialAnalyzers />
         </div>
       </section>
-      <HowItWorksBanner />
       <HowItWorks />
       <MaterialCatalogExplorer />
       <TectonicMatrixSection />
