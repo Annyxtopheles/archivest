@@ -123,7 +123,7 @@ const Pricing = () => {
               onClick={() => setBillingCycle("annual")}
               className={`px-4 py-2 rounded-lg text-xs font-sans font-medium transition-all ${
                 billingCycle === "annual"
-                  ? "bg-[#C85A32] text-white shadow-sm"
+                  ? "bg-[#C85A32] text-white"
                   : "text-[#B8B19F] hover:text-[#F6F5F0]"
               }`}
             >
@@ -133,7 +133,7 @@ const Pricing = () => {
               onClick={() => setBillingCycle("monthly")}
               className={`px-4 py-2 rounded-lg text-xs font-sans font-medium transition-all ${
                 billingCycle === "monthly"
-                  ? "bg-[#C85A32] text-white shadow-sm"
+                  ? "bg-[#C85A32] text-white"
                   : "text-[#B8B19F] hover:text-[#F6F5F0]"
               }`}
             >
@@ -201,7 +201,7 @@ const Pricing = () => {
                   disabled={isLoading(tier.checkoutId)}
                   className={`w-full py-3 rounded-lg font-sans text-xs font-medium transition-all ${
                     isHighlight
-                      ? "bg-[#C85A32] hover:bg-[#A64522] text-white shadow-sm"
+                      ? "bg-[#C85A32] hover:bg-[#A64522] text-white"
                       : "bg-[#141412] hover:bg-[#252420] text-[#EAE7DF] border border-white/10"
                   }`}
                 >

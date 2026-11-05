@@ -45,7 +45,7 @@ const TectonicMatrixSection = () => {
                 size="lg"
                 onClick={() => startCheckout("practice-plan")}
                 disabled={isLoading("practice-plan")}
-                className="bg-[#C85A32] text-white hover:bg-[#A64522] font-sans text-xs font-medium px-6 py-3 rounded-lg shadow-sm transition-all"
+                className="bg-[#C85A32] text-white hover:bg-[#A64522] font-sans text-xs font-medium px-6 py-3 rounded-lg transition-all"
               >
                 Explore Practice Licensing
               </Button>

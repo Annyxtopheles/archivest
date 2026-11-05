@@ -84,7 +84,7 @@ const Header = () => {
               <Button
                 size="sm"
                 asChild
-                className="bg-[#C85A32] text-white font-sans text-xs font-medium hover:bg-[#A64522] rounded-lg px-4 py-2 h-auto shadow-sm transition-all"
+                className="bg-[#C85A32] text-white font-sans text-xs font-medium hover:bg-[#A64522] rounded-lg px-4 py-2 h-auto transition-all"
               >
                 <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
                   Request Access

@@ -20,7 +20,7 @@ const NotFound = () => {
         </p>
         <Link
           to="/"
-          className="inline-block bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-xs uppercase tracking-wider px-6 py-3.5 rounded font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(200,90,50,0.3)]"
+          className="inline-block bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-xs uppercase tracking-wider px-6 py-3.5 rounded font-semibold transition-all duration-300"
         >
           Return to STRATA Workbench
         </Link>

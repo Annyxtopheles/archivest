@@ -224,7 +224,7 @@ const MaterialAnalyzers = () => {
       {/* =========================================================================
           MODULE 02: Acoustic & Hygrothermal Simulator
          ========================================================================= */}
-      <div className="flex flex-col justify-between rounded-2xl border border-[#C85A32]/40 bg-[#1C1B18]/90 p-8 shadow-xl">
+      <div className="flex flex-col justify-between rounded-2xl border border-[#EAE7DF]/15 bg-[#1C1B18]/90 p-8 shadow-xl">
         <div>
           <div className="flex items-center justify-between pb-3 border-b border-white/5 text-xs">
             <span className="text-[#C85A32] font-mono font-medium">02 // PHYSICS ENGINE</span>

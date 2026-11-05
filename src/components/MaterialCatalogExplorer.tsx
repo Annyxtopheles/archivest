@@ -609,7 +609,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                         <Button
                           size="sm"
                           onClick={() => handleOpenSpec(item)}
-                          className="h-8 bg-[#C85A32] hover:bg-[#A64522] text-white text-xs font-sans font-medium px-3 rounded-lg shadow-sm"
+                          className="h-8 bg-[#C85A32] hover:bg-[#A64522] text-white text-xs font-sans font-medium px-3 rounded-lg"
                         >
                           <FileText className="w-3.5 h-3.5 mr-1" />
                           Inspect

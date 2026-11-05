@@ -38,7 +38,7 @@ const FinalCTA = () => {
           size="lg"
           onClick={() => startCheckout("practice-plan")}
           disabled={isLoading("practice-plan")}
-          className="bg-[#C85A32] hover:bg-[#A64522] text-white font-sans text-sm font-medium py-3.5 px-8 rounded-lg shadow-sm transition-all"
+          className="bg-[#C85A32] hover:bg-[#A64522] text-white font-sans text-sm font-medium py-3.5 px-8 rounded-lg transition-all"
         >
           {isLoading("practice-plan") ? (
             "Accessing Workbench..."

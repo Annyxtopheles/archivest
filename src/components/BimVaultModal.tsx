@@ -171,7 +171,7 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
                   onClick={() => setSelectedSystem(sys)}
                   className={`px-3 py-1 rounded-lg text-xs font-sans transition-all border ${
                     active
-                      ? "bg-[#C85A32] text-white border-[#C85A32] font-medium shadow-sm"
+                      ? "bg-[#C85A32] text-white border-[#C85A32] font-medium"
                       : "bg-[#181816] text-[#EAE7DF]/70 border-[#EAE7DF]/15 hover:border-[#EAE7DF]/40"
                   }`}
                 >

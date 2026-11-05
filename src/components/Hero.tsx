@@ -184,7 +184,7 @@ const Hero = () => {
             <Button
               size="lg"
               asChild
-              className="bg-[#C85A32] text-white hover:bg-[#A64522] font-sans text-sm font-medium px-6 py-3 rounded-lg shadow-sm transition-all"
+              className="bg-[#C85A32] text-white hover:bg-[#A64522] font-sans text-sm font-medium px-6 py-3 rounded-lg transition-all"
             >
               <a href="#spec-sandbox">Explore Materials</a>
             </Button>
@@ -193,7 +193,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               asChild
-              className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-sm font-medium px-6 py-3 rounded-lg shadow-sm transition-all"
+              className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-sm font-medium px-6 py-3 rounded-lg transition-all"
             >
               <a href="#pricing">Pricing &amp; Access</a>
             </Button>
@@ -225,7 +225,7 @@ const Hero = () => {
                     onClick={() => setSelectedMat(mat)}
                     className={`px-3.5 py-2 rounded-lg font-sans text-xs transition-all ${
                       isActive
-                        ? "bg-[#C85A32] text-white font-medium shadow-sm"
+                        ? "bg-[#C85A32] text-white font-medium"
                         : "text-[#EAE7DF]/70 hover:text-white hover:bg-white/5"
                     }`}
                   >
@@ -357,7 +357,7 @@ const Hero = () => {
                 <Button
                   size="sm"
                   onClick={() => setSpecModalOpen(true)}
-                  className="bg-[#C85A32] hover:bg-[#A64522] text-white font-sans text-xs font-medium px-4 py-2.5 rounded-lg shadow-sm transition-all"
+                  className="bg-[#C85A32] hover:bg-[#A64522] text-white font-sans text-xs font-medium px-4 py-2.5 rounded-lg transition-all"
                 >
                   <FileText className="w-3.5 h-3.5 mr-2" />
                   Inspect 3-Part CSI Spec
@@ -366,7 +366,7 @@ const Hero = () => {
                   size="sm"
                   variant="outline"
                   onClick={() => setBimVaultOpen(true)}
-                  className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-xs font-medium px-4 py-2.5 rounded-lg shadow-sm transition-all"
+                  className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-xs font-medium px-4 py-2.5 rounded-lg transition-all"
                 >
                   <Download className="w-3.5 h-3.5 mr-2" />
                   Export BIM Package
