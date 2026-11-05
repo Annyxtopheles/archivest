@@ -79,16 +79,16 @@ const FAQ = () => {
       id="faq"
       className="scroll-mt-28 py-20 bg-[#181816] text-[#F6F5F0] relative overflow-hidden border-t border-[#EAE7DF]/15"
     >
-      <div className="container mx-auto px-4 max-w-4xl relative z-10">
+      <div className="container mx-auto px-4 max-w-3xl relative z-10">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-[#2E6F5E]/15 text-[#2E6F5E] border border-[#2E6F5E]/30 mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-sans font-medium text-[#2E6F5E] bg-[#2E6F5E]/10 border border-[#2E6F5E]/25 mb-3">
             <ShieldCheck className="w-3.5 h-3.5" />
-            TECHNICAL DOCUMENTATION &amp; COMPLIANCE FAQ
+            Documentation &amp; FAQ
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0]">
-            Specification &amp; Engineering Protocol
+            Specification Protocol
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[#EAE7DF]/70 font-sans">
+          <p className="mt-3 text-base text-[#EAE7DF]/70 font-sans">
             Answers regarding ISO 14044 carbon accounting, BIM interoperability, and studio licensing.
           </p>
         </div>
@@ -98,7 +98,7 @@ const FAQ = () => {
             <AccordionItem
               key={item.id}
               value={item.id}
-              className="rounded-xl border border-[#EAE7DF]/15 bg-[#1F1E1B]/90 px-6 py-1 data-[state=open]:border-[#C85A32]/50 transition-all"
+              className="rounded-2xl border border-[#EAE7DF]/15 bg-[#1C1B18]/90 px-6 py-1 data-[state=open]:border-[#C85A32]/50 transition-all shadow-sm"
             >
               <AccordionTrigger className="text-left font-serif text-base sm:text-lg font-semibold text-[#F6F5F0] hover:text-[#C85A32] hover:no-underline py-4">
                 {item.question}
@@ -110,8 +110,11 @@ const FAQ = () => {
           ))}
         </Accordion>
 
-        <div className="mt-10 text-center font-mono text-xs text-[#B8B19F]">
-          DIRECT ENGINEERING DESK: <a href="mailto:specs@matterlab-strata.io" className="text-[#C85A32] hover:underline">specs@matterlab-strata.io</a> // CSI / RIBA / SIA Technical Support
+        <div className="mt-12 text-center text-xs text-[#B8B19F] font-sans">
+          Have specific technical questions? Reach our engineering team at{" "}
+          <a href="mailto:specs@matterlab-strata.io" className="text-[#C85A32] hover:underline font-medium">
+            specs@matterlab-strata.io
+          </a>
         </div>
       </div>
     </section>

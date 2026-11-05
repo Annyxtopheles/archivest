@@ -64,13 +64,13 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-2xl mx-auto text-center"
         >
-          <span className="text-xs font-mono uppercase tracking-widest text-[#C85A32] font-semibold mb-2">
-            FIELD REPORTS FROM GLOBAL PRACTICES
+          <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold mb-2">
+            Practice Reports
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#F6F5F0]">
-            Specified by Leading Tectonic Studios
+            Specified by Leading Studios
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-[#EAE7DF]/75 font-sans">
+          <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans">
             Architects, facade engineers, and specification writers rely on STRATA to defend material integrity.
           </p>
         </m.div>

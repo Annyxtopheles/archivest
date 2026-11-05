@@ -140,17 +140,17 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col bg-[#181816] text-[#F6F5F0] border border-[#EAE7DF]/20 shadow-[0_24px_60px_rgba(0,0,0,0.85)] p-0 font-mono">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col bg-[#181816] text-[#F6F5F0] border border-[#EAE7DF]/20 shadow-[0_24px_60px_rgba(0,0,0,0.85)] p-0 font-sans">
         
         {/* Header */}
         <div className="p-6 pb-4 border-b border-[#EAE7DF]/15 bg-[#1F1E1B]">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
-            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-[#2E6F5E]/15 text-[#2E6F5E] border border-[#2E6F5E]/30 text-[11px] font-bold">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#2E6F5E]/15 text-[#2E6F5E] border border-[#2E6F5E]/30 text-xs font-sans font-medium">
               <span className="w-2 h-2 rounded-full bg-[#2E6F5E] animate-pulse" />
-              <span>MATTERLAB CENTRAL BIM VAULT v2.4</span>
+              <span>Central BIM Materials Vault</span>
             </div>
-            <span className="text-[10px] text-[#B8B19F]">
-              FORMATS: REVIT · ARCHICAD · RHINO/GH · IFC4
+            <span className="text-xs text-[#B8B19F] font-mono">
+              Revit · ArchiCAD · Rhino · IFC4
             </span>
           </div>
 
@@ -169,9 +169,9 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
                 <button
                   key={sys}
                   onClick={() => setSelectedSystem(sys)}
-                  className={`px-3 py-1 rounded text-xs font-mono uppercase tracking-wider transition-all border ${
+                  className={`px-3 py-1 rounded-lg text-xs font-sans transition-all border ${
                     active
-                      ? "bg-[#C85A32] text-white border-[#C85A32] font-bold shadow-[0_0_12px_rgba(200,90,50,0.35)]"
+                      ? "bg-[#C85A32] text-white border-[#C85A32] font-medium shadow-sm"
                       : "bg-[#181816] text-[#EAE7DF]/70 border-[#EAE7DF]/15 hover:border-[#EAE7DF]/40"
                   }`}
                 >

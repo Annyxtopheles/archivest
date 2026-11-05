@@ -189,18 +189,18 @@ PART 3 - EXECUTION
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col bg-[#181816] text-[#F6F5F0] border border-[#EAE7DF]/20 shadow-[0_24px_60px_rgba(0,0,0,0.85)] p-0 font-mono">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col bg-[#181816] text-[#F6F5F0] border border-[#EAE7DF]/20 shadow-[0_24px_60px_rgba(0,0,0,0.85)] p-0 font-sans">
         {/* Modal Header */}
         <div className="p-6 pb-4 border-b border-[#EAE7DF]/15 bg-[#1F1E1B]">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
-            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-[#C85A32]/15 text-[#C85A32] border border-[#C85A32]/30 text-[11px] font-bold">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#C85A32]/15 text-[#C85A32] border border-[#C85A32]/30 text-xs font-mono font-medium">
               <span>{material.code}</span>
               <span>•</span>
-              <span>CSI 3-PART SPECIFICATION</span>
+              <span>CSI 3-Part Spec</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 text-[10px] text-[#2E6F5E] bg-[#2E6F5E]/15 border border-[#2E6F5E]/30 px-2 py-0.5 rounded">
-                <ShieldCheck className="w-3 h-3" /> EPD VERIFIED (ISO 14025)
+              <span className="inline-flex items-center gap-1 text-xs text-[#2E6F5E] bg-[#2E6F5E]/15 border border-[#2E6F5E]/30 px-2.5 py-0.5 rounded-full font-medium">
+                <ShieldCheck className="w-3.5 h-3.5" /> EPD Verified (ISO 14025)
               </span>
             </div>
           </div>
@@ -216,7 +216,7 @@ PART 3 - EXECUTION
         {/* Modal Body with Tabs */}
         <div className="flex-1 overflow-y-auto p-6">
           <Tabs defaultValue="csi-spec" className="w-full">
-            <TabsList className="grid grid-cols-3 bg-[#1F1E1B] border border-[#EAE7DF]/15 p-1 mb-6 rounded-lg text-xs font-mono">
+            <TabsList className="grid grid-cols-3 bg-[#141412] border border-white/5 p-1 mb-6 rounded-xl text-xs font-sans">
               <TabsTrigger
                 value="csi-spec"
                 className="data-[state=active]:bg-[#C85A32] data-[state=active]:text-white uppercase tracking-wider text-[11px]"
