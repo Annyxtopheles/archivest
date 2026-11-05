@@ -432,70 +432,46 @@ export const MaterialCatalogExplorer: React.FC = () => {
   };
 
   return (
-    <section id="specimen-catalog" className="py-20 bg-[#141412] border-t border-[#EAE7DF]/15 relative">
+    <section id="specimen-catalog" className="py-24 bg-[#141412] border-t border-[#EAE7DF]/15 relative">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider bg-[#C85A32]/15 text-[#C85A32] border border-[#C85A32]/30 mb-4">
-            <Layers className="w-3.5 h-3.5" />
-            CSI MasterFormat &amp; EPD Repository
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#F6F5F0] leading-tight">
-            Tactile Specimen Catalog &amp; Carbon Registry
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold">
+            Repository
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mt-2">
+            Tactile Specimen Catalog
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#EAE7DF]/75 font-sans leading-relaxed max-w-2xl mx-auto">
-            Search across 12 verified low-carbon architectural assemblies with cradle-to-gate LCA metrics, fire certifications, and 3-part CSI specifications.
+          <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans leading-relaxed">
+            Verified low-carbon architectural assemblies with cradle-to-gate LCA metrics, fire ratings, and 3-part CSI specifications.
           </p>
-
-          {/* Quick Metrics Ribbon */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mt-8">
-            <div className="p-3 rounded-lg bg-[#181816] border border-[#EAE7DF]/10">
-              <span className="text-[10px] font-mono text-[#B8B19F] block">SPECIMENS ARCHIVED</span>
-              <span className="text-xl font-mono font-bold text-[#F6F5F0]">12 Assemblies</span>
-            </div>
-            <div className="p-3 rounded-lg bg-[#181816] border border-[#EAE7DF]/10">
-              <span className="text-[10px] font-mono text-[#B8B19F] block">NET CARBON SINKS</span>
-              <span className="text-xl font-mono font-bold text-[#2E6F5E]">4 Net Negative</span>
-            </div>
-            <div className="p-3 rounded-lg bg-[#181816] border border-[#EAE7DF]/10">
-              <span className="text-[10px] font-mono text-[#B8B19F] block">EPD STANDARDS</span>
-              <span className="text-xl font-mono font-bold text-[#C85A32]">EN 15804 + A2</span>
-            </div>
-            <div className="p-3 rounded-lg bg-[#181816] border border-[#EAE7DF]/10">
-              <span className="text-[10px] font-mono text-[#B8B19F] block">CAD COMPATIBILITY</span>
-              <span className="text-xl font-mono font-bold text-[#EAE7DF]">Revit / IFC4</span>
-            </div>
-          </div>
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="max-w-6xl mx-auto mb-8 bg-[#181816] p-4 md:p-6 rounded-2xl border border-[#EAE7DF]/15 shadow-xl space-y-4">
+        <div className="max-w-6xl mx-auto mb-8 bg-[#1C1B18] p-5 md:p-6 rounded-2xl border border-[#EAE7DF]/15 shadow-xl space-y-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search Input */}
-            <div className="relative w-full md:w-96">
+            <div className="relative w-full md:w-80">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B8B19F]" />
               <Input
-                placeholder="Search assembly, code, division, or quarry..."
+                placeholder="Search assembly, division, or quarry..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 bg-[#121210] border-[#EAE7DF]/20 text-[#F6F5F0] placeholder:text-[#B8B19F]/50 font-sans text-xs focus:border-[#C85A32]"
+                className="pl-9 bg-[#141412] border-white/10 text-[#F6F5F0] placeholder:text-[#B8B19F]/50 font-sans text-xs focus:border-[#C85A32] rounded-lg"
               />
             </div>
 
             {/* Carbon Intensity Filter */}
             <div className="flex items-center gap-1.5 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
-              <span className="text-[10px] font-mono text-[#B8B19F] uppercase whitespace-nowrap mr-1 flex items-center gap-1">
-                <Filter className="w-3 h-3" /> Carbon:
-              </span>
               {CARBON_FILTERS.map((f) => (
                 <button
                   key={f.id}
                   onClick={() => setSelectedCarbonFilter(f.id)}
-                  className={`px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider rounded-md border transition-colors whitespace-nowrap ${
+                  className={`px-3 py-1.5 text-xs font-sans rounded-lg border transition-colors whitespace-nowrap ${
                     selectedCarbonFilter === f.id
-                      ? "bg-[#C85A32] text-white border-[#C85A32] font-bold"
-                      : "bg-[#1F1E1B] text-[#B8B19F] border-[#EAE7DF]/10 hover:border-[#EAE7DF]/30"
+                      ? "bg-[#C85A32] text-white border-[#C85A32] font-medium"
+                      : "bg-[#141412] text-[#B8B19F] border-white/5 hover:border-white/15"
                   }`}
                 >
                   {f.label}
@@ -505,18 +481,15 @@ export const MaterialCatalogExplorer: React.FC = () => {
           </div>
 
           {/* Division Filter Tabs */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pt-2 border-t border-[#EAE7DF]/10 no-scrollbar">
-            <span className="text-[10px] font-mono text-[#B8B19F] uppercase whitespace-nowrap mr-1">
-              Divisions:
-            </span>
+          <div className="flex items-center gap-1.5 overflow-x-auto pt-3 border-t border-white/5 no-scrollbar">
             {DIVISIONS.map((div) => (
               <button
                 key={div}
                 onClick={() => setSelectedDivision(div)}
-                className={`px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider rounded-md transition-colors whitespace-nowrap ${
+                className={`px-3 py-1 text-xs font-sans rounded-md transition-colors whitespace-nowrap ${
                   selectedDivision === div
-                    ? "bg-[#2E6F5E] text-white font-bold"
-                    : "text-[#B8B19F] hover:bg-[#252420] hover:text-[#F6F5F0]"
+                    ? "bg-[#2E6F5E] text-white font-medium"
+                    : "text-[#B8B19F] hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {div}
@@ -526,9 +499,9 @@ export const MaterialCatalogExplorer: React.FC = () => {
         </div>
 
         {/* Results Counter */}
-        <div className="max-w-6xl mx-auto mb-4 flex justify-between items-center text-xs font-mono text-[#B8B19F] px-2">
+        <div className="max-w-6xl mx-auto mb-4 flex justify-between items-center text-xs font-sans text-[#B8B19F] px-2">
           <span>
-            SHOWING <strong className="text-[#F6F5F0]">{filteredItems.length}</strong> OF {CATALOG_ITEMS.length} ARCHITECTURAL ASSEMBLIES
+            Showing <strong className="text-[#F6F5F0]">{filteredItems.length}</strong> of {CATALOG_ITEMS.length} assemblies
           </span>
           {(searchQuery || selectedDivision !== "All" || selectedCarbonFilter !== "all") && (
             <button
@@ -547,45 +520,45 @@ export const MaterialCatalogExplorer: React.FC = () => {
         {/* Specimen Table (Desktop) / Cards (Mobile) */}
         <div className="max-w-6xl mx-auto">
           {/* Desktop Table */}
-          <div className="hidden lg:block overflow-x-auto rounded-2xl border border-[#EAE7DF]/15 bg-[#181816] shadow-2xl">
+          <div className="hidden lg:block overflow-x-auto rounded-2xl border border-[#EAE7DF]/15 bg-[#1C1B18] shadow-2xl">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-[#EAE7DF]/15 bg-[#1F1E1B] text-[10px] font-mono uppercase tracking-wider text-[#B8B19F]">
-                  <th className="py-3.5 px-4">Specimen &amp; CSI Code</th>
-                  <th className="py-3.5 px-3">Division</th>
-                  <th className="py-3.5 px-3">A1–A3 Carbon</th>
-                  <th className="py-3.5 px-3">Fire Rating</th>
-                  <th className="py-3.5 px-3">Conductivity (λ)</th>
-                  <th className="py-3.5 px-3">EPD Cert</th>
-                  <th className="py-3.5 px-4 text-right">Actions</th>
+                <tr className="border-b border-white/5 bg-[#141412] text-xs font-sans text-[#B8B19F]">
+                  <th className="py-4 px-5">Specimen &amp; CSI Code</th>
+                  <th className="py-4 px-4">Division</th>
+                  <th className="py-4 px-4">A1–A3 Carbon</th>
+                  <th className="py-4 px-4">Fire Rating</th>
+                  <th className="py-4 px-4">Conductivity</th>
+                  <th className="py-4 px-4">EPD</th>
+                  <th className="py-4 px-5 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#EAE7DF]/10 text-xs font-sans">
+              <tbody className="divide-y divide-white/5 text-xs font-sans">
                 {filteredItems.map((item) => (
                   <tr
                     key={item.id}
-                    className="hover:bg-[#1F1E1B]/70 transition-colors group"
+                    className="hover:bg-white/[0.02] transition-colors group"
                   >
                     {/* Name & Code */}
-                    <td className="py-3.5 px-4">
+                    <td className="py-4 px-5">
                       <div className="font-serif font-bold text-sm text-[#F6F5F0] group-hover:text-[#C85A32] transition-colors">
                         {item.name}
                       </div>
-                      <div className="text-[10px] font-mono text-[#B8B19F] mt-0.5">
+                      <div className="text-[11px] font-mono text-[#B8B19F]/70 mt-0.5">
                         {item.code}
                       </div>
                     </td>
 
                     {/* Division */}
-                    <td className="py-3.5 px-3">
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#252420] text-[#EAE7DF] border border-white/5">
+                    <td className="py-4 px-4">
+                      <span className="px-2 py-0.5 rounded text-[11px] font-mono bg-[#141412] text-[#EAE7DF] border border-white/5">
                         {item.divisionCode}
                       </span>
                     </td>
 
                     {/* Embodied Carbon */}
-                    <td className="py-3.5 px-3">
-                      <div className="flex items-center gap-1.5 font-mono font-bold">
+                    <td className="py-4 px-4">
+                      <div className="flex items-center gap-1.5 font-sans font-semibold">
                         <span
                           className={`text-sm ${
                             item.embodiedCarbon < 0
@@ -597,54 +570,49 @@ export const MaterialCatalogExplorer: React.FC = () => {
                         >
                           {item.embodiedCarbon > 0 ? `+${item.embodiedCarbon}` : item.embodiedCarbon}
                         </span>
-                        <span className="text-[10px] text-[#B8B19F] font-normal">kgCO₂e/m²</span>
+                        <span className="text-[11px] text-[#B8B19F] font-normal">kgCO₂e/m²</span>
                       </div>
-                      {item.embodiedCarbon < 0 && (
-                        <span className="text-[9px] font-mono text-[#2E6F5E] block font-semibold">
-                          [Net Carbon Sink]
-                        </span>
-                      )}
                     </td>
 
                     {/* Fire Rating */}
-                    <td className="py-3.5 px-3">
-                      <div className="text-xs text-[#EAE7DF] flex items-center gap-1">
-                        <Flame className="w-3 h-3 text-[#C85A32]" />
+                    <td className="py-4 px-4">
+                      <div className="text-xs text-[#EAE7DF] flex items-center gap-1.5">
+                        <Flame className="w-3.5 h-3.5 text-[#C85A32]" />
                         <span>{item.fireRating.split("(")[0].trim()}</span>
                       </div>
                     </td>
 
                     {/* Conductivity */}
-                    <td className="py-3.5 px-3 font-mono text-[11px] text-[#B8B19F]">
+                    <td className="py-4 px-4 font-mono text-xs text-[#B8B19F]">
                       {item.conductivity}
                     </td>
 
                     {/* EPD Status */}
-                    <td className="py-3.5 px-3">
-                      <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#2E6F5E] font-semibold">
-                        <ShieldCheck className="w-3 h-3" /> Type III
+                    <td className="py-4 px-4">
+                      <span className="inline-flex items-center gap-1 text-[11px] text-[#2E6F5E] font-medium">
+                        <ShieldCheck className="w-3.5 h-3.5" /> Type III
                       </span>
                     </td>
 
                     {/* Actions */}
-                    <td className="py-3.5 px-4 text-right">
+                    <td className="py-4 px-5 text-right">
                       <div className="flex items-center justify-end gap-2">
                         <Button
                           size="sm"
                           variant="ghost"
                           onClick={() => handleQuickCopyParam(item)}
-                          className="h-8 px-2 text-[#B8B19F] hover:text-[#F6F5F0] hover:bg-[#252420] text-[10px] font-mono uppercase"
-                          title="Copy IFC4 / JSON parameter snippet"
+                          className="h-8 px-2.5 text-[#B8B19F] hover:text-[#F6F5F0] hover:bg-white/5 text-xs font-sans"
+                          title="Copy IFC4 parameter snippet"
                         >
                           IFC4
                         </Button>
                         <Button
                           size="sm"
                           onClick={() => handleOpenSpec(item)}
-                          className="h-8 bg-[#C85A32] hover:bg-[#A64522] text-white text-[10px] font-mono uppercase tracking-wider font-semibold shadow-sm"
+                          className="h-8 bg-[#C85A32] hover:bg-[#A64522] text-white text-xs font-sans font-medium px-3 rounded-lg shadow-sm"
                         >
-                          <FileText className="w-3 h-3 mr-1" />
-                          Inspect Spec
+                          <FileText className="w-3.5 h-3.5 mr-1" />
+                          Inspect
                         </Button>
                       </div>
                     </td>
@@ -659,11 +627,11 @@ export const MaterialCatalogExplorer: React.FC = () => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="p-5 rounded-2xl bg-[#181816] border border-[#EAE7DF]/15 space-y-3"
+                className="p-6 rounded-2xl bg-[#1C1B18] border border-[#EAE7DF]/15 space-y-3 shadow-lg"
               >
                 <div className="flex justify-between items-start gap-2">
                   <div>
-                    <span className="text-[10px] font-mono text-[#B8B19F] block">
+                    <span className="text-[11px] font-mono text-[#B8B19F] block">
                       {item.code}
                     </span>
                     <h3 className="font-serif font-bold text-base text-[#F6F5F0] mt-0.5">
@@ -672,7 +640,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                   </div>
                   <div className="text-right">
                     <span
-                      className={`text-base font-mono font-bold block ${
+                      className={`text-base font-sans font-bold block ${
                         item.embodiedCarbon < 0
                           ? "text-[#2E6F5E]"
                           : item.embodiedCarbon <= 40
@@ -682,17 +650,17 @@ export const MaterialCatalogExplorer: React.FC = () => {
                     >
                       {item.embodiedCarbon > 0 ? `+${item.embodiedCarbon}` : item.embodiedCarbon}
                     </span>
-                    <span className="text-[9px] font-mono text-[#B8B19F]">kgCO₂e/m²</span>
+                    <span className="text-[10px] text-[#B8B19F]">kgCO₂e/m²</span>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/5 text-xs">
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/5 text-xs font-sans">
                   <div>
-                    <span className="text-[9px] font-mono text-[#B8B19F] block">DIVISION</span>
+                    <span className="text-[10px] text-[#B8B19F] block">DIVISION</span>
                     <span className="text-[#EAE7DF]">{item.division}</span>
                   </div>
                   <div>
-                    <span className="text-[9px] font-mono text-[#B8B19F] block">FIRE RATING</span>
+                    <span className="text-[10px] text-[#B8B19F] block">FIRE RATING</span>
                     <span className="text-[#EAE7DF]">{item.fireRating.split("(")[0].trim()}</span>
                   </div>
                 </div>
@@ -702,16 +670,16 @@ export const MaterialCatalogExplorer: React.FC = () => {
                     size="sm"
                     variant="outline"
                     onClick={() => handleQuickCopyParam(item)}
-                    className="flex-1 border-[#EAE7DF]/20 text-[#EAE7DF] font-mono text-[10px] uppercase"
+                    className="flex-1 border-[#EAE7DF]/20 text-[#EAE7DF] font-sans text-xs"
                   >
                     Copy IFC4
                   </Button>
                   <Button
                     size="sm"
                     onClick={() => handleOpenSpec(item)}
-                    className="flex-1 bg-[#C85A32] hover:bg-[#A64522] text-white font-mono text-[10px] uppercase tracking-wider font-semibold"
+                    className="flex-1 bg-[#C85A32] hover:bg-[#A64522] text-white font-sans text-xs font-medium"
                   >
-                    <FileText className="w-3 h-3 mr-1" />
+                    <FileText className="w-3.5 h-3.5 mr-1" />
                     Inspect Spec
                   </Button>
                 </div>
@@ -720,9 +688,8 @@ export const MaterialCatalogExplorer: React.FC = () => {
           </div>
 
           {filteredItems.length === 0 && (
-            <div className="text-center py-16 bg-[#181816] rounded-2xl border border-[#EAE7DF]/15 p-6">
-              <p className="text-base text-[#EAE7DF] font-serif">No architectural assemblies matched your criteria.</p>
-              <p className="text-xs text-[#B8B19F] mt-1 font-mono">Try adjusting your search terms or resetting filters.</p>
+            <div className="text-center py-16 bg-[#1C1B18] rounded-2xl border border-[#EAE7DF]/15 p-6">
+              <p className="text-base text-[#EAE7DF] font-serif">No assemblies match your filters.</p>
               <Button
                 size="sm"
                 onClick={() => {
@@ -730,7 +697,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                   setSelectedDivision("All");
                   setSelectedCarbonFilter("all");
                 }}
-                className="mt-4 bg-[#C85A32] text-white font-mono text-xs uppercase"
+                className="mt-4 bg-[#C85A32] text-white font-sans text-xs"
               >
                 Reset Filters
               </Button>
