@@ -27,6 +27,11 @@ const navItems = [
     icon: FileSpreadsheet,
   },
   {
+    id: "specimen-catalog",
+    label: "Specimens",
+    href: "/#specimen-catalog",
+  },
+  {
     id: "carbon-benchmarks",
     label: "EPD Benchmarks",
     href: "/#carbon-benchmarks",

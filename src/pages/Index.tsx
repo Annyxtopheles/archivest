@@ -4,6 +4,7 @@ import MaterialAnalyzers, { MaterialAnalyzersIntro } from "../components/Materia
 import JourneyPillars from "../components/JourneyPillars";
 import HowItWorks from "../components/HowItWorks";
 import HowItWorksBanner from "../components/HowItWorksBanner";
+import MaterialCatalogExplorer from "../components/MaterialCatalogExplorer";
 import Pricing from "../components/Pricing";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
@@ -28,6 +29,7 @@ const Index = () => {
       </section>
       <HowItWorksBanner />
       <HowItWorks />
+      <MaterialCatalogExplorer />
       <TectonicMatrixSection />
       <Pricing />
       <TectonicDisciplineBanner />

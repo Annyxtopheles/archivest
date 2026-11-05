@@ -368,3 +368,5 @@ PART 3 - EXECUTION
     </Dialog>
   );
 };
+
+export default SpecSheetModal;
