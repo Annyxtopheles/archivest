@@ -171,7 +171,7 @@ const Hero = () => {
             Material Specification Workbench
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-[#F6F5F0] leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-[#F6F5F0] leading-[1.12]">
             Specify with tectonic truth. <br />
             <span className="text-[#C85A32]">Audit carbon to the millimeter.</span>
           </h1>
@@ -207,7 +207,7 @@ const Hero = () => {
           {/* Sandbox Top Control Bar */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#EAE7DF]/10">
             <div>
-              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#F6F5F0]">
+              <h2 className="text-xl sm:text-2xl font-serif font-normal text-[#F6F5F0]">
                 Assembly Inspector
               </h2>
               <p className="text-xs sm:text-sm text-[#B8B19F] mt-1 font-sans">
@@ -290,7 +290,7 @@ const Hero = () => {
               {/* Material Title & EPD Badge */}
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#F6F5F0]">
+                  <h3 className="text-2xl sm:text-3xl font-serif font-normal text-[#F6F5F0]">
                     {selectedMat.name}
                   </h3>
                   {selectedMat.epdVerified && (
@@ -310,7 +310,7 @@ const Hero = () => {
                 <div>
                   <span className="text-xs font-sans text-[#B8B19F] block">Cradle-to-Gate Embodied Carbon (A1–A3)</span>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-3xl sm:text-4xl font-serif font-bold text-[#F6F5F0]">
+                    <span className="text-3xl sm:text-4xl font-serif font-normal text-[#F6F5F0]">
                       {selectedMat.embodiedCarbon}
                     </span>
                     <span className="text-xs text-[#EAE7DF]/70 font-sans">kg CO₂e / m²</span>
@@ -329,25 +329,25 @@ const Hero = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="p-3.5 rounded-lg bg-[#141412] border border-white/5">
                   <span className="text-xs text-[#B8B19F] block font-sans">Fire Rating</span>
-                  <div className="text-base font-serif font-bold text-[#F6F5F0] mt-1">{selectedMat.fireRating.split(" ")[0]}</div>
+                  <div className="text-base font-serif font-normal text-[#F6F5F0] mt-1">{selectedMat.fireRating.split(" ")[0]}</div>
                   <div className="text-[10px] text-[#B8B19F]/70 truncate mt-0.5">ASTM E84</div>
                 </div>
 
                 <div className="p-3.5 rounded-lg bg-[#141412] border border-white/5">
                   <span className="text-xs text-[#B8B19F] block font-sans">Acoustic</span>
-                  <div className="text-base font-serif font-bold text-[#F6F5F0] mt-1">{selectedMat.acousticNRC} NRC</div>
+                  <div className="text-base font-serif font-normal text-[#F6F5F0] mt-1">{selectedMat.acousticNRC} NRC</div>
                   <div className="text-[10px] text-[#B8B19F]/70 mt-0.5">ISO 354</div>
                 </div>
 
                 <div className="p-3.5 rounded-lg bg-[#141412] border border-white/5">
                   <span className="text-xs text-[#B8B19F] block font-sans">Thermal</span>
-                  <div className="text-base font-serif font-bold text-[#F6F5F0] mt-1">R-{selectedMat.rValue}</div>
+                  <div className="text-base font-serif font-normal text-[#F6F5F0] mt-1">R-{selectedMat.rValue}</div>
                   <div className="text-[10px] text-[#B8B19F]/70 mt-0.5">m²·K/W per 100mm</div>
                 </div>
 
                 <div className="p-3.5 rounded-lg bg-[#141412] border border-white/5">
                   <span className="text-xs text-[#B8B19F] block font-sans">Compressive</span>
-                  <div className="text-base font-serif font-bold text-[#F6F5F0] mt-1">{selectedMat.tensileStrength.split(" ")[0]}</div>
+                  <div className="text-base font-serif font-normal text-[#F6F5F0] mt-1">{selectedMat.tensileStrength.split(" ")[0]}</div>
                   <div className="text-[10px] text-[#B8B19F]/70 truncate mt-0.5">{selectedMat.density}</div>
                 </div>
               </div>
@@ -385,7 +385,7 @@ const Hero = () => {
             <div>
               <div className="flex items-center gap-2">
                 <Calculator className="w-4 h-4 text-[#C85A32]" />
-                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#F6F5F0]">
+                <h3 className="text-lg sm:text-xl font-serif font-normal text-[#F6F5F0]">
                   Whole-Building Carbon Audit
                 </h3>
               </div>
@@ -395,7 +395,7 @@ const Hero = () => {
             </div>
             <div className="text-left md:text-right">
               <span className="text-xs font-sans text-[#B8B19F] block">Project Envelope Area</span>
-              <span className="text-xl font-serif font-bold text-[#F6F5F0]">{projectAreaM2.toLocaleString()} m²</span>
+              <span className="text-xl font-serif font-normal text-[#F6F5F0]">{projectAreaM2.toLocaleString()} m²</span>
             </div>
           </div>
 
@@ -418,7 +418,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/5">
             <div className="p-4 rounded-xl bg-[#141412] border border-white/5">
               <span className="text-xs text-[#B8B19F] block font-sans">Conventional Baseline</span>
-              <div className="text-xl sm:text-2xl font-serif font-bold text-[#EAE7DF] mt-1">
+              <div className="text-xl sm:text-2xl font-serif font-normal text-[#EAE7DF] mt-1">
                 {((selectedMat.baselineCarbon * projectAreaM2) / 1000).toFixed(1)} t
               </div>
               <span className="text-[11px] text-[#B8B19F]/70 font-sans block mt-1">{selectedMat.baselineName}</span>
@@ -426,7 +426,7 @@ const Hero = () => {
 
             <div className="p-4 rounded-xl bg-[#141412] border border-white/5">
               <span className="text-xs text-[#B8B19F] block font-sans">STRATA Specified</span>
-              <div className="text-xl sm:text-2xl font-serif font-bold text-[#F6F5F0] mt-1">
+              <div className="text-xl sm:text-2xl font-serif font-normal text-[#F6F5F0] mt-1">
                 {totalCarbonTonnes} t
               </div>
               <span className="text-[11px] text-[#C85A32] font-sans block mt-1">{selectedMat.name}</span>
@@ -434,7 +434,7 @@ const Hero = () => {
 
             <div className="p-4 rounded-xl bg-[#2E6F5E]/10 border border-[#2E6F5E]/20">
               <span className="text-xs text-[#2E6F5E] font-medium block font-sans">Net Carbon Averted</span>
-              <div className="text-xl sm:text-2xl font-serif font-bold text-[#2E6F5E] mt-1">
+              <div className="text-xl sm:text-2xl font-serif font-normal text-[#2E6F5E] mt-1">
                 {totalSavedTonnes} Metric Tons
               </div>
               <span className="text-[11px] text-[#EAE7DF]/75 font-sans block mt-1">

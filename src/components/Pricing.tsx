@@ -110,7 +110,7 @@ const Pricing = () => {
           <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold">
             Licensing
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0] mt-2">
             Studio Plans &amp; Licensing
           </h2>
           <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans leading-relaxed">
@@ -165,14 +165,14 @@ const Pricing = () => {
 
                 <div>
                   <div className="mb-4">
-                    <h3 className="text-xl font-serif font-bold text-[#F6F5F0]">{tier.name}</h3>
+                    <h3 className="text-xl font-serif font-normal text-[#F6F5F0]">{tier.name}</h3>
                     <p className="text-xs text-[#B8B19F] mt-1 font-sans">{tier.target}</p>
                   </div>
 
                   {/* Price */}
                   <div className="my-6 pb-6 border-b border-white/5">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-serif font-bold text-[#F6F5F0]">${price}</span>
+                      <span className="text-4xl font-serif font-normal text-[#F6F5F0]">${price}</span>
                       <span className="text-xs text-[#B8B19F] font-sans">/ month / seat</span>
                     </div>
                     <span className="text-xs text-[#EAE7DF]/60 mt-1 block font-sans">
@@ -216,7 +216,7 @@ const Pricing = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-[#EAE7DF]/15 text-center">
           {TRUST_METRICS.map((item, idx) => (
             <div key={idx} className="p-4">
-              <h4 className="text-sm font-serif font-bold text-[#F6F5F0]">{item.title}</h4>
+              <h4 className="text-sm font-serif font-normal text-[#F6F5F0]">{item.title}</h4>
               <p className="text-xs text-[#B8B19F] mt-1 font-sans">{item.description}</p>
             </div>
           ))}

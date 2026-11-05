@@ -154,7 +154,7 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
             </span>
           </div>
 
-          <DialogTitle className="text-xl sm:text-2xl font-serif font-bold text-[#F6F5F0]">
+          <DialogTitle className="text-xl sm:text-2xl font-serif font-normal text-[#F6F5F0]">
             Parametric Architectural Material Libraries
           </DialogTitle>
           <DialogDescription className="text-xs text-[#EAE7DF]/75 font-sans mt-1">
@@ -200,7 +200,7 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
                   </span>
                 </div>
 
-                <div className="text-sm font-serif font-bold text-[#F6F5F0]">
+                <div className="text-sm font-serif font-normal text-[#F6F5F0]">
                   {pkg.name}
                 </div>
 

@@ -6,7 +6,7 @@ const EULA = () => {
     <div className="min-h-screen bg-[#181816] text-[#F6F5F0]">
       <Header />
       <main className="container mx-auto px-4 pt-28 md:pt-36 pb-20 max-w-4xl">
-        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#F6F5F0] mb-4">
+        <h1 className="text-3xl sm:text-4xl font-serif font-normal text-[#F6F5F0] mb-4">
           End User License Agreement (EULA)
         </h1>
         <div className="space-y-6 bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 font-sans text-sm text-[#EAE7DF]/85 leading-relaxed">

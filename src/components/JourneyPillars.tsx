@@ -22,7 +22,7 @@ const JourneyPillars = () => {
   return (
     <div className="max-w-6xl mx-auto mb-20" id="workflow">
       <div className="text-center mb-10 max-w-2xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#F6F5F0]">
+        <h2 className="text-2xl sm:text-3xl font-serif font-normal text-[#F6F5F0]">
           Engineering Rigor in Three Pillars
         </h2>
         <p className="mt-2 text-sm text-[#EAE7DF]/75 font-sans">
@@ -42,7 +42,7 @@ const JourneyPillars = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#C85A32]/10 border border-[#C85A32]/25 flex items-center justify-center text-[#C85A32] mb-5">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-[#F6F5F0]">
+                <h3 className="text-lg font-serif font-normal text-[#F6F5F0]">
                   {pillar.title}
                 </h3>
                 <p className="mt-2 text-sm text-[#EAE7DF]/70 font-sans leading-relaxed">

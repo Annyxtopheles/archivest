@@ -25,7 +25,7 @@ const FinalCTA = () => {
           Get Started
         </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal tracking-tight mb-4 leading-tight">
           Every building is a material ledger. <br />
           <span className="text-[#C85A32]">Specify it with empirical truth.</span>
         </h2>

@@ -34,7 +34,7 @@ const WORKFLOW_STEPS: WorkflowStep[] = [
           <span className="text-[#2E6F5E] font-medium">Verified EPD</span>
         </div>
         <div className="w-28 h-28 border border-[#C85A32]/40 rounded-xl flex items-center justify-center relative bg-[#1F1E1B]">
-          <span className="text-[#F6F5F0] font-serif font-bold text-center text-xs">
+          <span className="text-[#F6F5F0] font-serif font-normal text-center text-xs">
             Pozzolanic<br />Basalt
           </span>
         </div>
@@ -103,7 +103,7 @@ const HowItWorks = () => {
           <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold">
             Methodology
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0] mt-2">
             The Specification Pipeline
           </h2>
           <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans leading-relaxed">
@@ -127,7 +127,7 @@ const HowItWorks = () => {
                       STEP {stepItem.step}
                     </span>
 
-                    <h3 className="text-2xl font-serif font-bold text-[#F6F5F0] leading-tight">
+                    <h3 className="text-2xl font-serif font-normal text-[#F6F5F0] leading-tight">
                       {stepItem.title}
                     </h3>
 

@@ -205,7 +205,7 @@ PART 3 - EXECUTION
             </div>
           </div>
 
-          <DialogTitle className="text-xl sm:text-2xl font-serif font-bold text-[#F6F5F0]">
+          <DialogTitle className="text-xl sm:text-2xl font-serif font-normal text-[#F6F5F0]">
             {material.name}
           </DialogTitle>
           <DialogDescription className="text-xs text-[#EAE7DF]/70 font-sans mt-1">

@@ -440,7 +440,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
           <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold">
             Repository
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0] mt-2">
             Tactile Specimen Catalog
           </h2>
           <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans leading-relaxed">
@@ -541,7 +541,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                   >
                     {/* Name & Code */}
                     <td className="py-4 px-5">
-                      <div className="font-serif font-bold text-sm text-[#F6F5F0] group-hover:text-[#C85A32] transition-colors">
+                      <div className="font-serif font-normal text-sm text-[#F6F5F0] group-hover:text-[#C85A32] transition-colors">
                         {item.name}
                       </div>
                       <div className="text-[11px] font-mono text-[#B8B19F]/70 mt-0.5">
@@ -634,7 +634,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                     <span className="text-[11px] font-mono text-[#B8B19F] block">
                       {item.code}
                     </span>
-                    <h3 className="font-serif font-bold text-base text-[#F6F5F0] mt-0.5">
+                    <h3 className="font-serif font-normal text-base text-[#F6F5F0] mt-0.5">
                       {item.name}
                     </h3>
                   </div>

@@ -85,7 +85,7 @@ const FAQ = () => {
             <ShieldCheck className="w-3.5 h-3.5" />
             Documentation &amp; FAQ
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0]">
             Specification Protocol
           </h2>
           <p className="mt-3 text-base text-[#EAE7DF]/70 font-sans">
@@ -100,7 +100,7 @@ const FAQ = () => {
               value={item.id}
               className="rounded-2xl border border-[#EAE7DF]/15 bg-[#1C1B18]/90 px-6 py-1 data-[state=open]:border-[#C85A32]/50 transition-all shadow-sm"
             >
-              <AccordionTrigger className="text-left font-serif text-base sm:text-lg font-semibold text-[#F6F5F0] hover:text-[#C85A32] hover:no-underline py-4">
+              <AccordionTrigger className="text-left font-serif text-base sm:text-lg font-normal text-[#F6F5F0] hover:text-[#C85A32] hover:no-underline py-4">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent className="text-sm font-sans text-[#EAE7DF]/80 leading-relaxed pb-5 pt-1 border-t border-white/5">

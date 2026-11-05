@@ -16,7 +16,7 @@ const TectonicMatrixSection = () => {
               Integration
             </span>
 
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0] leading-tight">
               From Site Datum <br />
               <span className="text-[#C85A32]">to Fabrication Kerf.</span>
             </h3>
@@ -99,7 +99,7 @@ const TectonicMatrixSection = () => {
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-[#B8B19F] block">Net Embodied Carbon:</span>
-                  <span className="text-base font-serif font-bold text-[#2E6F5E]">-94 kg CO₂e / m² (Carbon Sink)</span>
+                  <span className="text-base font-serif font-normal text-[#2E6F5E]">-94 kg CO₂e / m² (Carbon Sink)</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[11px] text-[#B8B19F] block">Fire Resistance:</span>

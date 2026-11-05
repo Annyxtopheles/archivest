@@ -106,7 +106,7 @@ export default {
 			fontFamily: {
 				mono: ['"JetBrains Mono"', '"Space Mono"', 'ui-monospace', 'monospace'],
 				sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
-				serif: ['"Fraunces"', '"Instrument Serif"', 'Georgia', 'serif'],
+				serif: ['"Instrument Serif"', 'Georgia', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

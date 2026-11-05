@@ -67,7 +67,7 @@ const Testimonials = () => {
           <span className="text-xs font-sans uppercase tracking-widest text-[#C85A32] font-semibold mb-2">
             Practice Reports
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#F6F5F0]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal tracking-tight text-[#F6F5F0]">
             Specified by Leading Studios
           </h2>
           <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans">

@@ -11,7 +11,7 @@ const TectonicDisciplineBanner = () => {
           <Compass className="w-3.5 h-3.5" />
           Tectonic Discipline
         </div>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold leading-snug text-[#F6F5F0]">
+        <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal leading-snug text-[#F6F5F0]">
           Architecture is physical reality quantified in stone, clay, timber, and glass. 
           STRATA gives modern practices the unsparing empirical rigor to build monuments that outlive carbon debt.
         </p>

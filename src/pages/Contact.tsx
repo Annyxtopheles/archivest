@@ -12,7 +12,7 @@ const Contact = () => {
             <Compass className="w-3.5 h-3.5" />
             Materials Engineering Desk
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F6F5F0] mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F6F5F0] mb-3">
             Specification Support &amp; Quarry Audits
           </h1>
           <p className="text-base sm:text-lg text-[#EAE7DF]/75 font-sans">
@@ -23,7 +23,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           <div className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 shadow-lg">
             <Mail className="w-8 h-8 text-[#C85A32] mb-4" />
-            <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-2">Technical Specification Desk</h2>
+            <h2 className="text-xl font-serif font-normal text-[#F6F5F0] mb-2">Technical Specification Desk</h2>
             <p className="text-sm text-[#EAE7DF]/75 font-sans mb-4">
               For CSI MasterFormat inquiries, custom WBLCA audits, and enterprise seat commissioning:
             </p>
@@ -34,7 +34,7 @@ const Contact = () => {
 
           <div className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15 shadow-lg">
             <MapPin className="w-8 h-8 text-[#2E6F5E] mb-4" />
-            <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-2">Applied Materials Laboratory</h2>
+            <h2 className="text-xl font-serif font-normal text-[#F6F5F0] mb-2">Applied Materials Laboratory</h2>
             <p className="text-sm text-[#EAE7DF]/75 font-mono leading-relaxed">
               MatterLab Applied Sciences // STRATA Division<br />
               Technoparkstrasse 1, 8005 Zürich<br />
@@ -44,7 +44,7 @@ const Contact = () => {
         </div>
 
         <section className="bg-[#1F1E1B] p-6 sm:p-8 rounded-2xl border border-[#EAE7DF]/15">
-          <h2 className="text-xl font-serif font-bold text-[#F6F5F0] mb-3">Manufacturer Specimen Submission Protocol</h2>
+          <h2 className="text-xl font-serif font-normal text-[#F6F5F0] mb-3">Manufacturer Specimen Submission Protocol</h2>
           <p className="text-sm text-[#EAE7DF]/80 font-sans leading-relaxed">
             Physical quarries, timber mills, and biogenic insulation producers seeking inclusion in the STRATA index must submit verified ISO 14025 / EN 15804+A2 Environmental Product Declarations alongside three physical 200mm×200mm material coupons for independent laboratory validation. Prefix technical dispatches with <strong className="text-[#C85A32] font-mono">[EPD-INGEST-REQUEST]</strong>.
           </p>

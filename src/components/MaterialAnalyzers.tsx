@@ -19,7 +19,7 @@ export const MaterialAnalyzersIntro = () => (
       <Activity className="w-3.5 h-3.5" />
       Engineering Engines
     </div>
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#F6F5F0] leading-tight">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal tracking-tight text-[#F6F5F0] leading-tight">
       Three Performance Simulators
     </h2>
     <p className="mt-3 text-base text-[#EAE7DF]/75 font-sans leading-relaxed">
@@ -124,7 +124,7 @@ const MaterialAnalyzers = () => {
             <div className="w-10 h-10 rounded-xl bg-[#C85A32]/10 border border-[#C85A32]/25 flex items-center justify-center text-[#C85A32] mb-3">
               <BarChart3 className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-serif font-bold text-[#F6F5F0]">Lifecycle Carbon</h3>
+            <h3 className="text-xl font-serif font-normal text-[#F6F5F0]">Lifecycle Carbon</h3>
             <p className="text-xs font-sans text-[#EAE7DF]/70 mt-1">
               Deconstructs cradle-to-gate extraction and end-of-life circularity across EN 15804 modules.
             </p>
@@ -235,7 +235,7 @@ const MaterialAnalyzers = () => {
             <div className="w-10 h-10 rounded-xl bg-[#C85A32]/10 border border-[#C85A32]/25 flex items-center justify-center text-[#C85A32] mb-3">
               <Sliders className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-serif font-bold text-[#F6F5F0]">Hygrothermal &amp; Acoustics</h3>
+            <h3 className="text-xl font-serif font-normal text-[#F6F5F0]">Hygrothermal &amp; Acoustics</h3>
             <p className="text-xs font-sans text-[#EAE7DF]/70 mt-1">
               Glaser dew-point gradient and acoustic absorption computed from substrate depth.
             </p>
@@ -393,7 +393,7 @@ const MaterialAnalyzers = () => {
             <div className="w-10 h-10 rounded-xl bg-[#2E6F5E]/10 border border-[#2E6F5E]/25 flex items-center justify-center text-[#2E6F5E] mb-3">
               <Globe2 className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-serif font-bold text-[#F6F5F0]">Provenance Ledger</h3>
+            <h3 className="text-xl font-serif font-normal text-[#F6F5F0]">Provenance Ledger</h3>
             <p className="text-xs font-sans text-[#EAE7DF]/70 mt-1">
               Tracks quarry geolocation, legal chain of custody, FSC compliance, and low-VOC emissions.
             </p>
