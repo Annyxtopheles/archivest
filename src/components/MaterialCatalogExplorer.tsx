@@ -670,7 +670,7 @@ export const MaterialCatalogExplorer: React.FC = () => {
                     size="sm"
                     variant="outline"
                     onClick={() => handleQuickCopyParam(item)}
-                    className="flex-1 bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-xs font-medium transition-all"
+                    className="flex-1 bg-white text-[#C85A32] hover:bg-[#181816] hover:text-white hover:border-[#EAE7DF]/30 border border-[#C85A32]/30 font-sans text-xs font-medium transition-all"
                   >
                     Copy IFC4
                   </Button>

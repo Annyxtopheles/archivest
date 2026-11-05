@@ -239,7 +239,7 @@ export const BimVaultModal: React.FC<BimVaultModalProps> = ({ open, onOpenChange
             size="sm"
             variant="outline"
             onClick={handleCopyAddIn}
-            className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-mono text-xs uppercase tracking-wider font-medium transition-all"
+            className="bg-white text-[#C85A32] hover:bg-[#181816] hover:text-white hover:border-[#EAE7DF]/30 border border-[#C85A32]/30 font-mono text-xs uppercase tracking-wider font-medium transition-all"
           >
             {copiedSnippet ? (
               <>
