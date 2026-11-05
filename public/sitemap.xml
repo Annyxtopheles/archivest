@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://archivest.ai/</loc>
+    <loc>https://annyxtopheles.github.io/archivest/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/contact</loc>
+    <loc>https://annyxtopheles.github.io/archivest/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/privacy-policy</loc>
+    <loc>https://annyxtopheles.github.io/archivest/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/terms-of-service</loc>
+    <loc>https://annyxtopheles.github.io/archivest/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/eula</loc>
+    <loc>https://annyxtopheles.github.io/archivest/eula</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/refund-policy</loc>
+    <loc>https://annyxtopheles.github.io/archivest/refund-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://archivest.ai/early-access-terms</loc>
+    <loc>https://annyxtopheles.github.io/archivest/early-access-terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

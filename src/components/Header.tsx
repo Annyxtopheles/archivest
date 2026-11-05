@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { StrataLogo, StrataVerticalLogo } from "./StrataLogo";
+import BimVaultModal from "./BimVaultModal";
 
 const navItems = [
   {
@@ -45,6 +46,7 @@ const navItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [bimVaultOpen, setBimVaultOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -52,13 +54,9 @@ const Header = () => {
     navigate(href);
   }, [navigate]);
 
-  const handleStudioLogin = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    toast("REVIT / ARCHICAD BIM CONNECT: [Connected]", {
-      description:
-        "MatterLab Central Materials Vault is open in Studio Preview mode. Real-time EPD telemetry active.",
-      duration: 5000,
-    });
+  const handleOpenBimVault = useCallback((e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    setBimVaultOpen(true);
   }, []);
 
   return (
@@ -101,7 +99,7 @@ const Header = () => {
               <Button
                 size="sm"
                 variant="outline"
-                onClick={handleStudioLogin}
+                onClick={handleOpenBimVault}
                 className="bg-transparent text-[#EAE7DF] border-[#EAE7DF]/25 hover:bg-[#EAE7DF]/10 hover:text-white font-mono text-xs uppercase tracking-wider transition-all duration-300"
               >
                 BIM Vault
@@ -170,9 +168,9 @@ const Header = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={(e) => {
+                      onClick={() => {
                         setIsOpen(false);
-                        handleStudioLogin(e);
+                        handleOpenBimVault();
                       }}
                       className="w-full border-[#EAE7DF]/20 text-[#EAE7DF] font-mono text-xs uppercase tracking-wider"
                     >
@@ -185,6 +183,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      <BimVaultModal open={bimVaultOpen} onOpenChange={setBimVaultOpen} />
     </header>
   );
 };
