@@ -10,42 +10,23 @@ import BimVaultModal from "./BimVaultModal";
 const navItems = [
   {
     id: "spec-sandbox",
-    label: "Spec Sandbox",
+    label: "Materials",
     href: "/#spec-sandbox",
-    icon: Layers,
   },
   {
     id: "engineering-modules",
     label: "Analyzers",
     href: "/#engineering-modules",
-    icon: Compass,
-  },
-  {
-    id: "workflow",
-    label: "BIM Workflow",
-    href: "/#workflow",
-    icon: FileSpreadsheet,
   },
   {
     id: "specimen-catalog",
-    label: "Specimens",
+    label: "Catalog",
     href: "/#specimen-catalog",
   },
   {
-    id: "carbon-benchmarks",
-    label: "EPD Benchmarks",
-    href: "/#carbon-benchmarks",
-    icon: ShieldCheck,
-  },
-  {
     id: "pricing",
-    label: "Licensing",
+    label: "Pricing",
     href: "/#pricing",
-  },
-  {
-    id: "faq",
-    label: "Docs",
-    href: "/#faq",
   },
 ];
 
@@ -76,14 +57,14 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7">
-            <ul className="flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-8">
+            <ul className="flex items-center gap-7">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <a
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className="text-[#EAE7DF]/80 hover:text-[#C85A32] transition-colors text-xs uppercase font-mono tracking-wider font-medium"
+                    className="text-[#EAE7DF]/75 hover:text-[#F6F5F0] transition-colors text-sm font-sans font-medium"
                   >
                     {item.label}
                   </a>
@@ -91,23 +72,23 @@ const Header = () => {
               ))}
             </ul>
 
-            <div className="flex items-center gap-3 pl-2 border-l border-[#EAE7DF]/10">
+            <div className="flex items-center gap-3 pl-4 border-l border-[#EAE7DF]/10">
               <Button
                 size="sm"
-                asChild
-                className="bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-[#A64522] border border-[#C85A32]/80 shadow-[0_0_20px_rgba(200,90,50,0.35)] transition-all duration-300"
+                variant="ghost"
+                onClick={handleOpenBimVault}
+                className="text-[#EAE7DF]/75 hover:text-white hover:bg-white/5 font-sans text-xs font-normal px-3 py-1.5 h-auto transition-colors"
               >
-                <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
-                  Requisition Seat
-                </a>
+                BIM Vault
               </Button>
               <Button
                 size="sm"
-                variant="outline"
-                onClick={handleOpenBimVault}
-                className="bg-transparent text-[#EAE7DF] border-[#EAE7DF]/25 hover:bg-[#EAE7DF]/10 hover:text-white font-mono text-xs uppercase tracking-wider transition-all duration-300"
+                asChild
+                className="bg-[#C85A32] text-white font-sans text-xs font-medium hover:bg-[#A64522] rounded-lg px-4 py-2 h-auto shadow-sm transition-all"
               >
-                BIM Vault
+                <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
+                  Request Access
+                </a>
               </Button>
             </div>
           </nav>
@@ -117,10 +98,10 @@ const Header = () => {
             <Button
               size="sm"
               asChild
-              className="bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-[#A64522] transition-all px-3"
+              className="bg-[#C85A32] text-white font-sans text-xs font-medium hover:bg-[#A64522] rounded-lg px-3 py-1.5 h-auto"
             >
               <a href="/#pricing" onClick={(e) => handleNavClick(e, "/#pricing")}>
-                Requisition Seat
+                Access
               </a>
             </Button>
             
@@ -138,7 +119,7 @@ const Header = () => {
                   <StrataVerticalLogo />
                 </div>
                 <div className="h-px w-full bg-[#EAE7DF]/10 mb-6" />
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-3">
                   {navItems.map((item) => (
                     <a
                       key={item.id}
@@ -147,10 +128,9 @@ const Header = () => {
                         handleNavClick(e, item.href);
                         setIsOpen(false);
                       }}
-                      className="text-[#EAE7DF]/80 hover:text-[#C85A32] transition-colors text-sm font-mono uppercase tracking-wider py-1.5 flex items-center justify-between"
+                      className="text-[#EAE7DF]/80 hover:text-white transition-colors text-sm font-sans py-2"
                     >
-                      <span>{item.label}</span>
-                      <span className="text-[10px] text-[#B8B19F]/50 font-mono">0{navItems.indexOf(item) + 1}</span>
+                      {item.label}
                     </a>
                   ))}
                   
@@ -158,7 +138,7 @@ const Header = () => {
                     <Button
                       size="sm"
                       asChild
-                      className="w-full bg-[#C85A32] text-white font-mono text-xs uppercase tracking-wider hover:bg-[#A64522]"
+                      className="w-full bg-[#C85A32] text-white font-sans text-xs font-medium hover:bg-[#A64522] rounded-lg py-2.5 h-auto"
                     >
                       <a
                         href="/#pricing"
@@ -167,7 +147,7 @@ const Header = () => {
                           setIsOpen(false);
                         }}
                       >
-                        Requisition Seat
+                        Request Access
                       </a>
                     </Button>
                     <Button
@@ -177,7 +157,7 @@ const Header = () => {
                         setIsOpen(false);
                         handleOpenBimVault();
                       }}
-                      className="w-full border-[#EAE7DF]/20 text-[#EAE7DF] font-mono text-xs uppercase tracking-wider"
+                      className="w-full border-[#EAE7DF]/20 text-[#EAE7DF] font-sans text-xs font-normal rounded-lg py-2.5 h-auto"
                     >
                       Access BIM Vault
                     </Button>
