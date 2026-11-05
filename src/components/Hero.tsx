@@ -12,8 +12,10 @@ import {
   Compass, 
   ArrowUpRight,
   ShieldCheck,
-  Cpu
+  Cpu,
+  FileText
 } from "lucide-react";
+import { SpecSheetModal } from "./SpecSheetModal";
 
 interface MaterialSpec {
   id: string;
@@ -130,6 +132,7 @@ const MATERIAL_PRESETS: MaterialSpec[] = [
 const Hero = () => {
   const [selectedMat, setSelectedMat] = useState<MaterialSpec>(MATERIAL_PRESETS[0]);
   const [activeLayerHover, setActiveLayerHover] = useState<number | null>(null);
+  const [specModalOpen, setSpecModalOpen] = useState(false);
   const { startCheckout, isLoading } = useCheckout();
 
   return (
@@ -400,7 +403,16 @@ const Hero = () => {
                   <span>FORMAT: <strong className="text-[#C85A32]">CSI DIV 03 / 06 / 09</strong></span>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => setSpecModalOpen(true)}
+                    className="border-[#EAE7DF]/25 text-[#EAE7DF] hover:bg-[#EAE7DF]/10 font-mono text-xs uppercase tracking-wider transition-all"
+                  >
+                    <FileText className="w-3.5 h-3.5 mr-1.5 text-[#C85A32]" />
+                    Inspect 3-Part CSI Spec
+                  </Button>
                   <Button
                     size="sm"
                     onClick={() => startCheckout(selectedMat.id)}
@@ -415,6 +427,13 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* 3-Part CSI MasterFormat Specification Sheet Modal */}
+        <SpecSheetModal
+          open={specModalOpen}
+          onOpenChange={setSpecModalOpen}
+          material={selectedMat}
+        />
 
       </div>
     </section>
