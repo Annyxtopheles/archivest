@@ -330,7 +330,7 @@ PART 3 - EXECUTION
               size="sm"
               variant="outline"
               onClick={handleCopy}
-              className="border-[#EAE7DF]/20 text-[#EAE7DF] hover:bg-[#EAE7DF]/10 font-mono text-xs uppercase"
+              className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-mono text-xs uppercase font-medium transition-all"
             >
               {copied ? (
                 <>
@@ -348,7 +348,7 @@ PART 3 - EXECUTION
               size="sm"
               variant="outline"
               onClick={handleDownloadSpec}
-              className="border-[#EAE7DF]/20 text-[#EAE7DF] hover:bg-[#EAE7DF]/10 font-mono text-xs uppercase"
+              className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-mono text-xs uppercase font-medium transition-all"
             >
               <Download className="w-3.5 h-3.5 mr-1.5" />
               Download .spec

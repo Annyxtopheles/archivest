@@ -193,7 +193,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               asChild
-              className="border-[#EAE7DF]/20 text-[#EAE7DF] hover:bg-white/5 hover:text-white font-sans text-sm font-normal px-6 py-3 rounded-lg"
+              className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-sm font-medium px-6 py-3 rounded-lg shadow-sm transition-all"
             >
               <a href="#pricing">Pricing &amp; Access</a>
             </Button>
@@ -366,7 +366,7 @@ const Hero = () => {
                   size="sm"
                   variant="outline"
                   onClick={() => setBimVaultOpen(true)}
-                  className="border-[#EAE7DF]/20 text-[#EAE7DF] hover:bg-white/5 hover:text-white font-sans text-xs font-normal px-4 py-2.5 rounded-lg transition-all"
+                  className="bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-xs font-medium px-4 py-2.5 rounded-lg shadow-sm transition-all"
                 >
                   <Download className="w-3.5 h-3.5 mr-2" />
                   Export BIM Package

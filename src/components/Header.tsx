@@ -157,7 +157,7 @@ const Header = () => {
                         setIsOpen(false);
                         handleOpenBimVault();
                       }}
-                      className="w-full border-[#EAE7DF]/20 text-[#EAE7DF] font-sans text-xs font-normal rounded-lg py-2.5 h-auto"
+                      className="w-full bg-white text-[#C85A32] hover:bg-[#FAF9F5] hover:text-[#A64522] border border-[#C85A32]/30 font-sans text-xs font-medium rounded-lg py-2.5 h-auto transition-all"
                     >
                       Access BIM Vault
                     </Button>
