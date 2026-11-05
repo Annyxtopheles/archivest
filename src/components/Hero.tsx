@@ -10,11 +10,13 @@ import {
   Download, 
   CheckCircle2, 
   Compass, 
-  ArrowUpRight,
-  ShieldCheck,
-  Cpu,
-  FileText
+  ArrowUpRight, 
+  ShieldCheck, 
+  Cpu, 
+  FileText,
+  Calculator
 } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
 import { SpecSheetModal } from "./SpecSheetModal";
 
 interface MaterialSpec {
@@ -24,6 +26,8 @@ interface MaterialSpec {
   subTitle: string;
   embodiedCarbon: number; // kgCO2e/m2 (A1-A3)
   benchmarkComparison: string; // e.g. "-74% vs Portland OPC"
+  baselineCarbon: number;
+  baselineName: string;
   fireRating: string; // ASTM E84 / EN 13501-1
   acousticNRC: number; // 0.0 - 1.0
   rValue: number; // Thermal resistance per 100mm
@@ -44,6 +48,8 @@ const MATERIAL_PRESETS: MaterialSpec[] = [
     subTitle: "Geopolymer hydraulic cement with 65% calcined clay & volcanic basalt aggregate",
     embodiedCarbon: 82,
     benchmarkComparison: "-76% vs Standard Portland OPC",
+    baselineCarbon: 340,
+    baselineName: "Standard Portland OPC Concrete",
     fireRating: "Class A (0 Flame / 0 Smoke)",
     acousticNRC: 0.15,
     rValue: 1.4,
@@ -67,6 +73,8 @@ const MATERIAL_PRESETS: MaterialSpec[] = [
     subTitle: "Industrial hemp shiv with carbon-sequestering hydraulic lime binder",
     embodiedCarbon: -18, // Carbon negative sequestering
     benchmarkComparison: "Net Carbon Sequestering (-18 kg CO₂e)",
+    baselineCarbon: 115,
+    baselineName: "Aerated Concrete Block + XPS Insulation",
     fireRating: "Class B-s1, d0 (2-Hr Fire Barrier)",
     acousticNRC: 0.85,
     rValue: 3.8,
@@ -89,6 +97,8 @@ const MATERIAL_PRESETS: MaterialSpec[] = [
     subTitle: "Yakisugi fire-preserved Japanese cypress cladding with natural tung oil cure",
     embodiedCarbon: 14,
     benchmarkComparison: "-89% vs Anodized Aluminum Siding",
+    baselineCarbon: 130,
+    baselineName: "Anodized Aluminum Siding Panels",
     fireRating: "Class B (Ignition Retarded by Charring)",
     acousticNRC: 0.55,
     rValue: 2.1,
@@ -112,6 +122,8 @@ const MATERIAL_PRESETS: MaterialSpec[] = [
     subTitle: "100% post-consumer architectural cullet fired at low-thermal eutectic threshold",
     embodiedCarbon: 34,
     benchmarkComparison: "-62% vs Virgin Float Glass",
+    baselineCarbon: 90,
+    baselineName: "Virgin Float Glass Curtain Wall",
     fireRating: "Class A1 Non-Combustible",
     acousticNRC: 0.10,
     rValue: 1.1,
@@ -133,7 +145,12 @@ const Hero = () => {
   const [selectedMat, setSelectedMat] = useState<MaterialSpec>(MATERIAL_PRESETS[0]);
   const [activeLayerHover, setActiveLayerHover] = useState<number | null>(null);
   const [specModalOpen, setSpecModalOpen] = useState(false);
+  const [projectAreaM2, setProjectAreaM2] = useState<number>(4500);
   const { startCheckout, isLoading } = useCheckout();
+
+  const deltaPerM2 = selectedMat.baselineCarbon - selectedMat.embodiedCarbon;
+  const totalCarbonTonnes = ((selectedMat.embodiedCarbon * projectAreaM2) / 1000).toFixed(1);
+  const totalSavedTonnes = ((deltaPerM2 * projectAreaM2) / 1000).toFixed(1);
 
   return (
     <section className="relative overflow-hidden pt-28 md:pt-36 pb-16 bg-[#181816] text-[#F6F5F0]">
@@ -349,6 +366,56 @@ const Hero = () => {
                     {selectedMat.benchmarkComparison}
                   </span>
                   <span className="text-[10px] font-mono text-[#EAE7DF]/60">Baseline Embodied Carbon Delta</span>
+                </div>
+              </div>
+
+              {/* Whole-Building Carbon Savings Calculator */}
+              <div className="p-4 rounded-xl bg-[#181816] border border-[#EAE7DF]/15 space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                  <div className="flex items-center gap-1.5 text-[#C85A32]">
+                    <Calculator className="w-3.5 h-3.5" />
+                    <span className="font-bold">PROJECT CARBON AUDIT CALCULATOR</span>
+                  </div>
+                  <div className="text-[#EAE7DF]">
+                    ENVELOPE AREA: <strong className="text-[#F6F5F0] text-sm">{projectAreaM2.toLocaleString()} m²</strong>
+                  </div>
+                </div>
+
+                <Slider
+                  value={[projectAreaM2]}
+                  min={500}
+                  max={20000}
+                  step={250}
+                  onValueChange={(val) => setProjectAreaM2(val[0])}
+                  className="py-1"
+                />
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs font-mono">
+                  <div className="p-2.5 rounded bg-[#252420] border border-white/5">
+                    <span className="text-[10px] text-[#B8B19F] block">CONVENTIONAL BASELINE</span>
+                    <span className="text-sm font-bold text-[#EAE7DF]/80">
+                      {((selectedMat.baselineCarbon * projectAreaM2) / 1000).toFixed(1)} t CO₂e
+                    </span>
+                    <span className="text-[9px] text-[#B8B19F]/60 block truncate">{selectedMat.baselineName}</span>
+                  </div>
+
+                  <div className="p-2.5 rounded bg-[#252420] border border-white/5">
+                    <span className="text-[10px] text-[#B8B19F] block">STRATA SPECIFIED EMISSIONS</span>
+                    <span className="text-sm font-bold text-[#F6F5F0]">
+                      {totalCarbonTonnes} t CO₂e
+                    </span>
+                    <span className="text-[9px] text-[#C85A32] block font-semibold">{selectedMat.name.split(" ")[0]} Specimen</span>
+                  </div>
+
+                  <div className="p-2.5 rounded bg-[#2E6F5E]/15 border border-[#2E6F5E]/30">
+                    <span className="text-[10px] text-[#2E6F5E] font-bold block">NET CARBON AVERTED</span>
+                    <span className="text-sm font-bold text-[#2E6F5E]">
+                      {totalSavedTonnes} Metric Tons
+                    </span>
+                    <span className="text-[9px] text-[#EAE7DF]/75 block truncate">
+                      ~{Math.round(Number(totalSavedTonnes) * 0.22)} cars removed / yr
+                    </span>
+                  </div>
                 </div>
               </div>
 
